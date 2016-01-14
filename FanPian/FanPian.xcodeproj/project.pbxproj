@@ -1,0 +1,640 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33EFB5621C4793B40033912B /* SMTListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB5611C4793B40033912B /* SMTListViewController.m */; };
+		33EFB5651C4793BD0033912B /* SMTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB5641C4793BD0033912B /* SMTMainViewController.m */; };
+		33EFB5681C4793DD0033912B /* SMTSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB5671C4793DD0033912B /* SMTSettingViewController.m */; };
+		33EFB56B1C4793E50033912B /* SMTSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB56A1C4793E50033912B /* SMTSearchViewController.m */; };
+		33EFB5701C479B0B0033912B /* SMTNavTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB56F1C479B0B0033912B /* SMTNavTitleView.m */; };
+		33F304DE1C448BAE0020838A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F304DD1C448BAE0020838A /* main.m */; };
+		33F304E11C448BAE0020838A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F304E01C448BAE0020838A /* AppDelegate.m */; };
+		33F304E41C448BAE0020838A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F304E31C448BAE0020838A /* ViewController.m */; };
+		33F304E71C448BAE0020838A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F304E51C448BAE0020838A /* Main.storyboard */; };
+		33F304E91C448BAE0020838A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F304E81C448BAE0020838A /* Assets.xcassets */; };
+		33F304EC1C448BAE0020838A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F304EA1C448BAE0020838A /* LaunchScreen.storyboard */; };
+		33F304F71C448BAE0020838A /* FanPianTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F304F61C448BAE0020838A /* FanPianTests.m */; };
+		33F305021C448BAE0020838A /* FanPianUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F305011C448BAE0020838A /* FanPianUITests.m */; };
+		E98474EED5FFA6410C22E543 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBE9C299F4D3C983B7D4063 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33F304F31C448BAE0020838A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33F304D11C448BAE0020838A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33F304D81C448BAE0020838A;
+			remoteInfo = FanPian;
+		};
+		33F304FE1C448BAE0020838A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33F304D11C448BAE0020838A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33F304D81C448BAE0020838A;
+			remoteInfo = FanPian;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		192E90DFC16EF2F416CDB37F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		33EFB5601C4793B40033912B /* SMTListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTListViewController.h; sourceTree = "<group>"; };
+		33EFB5611C4793B40033912B /* SMTListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTListViewController.m; sourceTree = "<group>"; };
+		33EFB5631C4793BD0033912B /* SMTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMainViewController.h; sourceTree = "<group>"; };
+		33EFB5641C4793BD0033912B /* SMTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMainViewController.m; sourceTree = "<group>"; };
+		33EFB5661C4793DD0033912B /* SMTSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTSettingViewController.h; sourceTree = "<group>"; };
+		33EFB5671C4793DD0033912B /* SMTSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTSettingViewController.m; sourceTree = "<group>"; };
+		33EFB5691C4793E50033912B /* SMTSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTSearchViewController.h; sourceTree = "<group>"; };
+		33EFB56A1C4793E50033912B /* SMTSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTSearchViewController.m; sourceTree = "<group>"; };
+		33EFB56C1C4794680033912B /* CommonUtils.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUtils.pch; sourceTree = "<group>"; };
+		33EFB56E1C479B0B0033912B /* SMTNavTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTNavTitleView.h; sourceTree = "<group>"; };
+		33EFB56F1C479B0B0033912B /* SMTNavTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTNavTitleView.m; sourceTree = "<group>"; };
+		33F304D91C448BAE0020838A /* FanPian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FanPian.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33F304DD1C448BAE0020838A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		33F304DF1C448BAE0020838A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		33F304E01C448BAE0020838A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		33F304E21C448BAE0020838A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		33F304E31C448BAE0020838A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		33F304E61C448BAE0020838A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		33F304E81C448BAE0020838A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		33F304EB1C448BAE0020838A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		33F304ED1C448BAE0020838A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33F304F21C448BAE0020838A /* FanPianTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FanPianTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33F304F61C448BAE0020838A /* FanPianTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FanPianTests.m; sourceTree = "<group>"; };
+		33F304F81C448BAE0020838A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33F304FD1C448BAE0020838A /* FanPianUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FanPianUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33F305011C448BAE0020838A /* FanPianUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FanPianUITests.m; sourceTree = "<group>"; };
+		33F305031C448BAE0020838A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		874545404FF4C356CEAFCE7A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DCBE9C299F4D3C983B7D4063 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33F304D61C448BAE0020838A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E98474EED5FFA6410C22E543 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F304EF1C448BAE0020838A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F304FA1C448BAE0020838A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02BBE97887D8DD6674D1F744 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				874545404FF4C356CEAFCE7A /* Pods.debug.xcconfig */,
+				192E90DFC16EF2F416CDB37F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		33EFB55F1C47935F0033912B /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				33EFB5631C4793BD0033912B /* SMTMainViewController.h */,
+				33EFB5641C4793BD0033912B /* SMTMainViewController.m */,
+				33EFB5601C4793B40033912B /* SMTListViewController.h */,
+				33EFB5611C4793B40033912B /* SMTListViewController.m */,
+				33EFB5661C4793DD0033912B /* SMTSettingViewController.h */,
+				33EFB5671C4793DD0033912B /* SMTSettingViewController.m */,
+				33EFB5691C4793E50033912B /* SMTSearchViewController.h */,
+				33EFB56A1C4793E50033912B /* SMTSearchViewController.m */,
+			);
+			name = VC;
+			sourceTree = "<group>";
+		};
+		33EFB56D1C479AF20033912B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33EFB56E1C479B0B0033912B /* SMTNavTitleView.h */,
+				33EFB56F1C479B0B0033912B /* SMTNavTitleView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		33F304D01C448BAE0020838A = {
+			isa = PBXGroup;
+			children = (
+				33F304DB1C448BAE0020838A /* FanPian */,
+				33F304F51C448BAE0020838A /* FanPianTests */,
+				33F305001C448BAE0020838A /* FanPianUITests */,
+				33F304DA1C448BAE0020838A /* Products */,
+				02BBE97887D8DD6674D1F744 /* Pods */,
+				E1CED7343844D4D6BC2D1D94 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		33F304DA1C448BAE0020838A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33F304D91C448BAE0020838A /* FanPian.app */,
+				33F304F21C448BAE0020838A /* FanPianTests.xctest */,
+				33F304FD1C448BAE0020838A /* FanPianUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33F304DB1C448BAE0020838A /* FanPian */ = {
+			isa = PBXGroup;
+			children = (
+				33F304DF1C448BAE0020838A /* AppDelegate.h */,
+				33F304E01C448BAE0020838A /* AppDelegate.m */,
+				33EFB55F1C47935F0033912B /* VC */,
+				33EFB56D1C479AF20033912B /* View */,
+				33F304E21C448BAE0020838A /* ViewController.h */,
+				33F304E31C448BAE0020838A /* ViewController.m */,
+				33F304E51C448BAE0020838A /* Main.storyboard */,
+				33F304E81C448BAE0020838A /* Assets.xcassets */,
+				33F304EA1C448BAE0020838A /* LaunchScreen.storyboard */,
+				33F304ED1C448BAE0020838A /* Info.plist */,
+				33F304DC1C448BAE0020838A /* Supporting Files */,
+				33EFB56C1C4794680033912B /* CommonUtils.pch */,
+			);
+			path = FanPian;
+			sourceTree = "<group>";
+		};
+		33F304DC1C448BAE0020838A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				33F304DD1C448BAE0020838A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		33F304F51C448BAE0020838A /* FanPianTests */ = {
+			isa = PBXGroup;
+			children = (
+				33F304F61C448BAE0020838A /* FanPianTests.m */,
+				33F304F81C448BAE0020838A /* Info.plist */,
+			);
+			path = FanPianTests;
+			sourceTree = "<group>";
+		};
+		33F305001C448BAE0020838A /* FanPianUITests */ = {
+			isa = PBXGroup;
+			children = (
+				33F305011C448BAE0020838A /* FanPianUITests.m */,
+				33F305031C448BAE0020838A /* Info.plist */,
+			);
+			path = FanPianUITests;
+			sourceTree = "<group>";
+		};
+		E1CED7343844D4D6BC2D1D94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCBE9C299F4D3C983B7D4063 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		33F304D81C448BAE0020838A /* FanPian */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33F305061C448BAE0020838A /* Build configuration list for PBXNativeTarget "FanPian" */;
+			buildPhases = (
+				6F0AF3F38211BD660BA6CD09 /* Check Pods Manifest.lock */,
+				33F304D51C448BAE0020838A /* Sources */,
+				33F304D61C448BAE0020838A /* Frameworks */,
+				33F304D71C448BAE0020838A /* Resources */,
+				FCC88ECCF1E16E97EBF7EA03 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FanPian;
+			productName = FanPian;
+			productReference = 33F304D91C448BAE0020838A /* FanPian.app */;
+			productType = "com.apple.product-type.application";
+		};
+		33F304F11C448BAE0020838A /* FanPianTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33F305091C448BAE0020838A /* Build configuration list for PBXNativeTarget "FanPianTests" */;
+			buildPhases = (
+				33F304EE1C448BAE0020838A /* Sources */,
+				33F304EF1C448BAE0020838A /* Frameworks */,
+				33F304F01C448BAE0020838A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33F304F41C448BAE0020838A /* PBXTargetDependency */,
+			);
+			name = FanPianTests;
+			productName = FanPianTests;
+			productReference = 33F304F21C448BAE0020838A /* FanPianTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		33F304FC1C448BAE0020838A /* FanPianUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33F3050C1C448BAE0020838A /* Build configuration list for PBXNativeTarget "FanPianUITests" */;
+			buildPhases = (
+				33F304F91C448BAE0020838A /* Sources */,
+				33F304FA1C448BAE0020838A /* Frameworks */,
+				33F304FB1C448BAE0020838A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33F304FF1C448BAE0020838A /* PBXTargetDependency */,
+			);
+			name = FanPianUITests;
+			productName = FanPianUITests;
+			productReference = 33F304FD1C448BAE0020838A /* FanPianUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		33F304D11C448BAE0020838A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SMT;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = sa.xiong;
+				TargetAttributes = {
+					33F304D81C448BAE0020838A = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					33F304F11C448BAE0020838A = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 33F304D81C448BAE0020838A;
+					};
+					33F304FC1C448BAE0020838A = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 33F304D81C448BAE0020838A;
+					};
+				};
+			};
+			buildConfigurationList = 33F304D41C448BAE0020838A /* Build configuration list for PBXProject "FanPian" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 33F304D01C448BAE0020838A;
+			productRefGroup = 33F304DA1C448BAE0020838A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				33F304D81C448BAE0020838A /* FanPian */,
+				33F304F11C448BAE0020838A /* FanPianTests */,
+				33F304FC1C448BAE0020838A /* FanPianUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		33F304D71C448BAE0020838A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33F304EC1C448BAE0020838A /* LaunchScreen.storyboard in Resources */,
+				33F304E91C448BAE0020838A /* Assets.xcassets in Resources */,
+				33F304E71C448BAE0020838A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F304F01C448BAE0020838A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F304FB1C448BAE0020838A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F0AF3F38211BD660BA6CD09 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FCC88ECCF1E16E97EBF7EA03 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33F304D51C448BAE0020838A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33EFB5681C4793DD0033912B /* SMTSettingViewController.m in Sources */,
+				33EFB56B1C4793E50033912B /* SMTSearchViewController.m in Sources */,
+				33EFB5701C479B0B0033912B /* SMTNavTitleView.m in Sources */,
+				33F304E41C448BAE0020838A /* ViewController.m in Sources */,
+				33EFB5621C4793B40033912B /* SMTListViewController.m in Sources */,
+				33F304E11C448BAE0020838A /* AppDelegate.m in Sources */,
+				33F304DE1C448BAE0020838A /* main.m in Sources */,
+				33EFB5651C4793BD0033912B /* SMTMainViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F304EE1C448BAE0020838A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33F304F71C448BAE0020838A /* FanPianTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F304F91C448BAE0020838A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33F305021C448BAE0020838A /* FanPianUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33F304F41C448BAE0020838A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33F304D81C448BAE0020838A /* FanPian */;
+			targetProxy = 33F304F31C448BAE0020838A /* PBXContainerItemProxy */;
+		};
+		33F304FF1C448BAE0020838A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33F304D81C448BAE0020838A /* FanPian */;
+			targetProxy = 33F304FE1C448BAE0020838A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		33F304E51C448BAE0020838A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33F304E61C448BAE0020838A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		33F304EA1C448BAE0020838A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33F304EB1C448BAE0020838A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		33F305041C448BAE0020838A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		33F305051C448BAE0020838A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		33F305071C448BAE0020838A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 874545404FF4C356CEAFCE7A /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FanPian/CommonUtils.pch";
+				INFOPLIST_FILE = FanPian/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = XS.FanPian;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		33F305081C448BAE0020838A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 192E90DFC16EF2F416CDB37F /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FanPian/CommonUtils.pch";
+				INFOPLIST_FILE = FanPian/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = XS.FanPian;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		33F3050A1C448BAE0020838A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FanPianTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = XS.FanPianTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FanPian.app/FanPian";
+			};
+			name = Debug;
+		};
+		33F3050B1C448BAE0020838A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FanPianTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = XS.FanPianTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FanPian.app/FanPian";
+			};
+			name = Release;
+		};
+		33F3050D1C448BAE0020838A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FanPianUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = XS.FanPianUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FanPian;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		33F3050E1C448BAE0020838A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FanPianUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = XS.FanPianUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FanPian;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		33F304D41C448BAE0020838A /* Build configuration list for PBXProject "FanPian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33F305041C448BAE0020838A /* Debug */,
+				33F305051C448BAE0020838A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33F305061C448BAE0020838A /* Build configuration list for PBXNativeTarget "FanPian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33F305071C448BAE0020838A /* Debug */,
+				33F305081C448BAE0020838A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33F305091C448BAE0020838A /* Build configuration list for PBXNativeTarget "FanPianTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33F3050A1C448BAE0020838A /* Debug */,
+				33F3050B1C448BAE0020838A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33F3050C1C448BAE0020838A /* Build configuration list for PBXNativeTarget "FanPianUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33F3050D1C448BAE0020838A /* Debug */,
+				33F3050E1C448BAE0020838A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 33F304D11C448BAE0020838A /* Project object */;
+}

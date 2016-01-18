@@ -16,4 +16,6 @@ typedef void(^NavTitleItemClickBlcok)(NSInteger itemTag);
               items:(NSArray *)items
          clickBlock:(NavTitleItemClickBlcok)itemClcikBlock;
 
+- (void)selectItem:(NSInteger)index;
+
 @end

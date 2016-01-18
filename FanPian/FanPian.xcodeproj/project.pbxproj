@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		332347051C489DB100B05D2B /* SMTContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 332347041C489DB100B05D2B /* SMTContainerViewController.m */; };
+		332347081C48A20200B05D2B /* SMTMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 332347071C48A20200B05D2B /* SMTMeViewController.m */; };
+		3323470B1C48A21D00B05D2B /* SMTFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323470A1C48A21D00B05D2B /* SMTFindViewController.m */; };
+		3323470E1C4B416F00B05D2B /* SMTScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323470D1C4B416F00B05D2B /* SMTScrollView.m */; };
+		332347161C4B629400B05D2B /* RHCArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 332347151C4B629400B05D2B /* RHCArrayDataSource.m */; };
+		332347231C4C8C6600B05D2B /* leftMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 332347221C4C8C6600B05D2B /* leftMenu.plist */; };
+		332347271C4C923400B05D2B /* rightMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 332347261C4C923400B05D2B /* rightMenu.plist */; };
+		3323472A1C4C983D00B05D2B /* SMTCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 332347291C4C983D00B05D2B /* SMTCell.m */; };
+		3323472D1C4CC6A700B05D2B /* SMTImageLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323472C1C4CC6A700B05D2B /* SMTImageLabelView.m */; };
+		33A7A8541C4D005E003CD805 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A7A8531C4D005E003CD805 /* UIView+Additions.m */; };
 		33EFB5621C4793B40033912B /* SMTListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB5611C4793B40033912B /* SMTListViewController.m */; };
 		33EFB5651C4793BD0033912B /* SMTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB5641C4793BD0033912B /* SMTMainViewController.m */; };
 		33EFB5681C4793DD0033912B /* SMTSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB5671C4793DD0033912B /* SMTSettingViewController.m */; };
@@ -42,6 +52,24 @@
 
 /* Begin PBXFileReference section */
 		192E90DFC16EF2F416CDB37F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		332347031C489DB100B05D2B /* SMTContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTContainerViewController.h; sourceTree = "<group>"; };
+		332347041C489DB100B05D2B /* SMTContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTContainerViewController.m; sourceTree = "<group>"; };
+		332347061C48A20200B05D2B /* SMTMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMeViewController.h; sourceTree = "<group>"; };
+		332347071C48A20200B05D2B /* SMTMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMeViewController.m; sourceTree = "<group>"; };
+		332347091C48A21D00B05D2B /* SMTFindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTFindViewController.h; sourceTree = "<group>"; };
+		3323470A1C48A21D00B05D2B /* SMTFindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTFindViewController.m; sourceTree = "<group>"; };
+		3323470C1C4B416F00B05D2B /* SMTScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTScrollView.h; sourceTree = "<group>"; };
+		3323470D1C4B416F00B05D2B /* SMTScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTScrollView.m; sourceTree = "<group>"; };
+		332347141C4B629400B05D2B /* RHCArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHCArrayDataSource.h; sourceTree = "<group>"; };
+		332347151C4B629400B05D2B /* RHCArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHCArrayDataSource.m; sourceTree = "<group>"; };
+		332347221C4C8C6600B05D2B /* leftMenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = leftMenu.plist; sourceTree = "<group>"; };
+		332347261C4C923400B05D2B /* rightMenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rightMenu.plist; sourceTree = "<group>"; };
+		332347281C4C983D00B05D2B /* SMTCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTCell.h; sourceTree = "<group>"; };
+		332347291C4C983D00B05D2B /* SMTCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTCell.m; sourceTree = "<group>"; };
+		3323472B1C4CC6A700B05D2B /* SMTImageLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTImageLabelView.h; sourceTree = "<group>"; };
+		3323472C1C4CC6A700B05D2B /* SMTImageLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTImageLabelView.m; sourceTree = "<group>"; };
+		33A7A8521C4D005E003CD805 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		33A7A8531C4D005E003CD805 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
 		33EFB5601C4793B40033912B /* SMTListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTListViewController.h; sourceTree = "<group>"; };
 		33EFB5611C4793B40033912B /* SMTListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTListViewController.m; sourceTree = "<group>"; };
 		33EFB5631C4793BD0033912B /* SMTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMainViewController.h; sourceTree = "<group>"; };
@@ -108,17 +136,39 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		33EFB55F1C47935F0033912B /* VC */ = {
+		3323470F1C4B5D6D00B05D2B /* MenuVC */ = {
 			isa = PBXGroup;
 			children = (
-				33EFB5631C4793BD0033912B /* SMTMainViewController.h */,
-				33EFB5641C4793BD0033912B /* SMTMainViewController.m */,
-				33EFB5601C4793B40033912B /* SMTListViewController.h */,
-				33EFB5611C4793B40033912B /* SMTListViewController.m */,
 				33EFB5661C4793DD0033912B /* SMTSettingViewController.h */,
 				33EFB5671C4793DD0033912B /* SMTSettingViewController.m */,
 				33EFB5691C4793E50033912B /* SMTSearchViewController.h */,
 				33EFB56A1C4793E50033912B /* SMTSearchViewController.m */,
+			);
+			name = MenuVC;
+			sourceTree = "<group>";
+		};
+		332347101C4B5D7F00B05D2B /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				332347031C489DB100B05D2B /* SMTContainerViewController.h */,
+				332347041C489DB100B05D2B /* SMTContainerViewController.m */,
+				33EFB5631C4793BD0033912B /* SMTMainViewController.h */,
+				33EFB5641C4793BD0033912B /* SMTMainViewController.m */,
+				332347061C48A20200B05D2B /* SMTMeViewController.h */,
+				332347071C48A20200B05D2B /* SMTMeViewController.m */,
+				332347091C48A21D00B05D2B /* SMTFindViewController.h */,
+				3323470A1C48A21D00B05D2B /* SMTFindViewController.m */,
+				33EFB5601C4793B40033912B /* SMTListViewController.h */,
+				33EFB5611C4793B40033912B /* SMTListViewController.m */,
+			);
+			name = MainPage;
+			sourceTree = "<group>";
+		};
+		33EFB55F1C47935F0033912B /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				332347101C4B5D7F00B05D2B /* MainPage */,
+				3323470F1C4B5D6D00B05D2B /* MenuVC */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -126,8 +176,18 @@
 		33EFB56D1C479AF20033912B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				33A7A8521C4D005E003CD805 /* UIView+Additions.h */,
+				33A7A8531C4D005E003CD805 /* UIView+Additions.m */,
+				332347141C4B629400B05D2B /* RHCArrayDataSource.h */,
+				332347151C4B629400B05D2B /* RHCArrayDataSource.m */,
 				33EFB56E1C479B0B0033912B /* SMTNavTitleView.h */,
 				33EFB56F1C479B0B0033912B /* SMTNavTitleView.m */,
+				3323470C1C4B416F00B05D2B /* SMTScrollView.h */,
+				3323470D1C4B416F00B05D2B /* SMTScrollView.m */,
+				332347281C4C983D00B05D2B /* SMTCell.h */,
+				332347291C4C983D00B05D2B /* SMTCell.m */,
+				3323472B1C4CC6A700B05D2B /* SMTImageLabelView.h */,
+				3323472C1C4CC6A700B05D2B /* SMTImageLabelView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -169,6 +229,8 @@
 				33F304ED1C448BAE0020838A /* Info.plist */,
 				33F304DC1C448BAE0020838A /* Supporting Files */,
 				33EFB56C1C4794680033912B /* CommonUtils.pch */,
+				332347221C4C8C6600B05D2B /* leftMenu.plist */,
+				332347261C4C923400B05D2B /* rightMenu.plist */,
 			);
 			path = FanPian;
 			sourceTree = "<group>";
@@ -313,6 +375,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				332347231C4C8C6600B05D2B /* leftMenu.plist in Resources */,
+				332347271C4C923400B05D2B /* rightMenu.plist in Resources */,
 				33F304EC1C448BAE0020838A /* LaunchScreen.storyboard in Resources */,
 				33F304E91C448BAE0020838A /* Assets.xcassets in Resources */,
 				33F304E71C448BAE0020838A /* Main.storyboard in Resources */,
@@ -373,13 +437,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A7A8541C4D005E003CD805 /* UIView+Additions.m in Sources */,
 				33EFB5681C4793DD0033912B /* SMTSettingViewController.m in Sources */,
+				332347051C489DB100B05D2B /* SMTContainerViewController.m in Sources */,
 				33EFB56B1C4793E50033912B /* SMTSearchViewController.m in Sources */,
+				3323470E1C4B416F00B05D2B /* SMTScrollView.m in Sources */,
 				33EFB5701C479B0B0033912B /* SMTNavTitleView.m in Sources */,
 				33F304E41C448BAE0020838A /* ViewController.m in Sources */,
+				332347161C4B629400B05D2B /* RHCArrayDataSource.m in Sources */,
 				33EFB5621C4793B40033912B /* SMTListViewController.m in Sources */,
+				332347081C48A20200B05D2B /* SMTMeViewController.m in Sources */,
 				33F304E11C448BAE0020838A /* AppDelegate.m in Sources */,
 				33F304DE1C448BAE0020838A /* main.m in Sources */,
+				3323472D1C4CC6A700B05D2B /* SMTImageLabelView.m in Sources */,
+				3323470B1C48A21D00B05D2B /* SMTFindViewController.m in Sources */,
+				3323472A1C4C983D00B05D2B /* SMTCell.m in Sources */,
 				33EFB5651C4793BD0033912B /* SMTMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

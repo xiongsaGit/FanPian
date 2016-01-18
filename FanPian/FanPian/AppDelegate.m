@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "SMTMainViewController.h"
+#import "SMTContainerViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:[[SMTMainViewController alloc] init]];
+    UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:[[SMTContainerViewController alloc] init]];
     self.window.rootViewController = navCtrl;
     self.window.backgroundColor = [UIColor whiteColor];
     

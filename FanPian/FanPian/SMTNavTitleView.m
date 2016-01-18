@@ -17,7 +17,7 @@
 
 - (id)initWithFrame:(CGRect)frame items:(NSArray *)items clickBlock:(NavTitleItemClickBlcok)itemClcikBlock {
     if (self = [super initWithFrame:frame]) {
-        self.lastSelectIndex = 1;
+        self.lastSelectIndex = -1;
         self.items = items;
         self.itemClickBlock = itemClcikBlock;
         [self setupItems:items];
@@ -25,17 +25,27 @@
     return self;
 }
 
-- (void)itemClick:(UIButton *)itemButton {
+- (void)selectItem:(NSInteger)index {
+    UIButton *selectButton;
     for (UIButton *item in self.subviews) {
         [item setSelected:NO];
+        if (item.tag == index) {
+            selectButton = item;
+        }
     }
-    [itemButton setSelected:YES];
+    [selectButton setSelected:YES];
+}
+
+- (void)itemClick:(UIButton *)itemButton {
+    
+    [self selectItem:itemButton.tag];
+    
     if (self.lastSelectIndex != itemButton.tag) {
+        self.lastSelectIndex = itemButton.tag;
         if (self.itemClickBlock) {
             self.itemClickBlock(itemButton.tag);
         }
     }
-
 }
 
 - (void)setupItems:(NSArray *)items {

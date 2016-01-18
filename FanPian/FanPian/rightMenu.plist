@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>imageName</key>
+		<string>R_Message</string>
+		<key>titleContent</key>
+		<string>影评</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>R_recommed</string>
+		<key>titleContent</key>
+		<string>画报</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>R_like</string>
+		<key>titleContent</key>
+		<string>杂粮</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>R_download</string>
+		<key>titleContent</key>
+		<string>经典台词</string>
+	</dict>
+</array>
+</plist>

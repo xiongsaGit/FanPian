@@ -18,6 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.view.backgroundColor = UIColorFromRGB(0xefeff4);
+    self.tableView.backgroundColor = [UIColor clearColor];
+
+    
     self.mutArray = [NSMutableArray array];
     [self setupTableView];
 }

@@ -17,8 +17,8 @@
 
 
 @interface SMTContainerViewController ()<UIScrollViewDelegate>
-@property (nonatomic, strong) SMTMeViewController *MeVC;
-@property (nonatomic, strong) SMTFindViewController *FindVC;
+@property (nonatomic, strong) SMTMeViewController *meVC;
+@property (nonatomic, strong) SMTFindViewController *findVC;
 @property (nonatomic, strong) SMTMainViewController *mainVC;
 @property (nonatomic, strong) SMTScrollView *scrollView;
 @end
@@ -44,21 +44,20 @@
     
     [self.view addSubview:self.scrollView];
 
-    self.MeVC = [[SMTMeViewController alloc] init];
-    self.MeVC.title = @"我的";
+    self.meVC = [[SMTMeViewController alloc] init];
+    self.meVC.title = @"我的";
     
     self.mainVC = [[SMTMainViewController alloc] init];
     
     self.mainVC.title = @"推荐";
     
-    self.FindVC = [[SMTFindViewController alloc] init];
+    self.findVC = [[SMTFindViewController alloc] init];
     
-    self.FindVC.title = @"发现";
+    self.findVC.title = @"发现";
     
-    _scrollView.viewsArray = [NSArray arrayWithObjects:self.MeVC.view,self.mainVC.view,self.FindVC.view, nil];
+    _scrollView.viewsArray = [NSArray arrayWithObjects:self.meVC.view,self.mainVC.view,self.findVC.view, nil];
     _scrollView.contentSize = CGSizeMake(SCREEN_WIDTH*self.scrollView.viewsArray.count, SCREEN_HEIGHT);
     
-//    [_scrollView setContentOffset:CGPointMake(SCREEN_WIDTH, PHONE_NAVIGATIONBAR_IOS7_HEIGHT) animated:YES];
     [self clickItemWithIndex:1];
 }
 

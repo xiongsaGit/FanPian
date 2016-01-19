@@ -1,26 +1,25 @@
 //
-//  SMTSettingViewController.m
+//  SMTFocusViewController.m
 //  FanPian
 //
-//  Created by sa.xiong on 16/1/14.
+//  Created by sa.xiong on 16/1/19.
 //  Copyright © 2016年 sa.xiong. All rights reserved.
 //
 
-#import "SMTSettingViewController.h"
+#import "SMTFocusViewController.h"
 
-@interface SMTSettingViewController ()
+@interface SMTFocusViewController ()
 
 @end
 
-@implementation SMTSettingViewController
+@implementation SMTFocusViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
-
+    
+    self.title = @"我关注的影单";
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

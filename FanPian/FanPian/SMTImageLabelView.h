@@ -17,6 +17,9 @@ typedef NS_ENUM(NSInteger,ImageLabelType) {
 typedef void(^ImageLabelViewBlock)();
 
 @interface SMTImageLabelView : UIView
+@property (nonatomic, copy) ImageLabelViewBlock clickBlock;
+
+- (id)initWithFrame:(CGRect)frame type:(ImageLabelType)type;
 
 - (id)initWithFrame:(CGRect)frame type:(ImageLabelType)type block:(ImageLabelViewBlock)block;
 

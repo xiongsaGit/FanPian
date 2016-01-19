@@ -35,16 +35,15 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:self.cellIdentifier];
-        UIImageView *separatorLine = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, cell.frame.size.height - 1.0f, cell.frame.size.width, 1.0f)];
-        separatorLine.image = [[UIImage imageNamed:@"line"] stretchableImageWithLeftCapWidth:1 topCapHeight:0];
+        UILabel *separatorLine = [[UILabel alloc] initWithFrame:CGRectMake(55.0f, cell.frame.size.height - 1.0f, cell.frame.size.width-55, 1.0f)];
+        separatorLine.backgroundColor = UIColorFromRGB(0xf3f3f3);
         separatorLine.tag = 4;
-        
         [cell.contentView addSubview:separatorLine];
-        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     // Setup default cell setttings.
-    UIImageView *separatorLine = (UIImageView *)[cell viewWithTag:4];
+    UILabel *separatorLine = (UILabel *)[cell viewWithTag:4];
     if (indexPath.row == self.items.count-1) {
         separatorLine.hidden = YES;
     }else

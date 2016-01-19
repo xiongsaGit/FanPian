@@ -1,26 +1,25 @@
 //
-//  SMTSettingViewController.m
+//  SMTWantViewController.m
 //  FanPian
 //
-//  Created by sa.xiong on 16/1/14.
+//  Created by sa.xiong on 16/1/19.
 //  Copyright © 2016年 sa.xiong. All rights reserved.
 //
 
-#import "SMTSettingViewController.h"
+#import "SMTWantViewController.h"
 
-@interface SMTSettingViewController ()
+@interface SMTWantViewController ()
 
 @end
 
-@implementation SMTSettingViewController
+@implementation SMTWantViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+    self.title = @"想看";
 
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

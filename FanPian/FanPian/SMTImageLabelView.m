@@ -8,28 +8,38 @@
 
 #import "SMTImageLabelView.h"
 
+
 @interface SMTImageLabelView()<UIGestureRecognizerDelegate>
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UILabel *label;
 @property (nonatomic, assign) ImageLabelType type;
-@property (nonatomic, copy) ImageLabelViewBlock clickBlock;
 
 @end
 
 @implementation SMTImageLabelView
 
+- (id)initWithFrame:(CGRect)frame type:(ImageLabelType)type {
+    if (self = [super initWithFrame:frame]) {
+        [self baseSetting];
+        self.type = type;
+
+    }
+    return self;
+}
+
+- (void)baseSetting {
+    [self addSubview:self.imageView];
+    [self addSubview:self.label];
+    
+    UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+    [self addGestureRecognizer:tapGes];
+}
+
 - (id)initWithFrame:(CGRect)frame type:(ImageLabelType)type block:(ImageLabelViewBlock)block {
     if (self = [super initWithFrame:frame]) {
-        [self addSubview:self.imageView];
-        [self addSubview:self.label];
+        [self baseSetting];
         self.type = type;
         self.clickBlock = block;
-        
-        UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
-        [self addGestureRecognizer:tapGes];
-        
-        self.backgroundColor = [UIColor greenColor];
-        
     }
     return self;
 }
@@ -53,15 +63,43 @@
 
 - (void)configureWithType:(ImageLabelType)type
 {
+    CGFloat SpaceX = 5;
+
+    CGSize titileSize = [self.label.text sizeWithAttributes:@{NSFontAttributeName:self.label.font}];
+    
     if (type == ImageLabelTypeImageLeft) {
         self.imageView.centerY = self.centerY;
 
-        self.label.frame = CGRectMake(CGRectGetMaxX(self.imageView.frame)+10, 0, CGRectGetWidth(self.frame)-CGRectGetMaxX(self.imageView.frame)-10, CGRectGetHeight(self.frame));
+        CGFloat originX = 0;
+        if (CGRectGetWidth(self.imageView.frame)+titileSize.width+SpaceX<CGRectGetWidth(self.frame)) {
+            originX = (CGRectGetWidth(self.frame)-CGRectGetWidth(self.imageView.frame)-titileSize.width-SpaceX)/2;
+        }
+        
+        CGRect imageRect = self.imageView.frame;
+        imageRect.origin.x = originX;
+        self.imageView.frame = imageRect;
+        
+        CGFloat actualHeight = CGRectGetHeight(self.frame)-titileSize.height>0?titileSize.height:CGRectGetHeight(self.frame);
+        
+        self.label.frame = CGRectMake(CGRectGetMaxX(self.imageView.frame)+SpaceX, (CGRectGetHeight(self.frame)-actualHeight)/2, titileSize.width, actualHeight);
+        
+
     }else {
-        self.imageView.centerX = self.centerX;
-        self.label.frame = CGRectMake(0, CGRectGetMaxY(self.imageView.frame)+10, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame)-CGRectGetMaxY(self.imageView.frame)-10);
+       
+        CGFloat originY = 0;
+        if (CGRectGetHeight(self.imageView.frame)+titileSize.height+SpaceX<CGRectGetHeight(self.frame)) {
+            originY = (CGRectGetHeight(self.frame)-CGRectGetHeight(self.imageView.frame)-titileSize.height-SpaceX)/2;
+        }
+        
+        CGRect imageRect = self.imageView.frame;
+        imageRect.origin = CGPointMake((CGRectGetWidth(self.frame)-CGRectGetWidth(self.imageView.frame))/2, originY);
+        self.imageView.frame = imageRect;
+  
+        self.label.frame = CGRectMake(0, CGRectGetMaxY(self.imageView.frame)+SpaceX, CGRectGetWidth(self.frame),titileSize.height);
     }
 }
+
+
 
 - (UIImageView *)imageView {
     if (!_imageView) {
@@ -76,6 +114,7 @@
         _label = [[UILabel alloc] init];
         _label.adjustsFontSizeToFitWidth = YES;
         _label.font = [UIFont systemFontOfSize:15];
+        _label.textAlignment = NSTextAlignmentCenter;
     }
     return _label;
 }

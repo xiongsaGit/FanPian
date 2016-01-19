@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		331259211C4DEB5600F14A50 /* SMTFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 331259201C4DEB5600F14A50 /* SMTFooter.m */; };
+		331259241C4E0BBA00F14A50 /* SMTFocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 331259231C4E0BBA00F14A50 /* SMTFocusViewController.m */; };
+		331259261C4E1CF600F14A50 /* rightHeaderList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 331259251C4E1CF600F14A50 /* rightHeaderList.plist */; };
+		331259291C4E265300F14A50 /* SMTShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 331259281C4E265300F14A50 /* SMTShowViewController.m */; };
+		3312592E1C4E2DDC00F14A50 /* SMTWantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3312592D1C4E2DDC00F14A50 /* SMTWantViewController.m */; };
+		331259311C4E2E7700F14A50 /* SMTHadWatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 331259301C4E2E7700F14A50 /* SMTHadWatchViewController.m */; };
+		331259351C4E350800F14A50 /* SMTBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 331259341C4E350800F14A50 /* SMTBaseRequest.m */; };
+		331259391C4E359100F14A50 /* SMTBeOnShowRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 331259381C4E359100F14A50 /* SMTBeOnShowRequest.m */; };
+		3312593D1C4E4F3000F14A50 /* SMTBeOnShowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3312593C1C4E4F3000F14A50 /* SMTBeOnShowModel.m */; };
+		331259411C4E4FCF00F14A50 /* SMTBeOnShowListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 331259401C4E4FCF00F14A50 /* SMTBeOnShowListModel.m */; };
+		331259441C4E507700F14A50 /* SMTBeOnShowListMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 331259431C4E507700F14A50 /* SMTBeOnShowListMovieModel.m */; };
 		332347051C489DB100B05D2B /* SMTContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 332347041C489DB100B05D2B /* SMTContainerViewController.m */; };
 		332347081C48A20200B05D2B /* SMTMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 332347071C48A20200B05D2B /* SMTMeViewController.m */; };
 		3323470B1C48A21D00B05D2B /* SMTFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323470A1C48A21D00B05D2B /* SMTFindViewController.m */; };
@@ -52,6 +63,29 @@
 
 /* Begin PBXFileReference section */
 		192E90DFC16EF2F416CDB37F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		3312591F1C4DEB5600F14A50 /* SMTFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTFooter.h; sourceTree = "<group>"; };
+		331259201C4DEB5600F14A50 /* SMTFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTFooter.m; sourceTree = "<group>"; };
+		331259221C4E0BBA00F14A50 /* SMTFocusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTFocusViewController.h; sourceTree = "<group>"; };
+		331259231C4E0BBA00F14A50 /* SMTFocusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTFocusViewController.m; sourceTree = "<group>"; };
+		331259251C4E1CF600F14A50 /* rightHeaderList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rightHeaderList.plist; sourceTree = "<group>"; };
+		331259271C4E265300F14A50 /* SMTShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTShowViewController.h; sourceTree = "<group>"; };
+		331259281C4E265300F14A50 /* SMTShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTShowViewController.m; sourceTree = "<group>"; };
+		3312592C1C4E2DDC00F14A50 /* SMTWantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTWantViewController.h; sourceTree = "<group>"; };
+		3312592D1C4E2DDC00F14A50 /* SMTWantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTWantViewController.m; sourceTree = "<group>"; };
+		3312592F1C4E2E7700F14A50 /* SMTHadWatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTHadWatchViewController.h; sourceTree = "<group>"; };
+		331259301C4E2E7700F14A50 /* SMTHadWatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTHadWatchViewController.m; sourceTree = "<group>"; };
+		331259321C4E34B700F14A50 /* ConstantUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstantUtil.h; sourceTree = "<group>"; };
+		331259331C4E350800F14A50 /* SMTBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTBaseRequest.h; sourceTree = "<group>"; };
+		331259341C4E350800F14A50 /* SMTBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTBaseRequest.m; sourceTree = "<group>"; };
+		331259361C4E351E00F14A50 /* UrlUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UrlUtil.h; sourceTree = "<group>"; };
+		331259371C4E359100F14A50 /* SMTBeOnShowRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTBeOnShowRequest.h; sourceTree = "<group>"; };
+		331259381C4E359100F14A50 /* SMTBeOnShowRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTBeOnShowRequest.m; sourceTree = "<group>"; };
+		3312593B1C4E4F3000F14A50 /* SMTBeOnShowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTBeOnShowModel.h; sourceTree = "<group>"; };
+		3312593C1C4E4F3000F14A50 /* SMTBeOnShowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTBeOnShowModel.m; sourceTree = "<group>"; };
+		3312593F1C4E4FCF00F14A50 /* SMTBeOnShowListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTBeOnShowListModel.h; sourceTree = "<group>"; };
+		331259401C4E4FCF00F14A50 /* SMTBeOnShowListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTBeOnShowListModel.m; sourceTree = "<group>"; };
+		331259421C4E507700F14A50 /* SMTBeOnShowListMovieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTBeOnShowListMovieModel.h; sourceTree = "<group>"; };
+		331259431C4E507700F14A50 /* SMTBeOnShowListMovieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTBeOnShowListMovieModel.m; sourceTree = "<group>"; };
 		332347031C489DB100B05D2B /* SMTContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTContainerViewController.h; sourceTree = "<group>"; };
 		332347041C489DB100B05D2B /* SMTContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTContainerViewController.m; sourceTree = "<group>"; };
 		332347061C48A20200B05D2B /* SMTMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMeViewController.h; sourceTree = "<group>"; };
@@ -136,6 +170,54 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3312592A1C4E266600F14A50 /* find */ = {
+			isa = PBXGroup;
+			children = (
+				332347091C48A21D00B05D2B /* SMTFindViewController.h */,
+				3323470A1C48A21D00B05D2B /* SMTFindViewController.m */,
+				331259271C4E265300F14A50 /* SMTShowViewController.h */,
+				331259281C4E265300F14A50 /* SMTShowViewController.m */,
+			);
+			name = find;
+			sourceTree = "<group>";
+		};
+		3312592B1C4E2D5100F14A50 /* me */ = {
+			isa = PBXGroup;
+			children = (
+				332347061C48A20200B05D2B /* SMTMeViewController.h */,
+				332347071C48A20200B05D2B /* SMTMeViewController.m */,
+				3312592C1C4E2DDC00F14A50 /* SMTWantViewController.h */,
+				3312592D1C4E2DDC00F14A50 /* SMTWantViewController.m */,
+				3312592F1C4E2E7700F14A50 /* SMTHadWatchViewController.h */,
+				331259301C4E2E7700F14A50 /* SMTHadWatchViewController.m */,
+			);
+			name = me;
+			sourceTree = "<group>";
+		};
+		3312593A1C4E4F1400F14A50 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				331259331C4E350800F14A50 /* SMTBaseRequest.h */,
+				331259341C4E350800F14A50 /* SMTBaseRequest.m */,
+				331259371C4E359100F14A50 /* SMTBeOnShowRequest.h */,
+				331259381C4E359100F14A50 /* SMTBeOnShowRequest.m */,
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
+		3312593E1C4E4F3400F14A50 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3312593B1C4E4F3000F14A50 /* SMTBeOnShowModel.h */,
+				3312593C1C4E4F3000F14A50 /* SMTBeOnShowModel.m */,
+				3312593F1C4E4FCF00F14A50 /* SMTBeOnShowListModel.h */,
+				331259401C4E4FCF00F14A50 /* SMTBeOnShowListModel.m */,
+				331259421C4E507700F14A50 /* SMTBeOnShowListMovieModel.h */,
+				331259431C4E507700F14A50 /* SMTBeOnShowListMovieModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		3323470F1C4B5D6D00B05D2B /* MenuVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,12 +236,12 @@
 				332347041C489DB100B05D2B /* SMTContainerViewController.m */,
 				33EFB5631C4793BD0033912B /* SMTMainViewController.h */,
 				33EFB5641C4793BD0033912B /* SMTMainViewController.m */,
-				332347061C48A20200B05D2B /* SMTMeViewController.h */,
-				332347071C48A20200B05D2B /* SMTMeViewController.m */,
-				332347091C48A21D00B05D2B /* SMTFindViewController.h */,
-				3323470A1C48A21D00B05D2B /* SMTFindViewController.m */,
+				3312592B1C4E2D5100F14A50 /* me */,
+				3312592A1C4E266600F14A50 /* find */,
 				33EFB5601C4793B40033912B /* SMTListViewController.h */,
 				33EFB5611C4793B40033912B /* SMTListViewController.m */,
+				331259221C4E0BBA00F14A50 /* SMTFocusViewController.h */,
+				331259231C4E0BBA00F14A50 /* SMTFocusViewController.m */,
 			);
 			name = MainPage;
 			sourceTree = "<group>";
@@ -188,6 +270,8 @@
 				332347291C4C983D00B05D2B /* SMTCell.m */,
 				3323472B1C4CC6A700B05D2B /* SMTImageLabelView.h */,
 				3323472C1C4CC6A700B05D2B /* SMTImageLabelView.m */,
+				3312591F1C4DEB5600F14A50 /* SMTFooter.h */,
+				331259201C4DEB5600F14A50 /* SMTFooter.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -221,6 +305,8 @@
 				33F304E01C448BAE0020838A /* AppDelegate.m */,
 				33EFB55F1C47935F0033912B /* VC */,
 				33EFB56D1C479AF20033912B /* View */,
+				3312593A1C4E4F1400F14A50 /* Request */,
+				3312593E1C4E4F3400F14A50 /* Model */,
 				33F304E21C448BAE0020838A /* ViewController.h */,
 				33F304E31C448BAE0020838A /* ViewController.m */,
 				33F304E51C448BAE0020838A /* Main.storyboard */,
@@ -231,6 +317,9 @@
 				33EFB56C1C4794680033912B /* CommonUtils.pch */,
 				332347221C4C8C6600B05D2B /* leftMenu.plist */,
 				332347261C4C923400B05D2B /* rightMenu.plist */,
+				331259251C4E1CF600F14A50 /* rightHeaderList.plist */,
+				331259321C4E34B700F14A50 /* ConstantUtil.h */,
+				331259361C4E351E00F14A50 /* UrlUtil.h */,
 			);
 			path = FanPian;
 			sourceTree = "<group>";
@@ -375,6 +464,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				331259261C4E1CF600F14A50 /* rightHeaderList.plist in Resources */,
 				332347231C4C8C6600B05D2B /* leftMenu.plist in Resources */,
 				332347271C4C923400B05D2B /* rightMenu.plist in Resources */,
 				33F304EC1C448BAE0020838A /* LaunchScreen.storyboard in Resources */,
@@ -437,20 +527,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				331259211C4DEB5600F14A50 /* SMTFooter.m in Sources */,
 				33A7A8541C4D005E003CD805 /* UIView+Additions.m in Sources */,
 				33EFB5681C4793DD0033912B /* SMTSettingViewController.m in Sources */,
 				332347051C489DB100B05D2B /* SMTContainerViewController.m in Sources */,
 				33EFB56B1C4793E50033912B /* SMTSearchViewController.m in Sources */,
+				331259411C4E4FCF00F14A50 /* SMTBeOnShowListModel.m in Sources */,
+				331259441C4E507700F14A50 /* SMTBeOnShowListMovieModel.m in Sources */,
 				3323470E1C4B416F00B05D2B /* SMTScrollView.m in Sources */,
+				331259241C4E0BBA00F14A50 /* SMTFocusViewController.m in Sources */,
 				33EFB5701C479B0B0033912B /* SMTNavTitleView.m in Sources */,
 				33F304E41C448BAE0020838A /* ViewController.m in Sources */,
+				331259351C4E350800F14A50 /* SMTBaseRequest.m in Sources */,
 				332347161C4B629400B05D2B /* RHCArrayDataSource.m in Sources */,
 				33EFB5621C4793B40033912B /* SMTListViewController.m in Sources */,
+				3312592E1C4E2DDC00F14A50 /* SMTWantViewController.m in Sources */,
 				332347081C48A20200B05D2B /* SMTMeViewController.m in Sources */,
 				33F304E11C448BAE0020838A /* AppDelegate.m in Sources */,
+				3312593D1C4E4F3000F14A50 /* SMTBeOnShowModel.m in Sources */,
+				331259391C4E359100F14A50 /* SMTBeOnShowRequest.m in Sources */,
+				331259311C4E2E7700F14A50 /* SMTHadWatchViewController.m in Sources */,
 				33F304DE1C448BAE0020838A /* main.m in Sources */,
 				3323472D1C4CC6A700B05D2B /* SMTImageLabelView.m in Sources */,
 				3323470B1C48A21D00B05D2B /* SMTFindViewController.m in Sources */,
+				331259291C4E265300F14A50 /* SMTShowViewController.m in Sources */,
 				3323472A1C4C983D00B05D2B /* SMTCell.m in Sources */,
 				33EFB5651C4793BD0033912B /* SMTMainViewController.m in Sources */,
 			);

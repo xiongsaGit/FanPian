@@ -7,11 +7,14 @@
 //
 
 #import "SMTMeViewController.h"
+#import "SMTFocusViewController.h"
+#import "SMTWantViewController.h"
+#import "SMTHadWatchViewController.h"
 #import "SMTImageLabelView.h"
+#import "SMTFooter.h"
 
-
-@interface SMTMeViewController ()
-
+@interface SMTMeViewController ()<UITableViewDelegate>
+@property (nonatomic, strong) SMTFooter *subFooter;
 @end
 
 @implementation SMTMeViewController
@@ -19,9 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = UIColorFromRGB(0xefeff4);
     
-   
+    self.tableView.backgroundColor = [UIColor clearColor];
    
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"leftMenu" ofType:@"plist"];
     
@@ -32,32 +35,88 @@
     
     
     [self addTableViewHeader];
+    [self addTableViewFooter];
+    [self.subFooter configureTitleLabel:@"关注的影单"];
+    [self.subFooter configureDetailLabel:@"0"];
 }
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
 
 - (void)addTableViewHeader {
     
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];
-    headerView.backgroundColor = [UIColor cyanColor];
-
-    SMTImageLabelView *liked = [[SMTImageLabelView alloc] initWithFrame:CGRectMake(CGRectGetWidth(headerView.frame)/4, 0, CGRectGetWidth(headerView.frame)/4, CGRectGetHeight(headerView.frame)/2) type:ImageLabelTypeImageLeft block:^{
+    
+    UIView *subHeader = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+    subHeader.backgroundColor = UIColorFromRGB(0xffffff);
+    
+    __weak typeof(self)weakSelf = self;
+    SMTImageLabelView *liked = [[SMTImageLabelView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(headerView.frame)/2, CGRectGetHeight(headerView.frame)) type:ImageLabelTypeImageLeft block:^{
+        
+        SMTWantViewController *viewCtrl = [[SMTWantViewController alloc] init];
+        [[weakSelf viewController].navigationController pushViewController:viewCtrl animated:YES];
         
     }];
     [liked configureImageName:@"liked" labelTitle:@"想看"];
-    liked.centerY = headerView.centerY;
+    [subHeader addSubview:liked];
     
-    
-    SMTImageLabelView *want = [[SMTImageLabelView alloc] initWithFrame:CGRectMake( CGRectGetMaxX(liked.frame), 0, CGRectGetWidth(headerView.frame)/2, CGRectGetHeight(headerView.frame)) type:ImageLabelTypeImageLeft block:^{
+    SMTImageLabelView *want = [[SMTImageLabelView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(liked.frame), 0, CGRectGetWidth(headerView.frame)/2, CGRectGetHeight(headerView.frame)) type:ImageLabelTypeImageLeft block:^{
+        SMTHadWatchViewController *viewCtrl = [[SMTHadWatchViewController alloc] init];
+        [[weakSelf viewController].navigationController pushViewController:viewCtrl animated:YES];
         
     }];
-    want.backgroundColor = [UIColor blueColor];
     [want configureImageName:@"love_selected" labelTitle:@"看过"];
+    [subHeader addSubview:want];
     
-    [headerView addSubview:liked];
-    [headerView addSubview:want];
+    UILabel *sep = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetWidth(subHeader.frame)/2, 0, 1, CGRectGetHeight(subHeader.frame))];
+    sep.backgroundColor = UIColorFromRGB(0xf3f3f3);
+    [subHeader addSubview:sep];
+    
+    UILabel *horizonSep = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(subHeader.frame)-1, CGRectGetWidth(subHeader.frame), 1)];
+    horizonSep.backgroundColor = UIColorFromRGB(0xf3f3f3);
+    [subHeader addSubview:horizonSep];
+    [headerView addSubview:subHeader];
     self.tableView.tableHeaderView = headerView;
 
-    self.tableView.sectionHeaderHeight = 20;
 }
+
+- (void)addTableViewFooter {
+    
+    UIView *footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+    self.subFooter.frame = CGRectMake(0, 10, SCREEN_WIDTH, 40);
+    footer.backgroundColor = [UIColor clearColor];
+    [footer addSubview:self.subFooter];
+    self.tableView.tableFooterView = footer;
+}
+
+- (SMTFooter *)subFooter {
+    if (!_subFooter) {
+        __weak typeof(self)weakSelf = self;
+        _subFooter = [[SMTFooter alloc] initWithClickBlock:^{
+            SMTFocusViewController *viewCtrl = [[SMTFocusViewController alloc] init];
+            [[weakSelf viewController].navigationController pushViewController:viewCtrl animated:YES];
+        }];
+        _subFooter.backgroundColor = UIColorFromRGB(0xffffff);
+
+    }
+    return _subFooter;
+}
+
+- (UIViewController*)viewController {
+    for (UIView* next = [self.view superview]; next; next = next.superview) {
+        UIResponder* nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController*)nextResponder;
+        }
+    }
+    return nil;
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

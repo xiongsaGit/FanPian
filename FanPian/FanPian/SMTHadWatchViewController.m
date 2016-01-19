@@ -1,26 +1,25 @@
 //
-//  SMTSettingViewController.m
+//  SMTHadWatchViewController.m
 //  FanPian
 //
-//  Created by sa.xiong on 16/1/14.
+//  Created by sa.xiong on 16/1/19.
 //  Copyright © 2016年 sa.xiong. All rights reserved.
 //
 
-#import "SMTSettingViewController.h"
+#import "SMTHadWatchViewController.h"
 
-@interface SMTSettingViewController ()
+@interface SMTHadWatchViewController ()
 
 @end
 
-@implementation SMTSettingViewController
+@implementation SMTHadWatchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
-
+    self.title = @"看过";
+    
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -11,40 +11,14 @@
 #define CommonUtils_pch
 
 #import "UIView+Additions.h"
+#import "YTKRequest.h"
+#import "JSONModel.h"
+#import "MGJRequestManager.h"
+#import "SDWebImageManager.h"
+#import "UIImageView+WebCache.h"
 
-/*
- * 通过RGB创建UIColor
- */
-#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
-#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
-
-
-#define UIColorFromRGB(rgbValue) [UIColor \
-colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
-green:((float)((rgbValue & 0x00FF00) >> 8))/255.0 \
-blue:((float)(rgbValue & 0x0000FF))/255.0 \
-alpha:1.0]
-
-#define UIColorFromRGBA(rgbValue, alphaValue) [UIColor \
-colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
-green:((float)((rgbValue & 0x00FF00) >> 8))/255.0 \
-blue:((float)(rgbValue & 0x0000FF))/255.0 \
-alpha:alphaValue]
-
-
-/*
- *屏幕宽度
- */
-#define SCREEN_WIDTH ([[UIScreen mainScreen]bounds].size.width)
-
-/*
- *屏幕高度
- */
-#define SCREEN_HEIGHT ([[UIScreen mainScreen]bounds].size.height)
-
-#define PHONE_NAVIGATIONBAR_IOS7_HEIGHT 64.0f
-
-
+#import "ConstantUtil.h"
+#import "UrlUtil.h"
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

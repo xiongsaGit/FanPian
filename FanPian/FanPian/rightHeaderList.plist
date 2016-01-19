@@ -4,27 +4,39 @@
 <array>
 	<dict>
 		<key>imageName</key>
-		<string>R_Message</string>
+		<string>mv</string>
 		<key>titleContent</key>
-		<string>我的提醒</string>
+		<string>上映</string>
 	</dict>
 	<dict>
 		<key>imageName</key>
-		<string>R_recommed</string>
+		<string>record</string>
 		<key>titleContent</key>
-		<string>我赞过的</string>
+		<string>短片</string>
 	</dict>
 	<dict>
 		<key>imageName</key>
-		<string>R_like</string>
+		<string>starmovie</string>
 		<key>titleContent</key>
-		<string>我的沙龙</string>
+		<string>影单</string>
 	</dict>
 	<dict>
 		<key>imageName</key>
-		<string>R_download</string>
+		<string>trailer</string>
 		<key>titleContent</key>
-		<string>我的缓存</string>
+		<string>沙龙</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>xilieju</string>
+		<key>titleContent</key>
+		<string>影库</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>youth</string>
+		<key>titleContent</key>
+		<string>电影原声</string>
 	</dict>
 </array>
 </plist>

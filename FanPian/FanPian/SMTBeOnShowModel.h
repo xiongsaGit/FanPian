@@ -9,8 +9,12 @@
 #import "JSONModel.h"
 #import "SMTBeOnShowListModel.h"
 
+@protocol SMTBeOnShowModel <NSObject>
+
+@end
+
 @interface SMTBeOnShowModel : JSONModel
-@property (nonatomic, copy) NSString *fromhash;
-@property (nonatomic, strong) NSNumber *nextpage;
-@property (nonatomic, strong) NSArray <SMTBeOnShowListModel>*list;
+@property (nonatomic, copy) NSString <Optional>*formhash;
+@property (nonatomic, strong) NSNumber <Optional>*nextpage;
+@property (nonatomic, strong) NSArray <Optional,SMTBeOnShowListModel>*list;
 @end

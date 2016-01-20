@@ -11,6 +11,9 @@
 
 #define AppVersion @"3.13"
 
+#define kFontOfSize(size) [UIFont systemFontOfSize:size]
+#define kBoldFontOfSize(size) [UIFont boldSystemFontOfSize:size]
+
 /*
  * 通过RGB创建UIColor
  */
@@ -31,6 +34,7 @@ blue:((float)(rgbValue & 0x0000FF))/255.0 \
 alpha:alphaValue]
 
 
+#define MIN_SCREEN_WIDTH 320
 /*
  *屏幕宽度
  */
@@ -42,6 +46,11 @@ alpha:alphaValue]
 #define SCREEN_HEIGHT ([[UIScreen mainScreen]bounds].size.height)
 
 #define PHONE_NAVIGATIONBAR_IOS7_HEIGHT 64.0f
+
+
+#define kEdge 10
+#define kLabelCommonHeight 20
+
 
 
 #endif /* ConstantUtil_h */

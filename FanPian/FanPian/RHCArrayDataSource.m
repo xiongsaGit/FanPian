@@ -49,7 +49,6 @@
     }else
         separatorLine.hidden = NO;
 
-   
     
     id item = [self itemAtIndexPath:indexPath];
     self.configureBlock(cell,item);

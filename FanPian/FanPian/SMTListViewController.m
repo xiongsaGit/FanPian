@@ -26,12 +26,21 @@
     [self setupTableView];
 }
 
+- (void)configureTableDataWithCell:(id)cell item:(id)item {
+   
+    UITableViewCell *resultCell = (UITableViewCell *)cell;
+    NSDictionary *dict = (NSDictionary *)item;
+    resultCell.textLabel.text = dict[@"titleContent"];
+    resultCell.imageView.image = [UIImage imageNamed:dict[@"imageName"]];
+    
+}
+
 - (void)setupTableView {
+    __weak typeof(self)weakSelf = self;
     self.configureCell = ^(id cell ,id item) {
-        UITableViewCell *resultCell = (UITableViewCell *)cell;
-        NSDictionary *dict = (NSDictionary *)item;
-        resultCell.textLabel.text = dict[@"titleContent"];
-        resultCell.imageView.image = [UIImage imageNamed:dict[@"imageName"]];
+      
+        [weakSelf configureTableDataWithCell:cell item:item];
+        
     };
     self.arrayDataSource = [[RHCArrayDataSource alloc] initWithItems:self.mutArray cellIdentifier:@"cellIdentifier" configureBlock:self.configureCell];
     self.tableView.dataSource = self.arrayDataSource;

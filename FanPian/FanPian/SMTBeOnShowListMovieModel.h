@@ -15,28 +15,28 @@
 
 @interface SMTBeOnShowListMovieModel : JSONModel
 
-@property (nonatomic, copy) NSString *casts;
-@property (nonatomic, copy) NSString *directors;
-@property (nonatomic, strong) NSNumber *height;
-@property (nonatomic, copy) NSString *image;
+@property (nonatomic, copy) NSString <Optional>*casts;
+@property (nonatomic, copy) NSString <Optional>*directors;
+@property (nonatomic, strong) NSNumber <Optional>*height;
+@property (nonatomic, copy) NSString <Optional>*image;
 
-@property (nonatomic, strong) NSNull *isonline;
-@property (nonatomic, copy) NSString *itemaka;
-@property (nonatomic, copy) NSString *itemcountries;
-@property (nonatomic, copy) NSString *itemgenres;
-@property (nonatomic, copy) NSString *itemratingaverage;
+@property (nonatomic, copy) NSString <Optional>*isonline;
+@property (nonatomic, copy) NSString <Optional>*itemaka;
+@property (nonatomic, copy) NSString <Optional>*itemcountries;
+@property (nonatomic, copy) NSString <Optional>*itemgenres;
+@property (nonatomic, copy) NSString <Optional>*itemratingaverage;
 
-@property (nonatomic, copy) NSString *itemratingcount;
-@property (nonatomic, copy) NSString *itemruntime;
-@property (nonatomic, copy) NSString *itemsummary;
-@property (nonatomic, strong) NSNumber *itemyear;
-@property (nonatomic, copy) NSString *movieshowflag;
-@property (nonatomic, copy) NSString *movieshowurl;
-@property (nonatomic, strong) NSDictionary *original_title;
-@property (nonatomic, copy) NSString *pubdate;
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, strong) NSNull *trailerflag;
-@property (nonatomic, copy) NSString *trailerurl;
-@property (nonatomic, strong) NSNumber *width;
+@property (nonatomic, copy) NSString <Optional>*itemratingcount;
+@property (nonatomic, copy) NSString <Optional>*itemruntime;
+@property (nonatomic, copy) NSString <Optional>*itemsummary;
+@property (nonatomic, strong) NSNumber <Optional>*itemyear;
+@property (nonatomic, copy) NSString <Optional>*movieshowflag;
+@property (nonatomic, copy) NSString <Optional>*movieshowurl;
+@property (nonatomic, copy) NSString <Optional>*original_title;
+@property (nonatomic, copy) NSString <Optional>*pubdate;
+@property (nonatomic, copy) NSString <Optional>*title;
+@property (nonatomic, copy) NSString <Optional>*trailerflag;
+@property (nonatomic, copy) NSString <Optional>*trailerurl;
+@property (nonatomic, strong) NSNumber <Optional>*width;
 
 @end

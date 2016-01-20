@@ -16,4 +16,7 @@
 @property (nonatomic, strong) RHCArrayDataSource *arrayDataSource;
 @property (nonatomic, strong) NSMutableArray *mutArray;
 
+// 设置tableview数据
+- (void)configureTableDataWithCell:(id)cell item:(id)item;
+
 @end

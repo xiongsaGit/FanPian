@@ -15,19 +15,19 @@
 
 
 @interface SMTBeOnShowListModel : JSONModel
-@property (nonatomic, copy) NSString *author;
-@property (nonatomic, copy) NSString *authorid;
-@property (nonatomic, copy) NSString *collections;
-@property (nonatomic, copy) NSString *dateline;
-@property (nonatomic, copy) NSString *fid;
-@property (nonatomic, strong) NSNumber *isliked;
-@property (nonatomic, copy) NSString *liketimes;
-@property (nonatomic, copy) NSString *message;
-@property (nonatomic, strong) SMTBeOnShowListModel *moviedata;
-@property (nonatomic, copy) NSString *replies;
-@property (nonatomic, copy) NSString *special;
-@property (nonatomic, strong) NSNull *specialname;
-@property (nonatomic, copy) NSString *subject;
-@property (nonatomic, copy) NSString *tid;
+@property (nonatomic, copy) NSString <Optional>*author;
+@property (nonatomic, copy) NSString <Optional>*authorid;
+@property (nonatomic, copy) NSString <Optional>*collections;
+@property (nonatomic, copy) NSString <Optional>*dateline;
+@property (nonatomic, copy) NSString <Optional>*fid;
+@property (nonatomic, strong) NSNumber <Optional>*isliked;
+@property (nonatomic, copy) NSString <Optional>*liketimes;
+@property (nonatomic, copy) NSString <Optional>*message;
+@property (nonatomic, strong) SMTBeOnShowListMovieModel *moviedata;
+@property (nonatomic, copy) NSString    <Optional>*replies;
+@property (nonatomic, copy) NSString <Optional>*special;
+@property (nonatomic, strong) NSNull <Optional>*specialname;
+@property (nonatomic, copy) NSString <Optional>*subject;
+@property (nonatomic, copy) NSString <Optional>*tid;
 
 @end

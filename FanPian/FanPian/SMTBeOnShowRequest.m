@@ -27,6 +27,10 @@
     return self;
 }
 
+- (NSString *)baseUrl {
+    return [NSString stringWithFormat:@"%@%@",kBaseURL,@"/forum.php"];
+}
+
 - (YTKRequestMethod)requestMethod
 {
     return YTKRequestMethodGet;

@@ -41,8 +41,8 @@
     UILabel     *_titleView;
     UIControl   *_overlayView;
     
-    id<UIPopoverListViewDataSource> _datasource;
-    id<UIPopoverListViewDelegate>   _delegate;
+//    id<UIPopoverListViewDataSource> _datasource;
+//    id<UIPopoverListViewDelegate>   _delegate;
     
 }
 
@@ -50,7 +50,7 @@
 @property (nonatomic, assign) id<UIPopoverListViewDelegate>   delegate;
 
 @property (nonatomic, retain) UITableView *listView;
-
+@property (nonatomic, strong) NSArray *listDataSource;
 - (void)setTitle:(NSString *)title;
 
 - (void)show;

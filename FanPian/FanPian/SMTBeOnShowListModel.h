@@ -26,7 +26,7 @@
 @property (nonatomic, strong) SMTBeOnShowListMovieModel *moviedata;
 @property (nonatomic, copy) NSString    <Optional>*replies;
 @property (nonatomic, copy) NSString <Optional>*special;
-@property (nonatomic, strong) NSNull <Optional>*specialname;
+@property (nonatomic, copy) NSString <Optional>*specialname;
 @property (nonatomic, copy) NSString <Optional>*subject;
 @property (nonatomic, copy) NSString <Optional>*tid;
 

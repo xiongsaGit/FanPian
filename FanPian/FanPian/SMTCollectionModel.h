@@ -7,7 +7,16 @@
 //
 
 #import "JSONModel.h"
+#import "SMTCollectionListModel.h"
+
+@protocol SMTCollectionModel <NSObject>
+
+@end
 
 @interface SMTCollectionModel : JSONModel
+
+@property (nonatomic, copy) NSString <Optional>*formhash;
+@property (nonatomic, strong) NSNumber <Optional>*nextpage;
+@property (nonatomic, strong) NSArray <Optional,SMTCollectionListModel>*list;
 
 @end

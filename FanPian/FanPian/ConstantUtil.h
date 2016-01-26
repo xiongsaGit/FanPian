@@ -52,5 +52,8 @@ alpha:alphaValue]
 #define kLabelCommonHeight 20
 
 
-
+#define kColor_Title    UIColorFromRGB(0x2a2a2a)
+#define kColor_Detail   UIColorFromRGB(0x5d5d5d)
+#define kColor_Detail_Light  UIColorFromRGB(0x808080)
+#define kColor_Red  UIColorFromRGB(0xee4c2a)
 #endif /* ConstantUtil_h */

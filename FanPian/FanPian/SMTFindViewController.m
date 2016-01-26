@@ -10,7 +10,9 @@
 #import "SMTImageLabelView.h"
 
 #import "SMTShowViewController.h"
-
+#import "SMTShortMovieViewController.h"
+#import "SMTCollectionViewController.h"
+#import "SMTSalonViewController.h"
 
 @interface SMTFindViewController ()<UITableViewDelegate>
 
@@ -31,8 +33,6 @@
     [self addTableViewHeader];
 }
 
-
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
 }
@@ -41,12 +41,33 @@
     switch (viewTag) {
         case 0:
         {
-            SMTShowViewController *viewCtrl = [[SMTShowViewController alloc] init];
+            SMTShowViewController *viewCtrl = [[SMTShowViewController alloc] initWithType:MovieTypeFromDefault title:@"上映" ctid:nil];
 
             [[self viewController].navigationController pushViewController:viewCtrl animated:YES];
         }
             break;
+        case 1:
+        {
+            SMTShortMovieViewController *viewCtrl = [[SMTShortMovieViewController alloc]init];
             
+            [[self viewController].navigationController pushViewController:viewCtrl animated:YES];
+        }
+            break;
+        case 2:
+        {
+            SMTCollectionViewController *viewCtrl = [[SMTCollectionViewController alloc] init];
+            
+            [[self viewController].navigationController pushViewController:viewCtrl animated:YES];
+        }
+            break;
+        case 3:
+        {
+            SMTSalonViewController *viewCtrl = [[SMTSalonViewController alloc] init];
+            
+            [[self viewController].navigationController pushViewController:viewCtrl animated:YES];
+        }
+            break;
+
         default:
             break;
     }

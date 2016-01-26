@@ -25,4 +25,6 @@ typedef void(^ImageLabelViewBlock)();
 
 - (void)configureImageName:(NSString *)imageName labelTitle:(NSString *)title;
 
+- (void)configureWitState:(BOOL)isChecked;
+
 @end

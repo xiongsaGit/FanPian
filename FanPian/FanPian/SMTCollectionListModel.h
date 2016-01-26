@@ -8,6 +8,18 @@
 
 #import "JSONModel.h"
 
-@interface SMTCollectionListModel : JSONModel
+@protocol SMTCollectionListModel <NSObject>
 
 @end
+
+@interface SMTCollectionListModel : JSONModel
+
+@property (nonatomic, copy) NSString <Optional>*ctid;
+@property (nonatomic, copy) NSString <Optional>*desc;
+@property (nonatomic, copy) NSString <Optional>*image;
+@property (nonatomic, copy) NSString <Optional>*name;
+@property (nonatomic, copy) NSString <Optional>*threadnum;
+
+@end
+
+

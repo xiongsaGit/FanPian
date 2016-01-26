@@ -54,8 +54,8 @@
         [btn setFrame:CGRectMake(i*(CGRectGetWidth(self.frame)/items.count), 0, (CGRectGetWidth(self.frame)/items.count), CGRectGetHeight(self.frame))];
         [btn setTitle:items[i] forState:UIControlStateNormal];
         btn.tag = i;
-        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+        [btn setTitleColor:kColor_Title forState:UIControlStateNormal];
+        [btn setTitleColor:kColor_Red forState:UIControlStateSelected];
         [btn addTarget:self action:@selector(itemClick:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:btn];
     }

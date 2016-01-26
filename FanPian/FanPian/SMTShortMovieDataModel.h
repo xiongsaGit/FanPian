@@ -7,7 +7,8 @@
 //
 
 #import "JSONModel.h"
+#import "SMTShortMovieModel.h"
 
 @interface SMTShortMovieDataModel : JSONModel
-
+@property (nonatomic, strong) SMTShortMovieModel *data;
 @end

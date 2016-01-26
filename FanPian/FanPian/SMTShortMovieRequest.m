@@ -9,5 +9,34 @@
 #import "SMTShortMovieRequest.h"
 
 @implementation SMTShortMovieRequest
+{
+    NSNumber *_page;
+}
+
+- (id)initWithPage:(NSNumber *)page
+{
+    self = [super init];
+    if (self) {
+        _page = page;
+    }
+    return self;
+}
+
+
+- (YTKRequestMethod)requestMethod
+{
+    return YTKRequestMethodGet;
+}
+
+- (id)requestArgument
+{
+    return @{
+             @"mod":@"threadvideo",
+             @"androidflag":@"1",
+             @"appfrom":@"ios",
+             @"iosversion":AppVersion,
+             @"page":[_page stringValue]
+             };
+}
 
 @end

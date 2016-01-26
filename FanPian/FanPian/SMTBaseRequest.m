@@ -12,7 +12,7 @@
 
 - (NSString *)baseUrl
 {
-    return kBaseURL;
+   return [NSString stringWithFormat:@"%@%@",kBaseURL,@"/forum.php"];
 }
 
 @end

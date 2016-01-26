@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^MovieImageViewClickBlock)();
+
 @interface SMTMovieImageView : UIImageView
 
+// 要有点击事件，需调用此方法
+- (id)initWithClickBlock:(MovieImageViewClickBlock)clickBlock;
+
+- (void)downLoadImageWithPath:(NSString *)path;
 @end

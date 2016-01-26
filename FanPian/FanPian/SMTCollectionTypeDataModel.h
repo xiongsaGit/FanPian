@@ -7,7 +7,8 @@
 //
 
 #import "JSONModel.h"
+#import "SMTCollectionTypeModel.h"
 
 @interface SMTCollectionTypeDataModel : JSONModel
-
+@property (nonatomic, strong) SMTCollectionTypeModel *data;
 @end

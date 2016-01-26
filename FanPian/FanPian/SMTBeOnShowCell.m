@@ -8,6 +8,7 @@
 
 #import "SMTBeOnShowCell.h"
 #import "SMTBeOnShowListModel.h"
+#import "SMTBarView.h"
 
 #define CoverImageViewWidth 180*SCREEN_WIDTH/MIN_SCREEN_WIDTH
 
@@ -22,6 +23,8 @@
 @property (nonatomic, strong) UILabel *movieCastsLabel;//
 @property (nonatomic, strong) UILabel *castsLabel;
 @property (nonatomic, strong) UILabel *messageLabel;
+@property (nonatomic, strong) SMTBarView *barView;
+
 @end
 
 @implementation SMTBeOnShowCell
@@ -34,6 +37,12 @@
     return self;
 }
 
+- (void)configureBarViewAtItemTag:(NSInteger)itemTag state:(BOOL)isChecked;
+{
+    [self.barView configureEventAtItemTag:itemTag state:isChecked];
+}
+
+
 - (void)configureCellData:(SMTBeOnShowListModel *)listModel {
     
     self.titleLabel.text = listModel.moviedata.title;
@@ -43,8 +52,20 @@
     self.messageLabel.text = listModel.message;
     
     [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",kBaseURL,listModel.moviedata.image]] placeholderImage:nil options:SDWebImageProgressiveDownload];
+
+    
+    NSDictionary *leftDict = @{@"imageName":@"like",
+                               @"title":@"想看"};
+    NSDictionary *middleDict = @{@"imageName":@"love",
+                                 @"title":@"看过"};
+    NSDictionary *rightDict = @{@"imageName":@"more",
+                                @"title":@""};
+    
+    self.barView.items = @[leftDict,middleDict,rightDict];
+    
     
     CGFloat ratio = [listModel.moviedata.height floatValue]/[listModel.moviedata.width floatValue];
+
     [self configureFrameWithRatio:ratio];
 }
 
@@ -52,21 +73,23 @@
     
     self.coverImageView.frame = CGRectMake(kEdge, kEdge*1.5, CoverImageViewWidth, CoverImageViewWidth*ratio);
     
-    CGSize movieTitleSize = [self sizeWithLabel:self.movieTitleLabel];
+   CGSize boundingSize = CGSizeMake(CGRectGetWidth(self.frame)-CGRectGetMaxX(self.coverImageView.frame)-2*kEdge, 0);
     
-    CGSize titleSize = [self sizeWithLabel:self.titleLabel];
+    CGSize movieTitleSize = [self sizeWithLabel:self.movieTitleLabel boundingSize:boundingSize];
     
-    CGSize moviePubDateSize = [self sizeWithLabel:self.moviePubDateLabel];
+    CGSize titleSize = [self sizeWithLabel:self.titleLabel boundingSize:boundingSize];
     
-    CGSize pubDateSize = [self sizeWithLabel:self.pubdateLabel];
+    CGSize moviePubDateSize = [self sizeWithLabel:self.moviePubDateLabel boundingSize:boundingSize];
     
-    CGSize movieDirectorSize = [self sizeWithLabel:self.movieDirectorLabel];
+    CGSize pubDateSize = [self sizeWithLabel:self.pubdateLabel boundingSize:boundingSize];
     
-    CGSize directorSize = [self sizeWithLabel:self.directorLabel];
+    CGSize movieDirectorSize = [self sizeWithLabel:self.movieDirectorLabel boundingSize:boundingSize];
     
-    CGSize movieCastsSize = [self sizeWithLabel:self.movieCastsLabel];
+    CGSize directorSize = [self sizeWithLabel:self.directorLabel boundingSize:boundingSize];
     
-    CGSize castsSize = [self sizeWithLabel:self.castsLabel];
+    CGSize movieCastsSize = [self sizeWithLabel:self.movieCastsLabel boundingSize:boundingSize];
+    
+    CGSize castsSize = [self sizeWithLabel:self.castsLabel boundingSize:boundingSize];
     
     
     self.movieTitleLabel.frame = CGRectMake(CGRectGetMaxX(self.coverImageView.frame)+kEdge, CGRectGetMinX(self.coverImageView.frame), movieTitleSize.width, movieTitleSize.height);
@@ -83,20 +106,14 @@
     
     self.messageLabel.frame = CGRectMake(CGRectGetMinX(self.coverImageView.frame), CGRectGetMaxY(self.coverImageView.frame)+1.5*kEdge, CGRectGetWidth(self.frame)-2*kEdge, kLabelCommonHeight);
     
+    self.barView.frame = CGRectMake(0, CGRectGetMaxY(self.messageLabel.frame), CGRectGetWidth(self.frame), 40);
+
     if (CGRectGetMaxY(self.castsLabel.frame)>CGRectGetMinY(self.messageLabel.frame)) {
         CGRect castRect = self.castsLabel.frame;
         castRect.size.height = CGRectGetMinY(self.messageLabel.frame)-castRect.origin.y;
         self.castsLabel.frame = castRect;
     }
 }
-
-- (CGSize)sizeWithLabel:(UILabel *)label {
-   
-    CGSize resultSize = [label.text boundingRectWithSize:CGSizeMake(CGRectGetWidth(self.frame)-CGRectGetMaxX(self.coverImageView.frame)-2*kEdge, 0) options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading  attributes:@{NSFontAttributeName:label.font} context:nil].size;
-    
-    return resultSize;
-}
-
 
 - (void)baseDataSetting {
     self.movieTitleLabel.text = @"片名";
@@ -136,7 +153,8 @@
     [self.contentView addSubview:self.self.castsLabel];
     
     [self.contentView addSubview:self.self.messageLabel];
-  
+    [self.contentView addSubview:self.barView];
+
 }
 
 - (UIImageView *)coverImageView
@@ -158,4 +176,17 @@
     label.contentMode = UIViewContentModeTop;
     return label;
 }
+
+- (SMTBarView *)barView {
+    if (!_barView) {
+        __weak typeof(self)weakSelf = self;
+        _barView = [[SMTBarView alloc] initWithFrame:CGRectZero clickBlock:^(NSInteger itemTag) {
+            if (weakSelf.itemBlock) {
+                weakSelf.itemBlock(weakSelf,itemTag);
+            }
+        }];
+    }
+    return _barView;
+}
+
 @end

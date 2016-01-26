@@ -60,7 +60,7 @@
         [[weakSelf viewController].navigationController pushViewController:viewCtrl animated:YES];
         
     }];
-    [liked configureImageName:@"liked" labelTitle:@"想看"];
+    [liked configureImageName:@"likeSelect" labelTitle:@"想看"];
     [subHeader addSubview:liked];
     
     SMTImageLabelView *want = [[SMTImageLabelView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(liked.frame), 0, CGRectGetWidth(headerView.frame)/2, CGRectGetHeight(headerView.frame)) type:ImageLabelTypeImageLeft block:^{

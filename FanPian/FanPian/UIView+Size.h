@@ -10,4 +10,8 @@
 
 @interface UIView (Size)
 
+- (CGSize)sizeWithLabel:(UILabel *)label boundingSize:(CGSize)boundingSize;
+
+- (CGSize)sizeWithText:(NSString *)text boundingSize:(CGSize)boundingSize font:(UIFont *)font;
+
 @end

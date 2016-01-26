@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class SMTShortMovieCell,SMTBeOnShowCell;
+typedef void(^BeOnShowCellItemBlock)(SMTBeOnShowCell *cell ,NSInteger itemTag);
+
+
 @class SMTBeOnShowListModel;
 @interface SMTBeOnShowCell : UITableViewCell
+@property (nonatomic, copy) BeOnShowCellItemBlock itemBlock;
 
 - (void)configureCellData:(SMTBeOnShowListModel *)listModel;
 
+- (void)configureBarViewAtItemTag:(NSInteger)itemTag state:(BOOL)isChecked;
 
 @end

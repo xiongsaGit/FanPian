@@ -8,6 +8,10 @@
 
 #import "JSONModel.h"
 
-@interface SMTCollectionTypeListModel : JSONModel
+@protocol SMTCollectionTypeListModel <NSObject>
 
+@end
+
+@interface SMTCollectionTypeListModel : JSONModel
+@property (nonatomic, copy) NSString *type;
 @end

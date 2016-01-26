@@ -62,6 +62,7 @@
     _listView = [[UITableView alloc] initWithFrame:tableFrame style:UITableViewStyleGrouped];
     _listView.dataSource = self;
     _listView.delegate = self;
+    _listView.rowHeight = 44;
     _listView.sectionHeaderHeight = 0;
     _listView.sectionFooterHeight = 10;
     _listView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, CGFLOAT_MIN)];
@@ -75,6 +76,16 @@
     
 }
 
+
+- (void)setListDataSource:(NSArray *)listDataSource {
+    _listDataSource = listDataSource;
+    
+   CGRect rect =  self.frame;
+
+    rect.size.height = 32+listDataSource.count*44+10;
+    self.frame = rect;
+
+}
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -147,15 +158,15 @@
 }
 - (void)fadeOut
 {
-    [UIView animateWithDuration:.35 animations:^{
-        self.transform = CGAffineTransformMakeScale(1.3, 1.3);
-        self.alpha = 0.0;
-    } completion:^(BOOL finished) {
-        if (finished) {
-            [_overlayView removeFromSuperview];
-            [self removeFromSuperview];
-        }
-    }];
+//    [UIView animateWithDuration:.35 animations:^{
+//        self.transform = CGAffineTransformMakeScale(1.3, 1.3);
+//        self.alpha = 0.0;
+//    } completion:^(BOOL finished) {
+//        if (finished) {
+//            [_overlayView removeFromSuperview];
+//            [self removeFromSuperview];
+//        }
+//    }];
 }
 
 - (void)setTitle:(NSString *)title

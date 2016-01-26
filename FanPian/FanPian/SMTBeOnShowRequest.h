@@ -12,5 +12,4 @@
 
 - (id)initWithType:(NSNumber *)type page:(NSNumber *)page;
 
-
 @end

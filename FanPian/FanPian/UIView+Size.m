@@ -10,4 +10,17 @@
 
 @implementation UIView (Size)
 
+- (CGSize)sizeWithLabel:(UILabel *)label boundingSize:(CGSize)boundingSize {
+    CGSize resultSize = [label.text boundingRectWithSize:boundingSize options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading  attributes:@{NSFontAttributeName:label.font} context:nil].size;
+    
+    return resultSize;
+}
+
+- (CGSize)sizeWithText:(NSString *)text boundingSize:(CGSize)boundingSize font:(UIFont *)font {
+    CGSize resultSize = [text boundingRectWithSize:boundingSize options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading  attributes:@{NSFontAttributeName:font} context:nil].size;
+    
+    return resultSize;
+}
+
+
 @end

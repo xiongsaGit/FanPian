@@ -13,6 +13,8 @@
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UILabel *label;
 @property (nonatomic, assign) ImageLabelType type;
+@property (nonatomic, copy) NSString *commonImageName;
+@property (nonatomic, copy) NSString *selectImageName;
 
 @end
 
@@ -51,7 +53,13 @@
     }
 }
 
+- (void)configureWitState:(BOOL)isChecked {
+    self.imageView.image = isChecked ?[UIImage imageNamed:self.selectImageName]:[UIImage imageNamed:self.commonImageName];
+}
+
 - (void)configureImageName:(NSString *)imageName labelTitle:(NSString *)title {
+    self.commonImageName = imageName;
+    self.selectImageName = [NSString stringWithFormat:@"%@Select",imageName];
     UIImage *image = [UIImage imageNamed:imageName];
     self.imageView.image = image;
     self.imageView.size = image.size;

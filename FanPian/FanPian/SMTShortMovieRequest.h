@@ -10,4 +10,6 @@
 
 @interface SMTShortMovieRequest : SMTBaseRequest
 
+- (id)initWithPage:(NSNumber *)page;
+
 @end

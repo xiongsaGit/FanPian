@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^BarViewClickItemBlock)(NSInteger itemTag);
+
 @interface SMTBarView : UIView
+@property (nonatomic, strong) NSArray *items;
+
+- (id)initWithFrame:(CGRect)frame clickBlock:(BarViewClickItemBlock)clickBlock;
+
+- (void)configureEventAtItemTag:(NSInteger)itemTag state:(BOOL)isChecked;
+
 
 @end

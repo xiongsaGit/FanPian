@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class ShowLabelOnImageView;
+typedef void(^LabelOnImageViewClickBlock)(ShowLabelOnImageView *item);
+
 @interface ShowLabelOnImageView : UIImageView
+
+- (id)initWithClickBlock:(LabelOnImageViewClickBlock)clickBlock;
+
 
 - (void)showTextWithIntro:(NSString *)intro subject:(NSString *)subject;
 

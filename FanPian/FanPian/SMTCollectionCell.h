@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class SMTCollectionListModel;
 @interface SMTCollectionCell : UITableViewCell
+
+- (void)configureCellData:(SMTCollectionListModel *)listModel;
+
 
 @end

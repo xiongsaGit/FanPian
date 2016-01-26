@@ -10,4 +10,6 @@
 
 @interface SMTCollectionTypeRequest : SMTBaseRequest
 
+- (id)initWithPage:(NSNumber *)page ctid:(NSString *)ctid;
+
 @end

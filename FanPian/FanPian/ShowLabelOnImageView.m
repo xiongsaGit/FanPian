@@ -7,26 +7,38 @@
 //
 
 #import "ShowLabelOnImageView.h"
-#import "UIView+Size.h"
+
 #define WHITE_SPACE 20
 
-@interface ShowLabelOnImageView()
+@interface ShowLabelOnImageView()<UIGestureRecognizerDelegate>
 @property (nonatomic, strong) UILabel *introlLabel;
 @property (nonatomic, strong) UILabel *subjectLabel;
+@property (nonatomic, copy) LabelOnImageViewClickBlock clickBlock;
+
 @end
 
 @implementation ShowLabelOnImageView
 
 
-- (id)init {
+- (id)initWithClickBlock:(LabelOnImageViewClickBlock)clickBlock {
     if (self = [super init]) {
-        
+        self.userInteractionEnabled = YES;
+        self.clickBlock = clickBlock;
         self.introlLabel = [self factoryForLabelWithFontSize:18 textAlignment:NSTextAlignmentCenter];
         self.subjectLabel = [self factoryForLabelWithFontSize:20 textAlignment:NSTextAlignmentRight];
         [self addSubview:self.introlLabel];
         [self addSubview:self.subjectLabel];
+        UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+        [self addGestureRecognizer:tapGes];
     }
     return self;
+}
+
+- (void)handleTapGesture:(UITapGestureRecognizer *)tgr {
+    NSLog(@"click:handleTapGesture");
+    if (self.clickBlock) {
+        self.clickBlock(self);
+    }
 }
 
 - (void)showImageWithImagePath:(NSString *)imagePath {
@@ -50,17 +62,22 @@
 
 - (void)adjustLabelSize {
     
+    // 先计算 计算完再调整
     CGSize boundingSize = CGSizeMake(CGRectGetWidth(self.frame)-4*WHITE_SPACE, 0);
     
     CGSize introSize = [self sizeWithLabel:self.introlLabel boundingSize:boundingSize];
     CGSize subjectSize = [self sizeWithLabel:self.subjectLabel boundingSize:boundingSize];
-
     
-    CGFloat minusHeight = CGRectGetHeight(self.frame)-2*WHITE_SPACE-subjectSize.height;
+    
+    self.subjectLabel.frame = CGRectMake(2*WHITE_SPACE, CGRectGetHeight(self.frame)-WHITE_SPACE/2-WHITE_SPACE-subjectSize.height, boundingSize.width, subjectSize.height);
+    self.introlLabel.backgroundColor = [UIColor redColor];
+    
+    
+    CGFloat minusHeight = subjectSize.height>0?CGRectGetMinY(self.subjectLabel.frame):CGRectGetMinY(self.subjectLabel.frame)+WHITE_SPACE/2;
     CGFloat introHeight = introSize.height <= minusHeight?introSize.height:minusHeight;
     
-    self.introlLabel.frame = CGRectMake(2*WHITE_SPACE, 0, boundingSize.width, introHeight);
-    self.subjectLabel.frame = CGRectMake(2*WHITE_SPACE, CGRectGetMaxY(self.introlLabel.frame)+WHITE_SPACE/2, boundingSize.width, subjectSize.height);
+    self.introlLabel.frame = CGRectMake(2*WHITE_SPACE, (minusHeight-introHeight)/2, boundingSize.width, introHeight);
+    
 }
 
 - (UILabel *)factoryForLabelWithFontSize:(CGFloat)fontSize textAlignment:(NSTextAlignment)align
@@ -70,7 +87,7 @@
     label.font = [UIFont systemFontOfSize:fontSize];
     label.textColor = [UIColor whiteColor];
     label.numberOfLines = 0;
-
+    
     return label;
 }
 

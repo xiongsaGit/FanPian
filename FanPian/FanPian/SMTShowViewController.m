@@ -91,7 +91,7 @@
         [self showDifferentListWithItemTag:0];
     }else {
     
-        SMTCollectionTypeRequest *request = [[SMTCollectionTypeRequest alloc] initWithPage:@(self.curPage) ctid:self.ctid];
+        SMTCollectionTypeRequest *request = [[SMTCollectionTypeRequest alloc] initWithType:CollectionOrSalonTypeCollection page:@(self.curPage) ctid:self.ctid];
         [request startWithCompletionBlockWithSuccess:^(YTKBaseRequest *request) {
             NSError* err = nil;
             

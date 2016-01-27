@@ -1,65 +1,75 @@
 //
-//  SMTSalonViewController.m
-//  LabelOnImageView
+//  SMTSalonDetailViewController.m
+//  FanPian
 //
-//  Created by sa.xiong on 16/1/25.
+//  Created by sa.xiong on 16/1/27.
 //  Copyright © 2016年 sa.xiong. All rights reserved.
 //
 
-#import "SMTSalonViewController.h"
 #import "SMTSalonDetailViewController.h"
 
-#import "SMTHeaderView.h"
-#import "SMTSalonCell.h"
+#import "SMTSalonDetailHeader.h"
+#import "SMTSalonDetailCell.h"
 
-#import "SMTSalonRequest.h"
-#import "SMTSalonDataModel.h"
 
-@interface SMTSalonViewController()<UITableViewDataSource,UITableViewDelegate>
+#import "SMTCollectionTypeRequest.h"
+
+#import "SMTSalonDetailDataModel.h"
+#import "SMTSalonDetailListModel.h"
+@interface SMTSalonDetailViewController()<UITableViewDataSource,UITableViewDelegate,SalonDetailHeaderDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataItems;
-@property (nonatomic, strong) SMTHeaderView *headerView;
+@property (nonatomic, strong) SMTSalonDetailHeader *headerView;
+@property (nonatomic, copy) NSString *ctid;
 @property (nonatomic, assign) NSInteger curPageNum;
+
 @end
 
-@implementation SMTSalonViewController
+@implementation SMTSalonDetailViewController
 
+- (id)initWithCtid:(NSString *)ctid {
+    if (self = [super init]) {
+        self.ctid = ctid;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
+
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     self.curPageNum = 1;
     self.dataItems = [NSMutableArray array];
-    [self.view addSubview:self.tableView];
-    [self addTableViewHeader];
+//    [self.view addSubview:self.tableView];
+//    [self addTableViewHeader];
     
-    [self requestSalonData];
+    [self.view addSubview:self.headerView];
+    [self defaultRequest];
+
+    
 }
 
-- (void)requestSalonData {
-    SMTSalonRequest *request = [[SMTSalonRequest alloc] initWithPage:@(self.curPageNum)];
+
+- (void)defaultRequest {
+    SMTCollectionTypeRequest *request = [[SMTCollectionTypeRequest alloc] initWithType:CollectionOrSalonTypeSalon page:@(self.curPageNum) ctid:self.ctid];
     [request startWithCompletionBlockWithSuccess:^(YTKBaseRequest *request) {
+        
         NSError *error = nil;
-        SMTSalonDataModel *model = [[SMTSalonDataModel alloc] initWithString:request.responseString error:&error];
-        self.dataItems = [NSMutableArray arrayWithArray:model.data.list];
-        
-        [self makeTableViewDataWithList:model.data.list];
-        
-        [self.tableView reloadData];
-        
-        
+        SMTSalonDetailDataModel *model = [[SMTSalonDetailDataModel alloc] initWithString:request.responseString error:&error];
+        [self.headerView configureData:model.data];
+
         
     } failure:^(YTKBaseRequest *request) {
         
     }];
 }
 
-- (void)makeTableViewDataWithList:(NSArray *)list {
-   
-    if (list.count > 2) {
-       NSArray *headerDataList = [NSArray arrayWithObjects:list[0],list[1], nil];
-        [self.headerView loadDataArray:headerDataList];
-    }
+- (void)refreshHeightOfHeader:(CGFloat)heightOfHeader {
+    CGRect headerRect = self.headerView.frame;
+    headerRect.size.height = heightOfHeader;
+    self.headerView.frame = headerRect;
+
 }
 
 - (void)setDataItems:(NSMutableArray *)dataItems {
@@ -75,7 +85,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.dataItems.count-2;
+    return self.dataItems.count;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -86,14 +96,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *identifier = @"cellId";
-    SMTSalonCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    SMTSalonDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell==nil)
     {
-        cell = [[SMTSalonCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[SMTSalonDetailCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     cell.size = CGSizeMake(SCREEN_WIDTH, 80);
-    SMTSalonListModel *listModel = self.dataItems[indexPath.row+2];
+    SMTSalonDetailListModel *listModel = self.dataItems[indexPath.row];
     [cell configureData:listModel];
     
     return cell;
@@ -116,14 +126,10 @@
     return _tableView;
 }
 
-- (SMTHeaderView *)headerView {
+- (SMTSalonDetailHeader *)headerView {
     if (!_headerView) {
-        __weak typeof(self)weakSelf = self;
-        _headerView = [[SMTHeaderView alloc] initWithItemClickBlock:^(NSInteger itemTag) {
-            SMTSalonListModel *listModel = weakSelf.dataItems[itemTag];
-            SMTSalonDetailViewController *viewCtrl = [[SMTSalonDetailViewController alloc] initWithCtid:listModel.ctid];
-            [weakSelf.navigationController pushViewController:viewCtrl animated:YES];
-        }];
+        _headerView = [[SMTSalonDetailHeader alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0)];
+        _headerView.headerDelegate = self;
     }
     return _headerView;
 }

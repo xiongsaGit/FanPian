@@ -72,6 +72,13 @@
 		33F304F71C448BAE0020838A /* FanPianTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F304F61C448BAE0020838A /* FanPianTests.m */; };
 		33F305021C448BAE0020838A /* FanPianUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F305011C448BAE0020838A /* FanPianUITests.m */; };
 		33F719E71C4F1F8C0038208E /* SMTBeOnShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F719E61C4F1F8C0038208E /* SMTBeOnShowCell.m */; };
+		33F8EBD71C586AC90015B6DC /* SMTSalonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8EBD61C586AC90015B6DC /* SMTSalonDetailViewController.m */; };
+		33F8EBDA1C586C520015B6DC /* SMTSalonDetailDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8EBD91C586C520015B6DC /* SMTSalonDetailDataModel.m */; };
+		33F8EBDD1C586C670015B6DC /* SMTSalonDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8EBDC1C586C670015B6DC /* SMTSalonDetailModel.m */; };
+		33F8EBE31C586D940015B6DC /* SMTSalonDetailListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8EBE21C586D940015B6DC /* SMTSalonDetailListModel.m */; };
+		33F8EBE61C586EC50015B6DC /* SMTSalonDetailListMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8EBE51C586EC50015B6DC /* SMTSalonDetailListMovieModel.m */; };
+		33F8EBE91C586FEF0015B6DC /* SMTSalonDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8EBE81C586FEF0015B6DC /* SMTSalonDetailCell.m */; };
+		33F8EBEF1C5871660015B6DC /* SMTSalonDetailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8EBEE1C5871660015B6DC /* SMTSalonDetailHeader.m */; };
 		E98474EED5FFA6410C22E543 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBE9C299F4D3C983B7D4063 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -224,6 +231,20 @@
 		33F305031C448BAE0020838A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33F719E51C4F1F8C0038208E /* SMTBeOnShowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTBeOnShowCell.h; sourceTree = "<group>"; };
 		33F719E61C4F1F8C0038208E /* SMTBeOnShowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTBeOnShowCell.m; sourceTree = "<group>"; };
+		33F8EBD51C586AC90015B6DC /* SMTSalonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTSalonDetailViewController.h; sourceTree = "<group>"; };
+		33F8EBD61C586AC90015B6DC /* SMTSalonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTSalonDetailViewController.m; sourceTree = "<group>"; };
+		33F8EBD81C586C520015B6DC /* SMTSalonDetailDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTSalonDetailDataModel.h; sourceTree = "<group>"; };
+		33F8EBD91C586C520015B6DC /* SMTSalonDetailDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTSalonDetailDataModel.m; sourceTree = "<group>"; };
+		33F8EBDB1C586C670015B6DC /* SMTSalonDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTSalonDetailModel.h; sourceTree = "<group>"; };
+		33F8EBDC1C586C670015B6DC /* SMTSalonDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTSalonDetailModel.m; sourceTree = "<group>"; };
+		33F8EBE11C586D940015B6DC /* SMTSalonDetailListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTSalonDetailListModel.h; sourceTree = "<group>"; };
+		33F8EBE21C586D940015B6DC /* SMTSalonDetailListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTSalonDetailListModel.m; sourceTree = "<group>"; };
+		33F8EBE41C586EC50015B6DC /* SMTSalonDetailListMovieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTSalonDetailListMovieModel.h; sourceTree = "<group>"; };
+		33F8EBE51C586EC50015B6DC /* SMTSalonDetailListMovieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTSalonDetailListMovieModel.m; sourceTree = "<group>"; };
+		33F8EBE71C586FEF0015B6DC /* SMTSalonDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTSalonDetailCell.h; sourceTree = "<group>"; };
+		33F8EBE81C586FEF0015B6DC /* SMTSalonDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTSalonDetailCell.m; sourceTree = "<group>"; };
+		33F8EBED1C5871660015B6DC /* SMTSalonDetailHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTSalonDetailHeader.h; sourceTree = "<group>"; };
+		33F8EBEE1C5871660015B6DC /* SMTSalonDetailHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTSalonDetailHeader.m; sourceTree = "<group>"; };
 		874545404FF4C356CEAFCE7A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DCBE9C299F4D3C983B7D4063 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -266,8 +287,6 @@
 		3312592A1C4E266600F14A50 /* find */ = {
 			isa = PBXGroup;
 			children = (
-				334E30FB1C577C1400D46105 /* SMTSalonViewController.h */,
-				334E30FC1C577C1400D46105 /* SMTSalonViewController.m */,
 				332347091C48A21D00B05D2B /* SMTFindViewController.h */,
 				3323470A1C48A21D00B05D2B /* SMTFindViewController.m */,
 				331259271C4E265300F14A50 /* SMTShowViewController.h */,
@@ -276,6 +295,10 @@
 				33F1BBF21C506CDB0069F4AA /* SMTShortMovieViewController.m */,
 				3348E6F01C53198500B46A3D /* SMTCollectionViewController.h */,
 				3348E6F11C53198500B46A3D /* SMTCollectionViewController.m */,
+				334E30FB1C577C1400D46105 /* SMTSalonViewController.h */,
+				334E30FC1C577C1400D46105 /* SMTSalonViewController.m */,
+				33F8EBD51C586AC90015B6DC /* SMTSalonDetailViewController.h */,
+				33F8EBD61C586AC90015B6DC /* SMTSalonDetailViewController.m */,
 			);
 			name = find;
 			sourceTree = "<group>";
@@ -381,6 +404,14 @@
 				334E30F51C57777600D46105 /* SMTSalonModel.m */,
 				334E30F71C57778400D46105 /* SMTSalonListModel.h */,
 				334E30F81C57778400D46105 /* SMTSalonListModel.m */,
+				33F8EBD81C586C520015B6DC /* SMTSalonDetailDataModel.h */,
+				33F8EBD91C586C520015B6DC /* SMTSalonDetailDataModel.m */,
+				33F8EBDB1C586C670015B6DC /* SMTSalonDetailModel.h */,
+				33F8EBDC1C586C670015B6DC /* SMTSalonDetailModel.m */,
+				33F8EBE11C586D940015B6DC /* SMTSalonDetailListModel.h */,
+				33F8EBE21C586D940015B6DC /* SMTSalonDetailListModel.m */,
+				33F8EBE41C586EC50015B6DC /* SMTSalonDetailListMovieModel.h */,
+				33F8EBE51C586EC50015B6DC /* SMTSalonDetailListMovieModel.m */,
 			);
 			name = salon;
 			sourceTree = "<group>";
@@ -424,6 +455,8 @@
 				33F1BC451C50C2A20069F4AA /* SMTBarView.m */,
 				3348E6E31C524E5000B46A3D /* UIView+Size.h */,
 				3348E6E41C524E5000B46A3D /* UIView+Size.m */,
+				33F8EBED1C5871660015B6DC /* SMTSalonDetailHeader.h */,
+				33F8EBEE1C5871660015B6DC /* SMTSalonDetailHeader.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -541,6 +574,8 @@
 				3348E6E11C524C4D00B46A3D /* SMTCollectionCell.m */,
 				334E31011C5790A300D46105 /* SMTSalonCell.h */,
 				334E31021C5790A300D46105 /* SMTSalonCell.m */,
+				33F8EBE71C586FEF0015B6DC /* SMTSalonDetailCell.h */,
+				33F8EBE81C586FEF0015B6DC /* SMTSalonDetailCell.m */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -738,6 +773,8 @@
 				33F1BC431C508BC20069F4AA /* SMTMovieImageView.m in Sources */,
 				3323470E1C4B416F00B05D2B /* SMTScrollView.m in Sources */,
 				331259241C4E0BBA00F14A50 /* SMTFocusViewController.m in Sources */,
+				33F8EBE61C586EC50015B6DC /* SMTSalonDetailListMovieModel.m in Sources */,
+				33F8EBD71C586AC90015B6DC /* SMTSalonDetailViewController.m in Sources */,
 				33EFB5701C479B0B0033912B /* SMTNavTitleView.m in Sources */,
 				33F304E41C448BAE0020838A /* ViewController.m in Sources */,
 				331259351C4E350800F14A50 /* SMTBaseRequest.m in Sources */,
@@ -758,6 +795,7 @@
 				33F304E11C448BAE0020838A /* AppDelegate.m in Sources */,
 				3312593D1C4E4F3000F14A50 /* SMTBeOnShowModel.m in Sources */,
 				33F1BC011C50702E0069F4AA /* SMTShortMovieCell.m in Sources */,
+				33F8EBE31C586D940015B6DC /* SMTSalonDetailListModel.m in Sources */,
 				331259391C4E359100F14A50 /* SMTBeOnShowRequest.m in Sources */,
 				336F60A91C5604B9008C6419 /* UIPopoverListView.m in Sources */,
 				331259311C4E2E7700F14A50 /* SMTHadWatchViewController.m in Sources */,
@@ -766,18 +804,22 @@
 				3348E6E81C5318A200B46A3D /* SMTCollectionDataModel.m in Sources */,
 				334E31001C577C3F00D46105 /* SMTHeaderView.m in Sources */,
 				33F1BBF01C506BFC0069F4AA /* SMTShortMovieRequest.m in Sources */,
+				33F8EBDD1C586C670015B6DC /* SMTSalonDetailModel.m in Sources */,
 				331259471C4E5AEA00F14A50 /* SMTBeOnShowDataModel.m in Sources */,
 				3348E6DF1C524B8E00B46A3D /* SMTCollectionRequest.m in Sources */,
 				3323472D1C4CC6A700B05D2B /* SMTImageLabelView.m in Sources */,
 				334E30FD1C577C1400D46105 /* SMTSalonViewController.m in Sources */,
+				33F8EBDA1C586C520015B6DC /* SMTSalonDetailDataModel.m in Sources */,
 				3348E6F81C53339400B46A3D /* SMTCollectionTypeDataModel.m in Sources */,
 				33F1BC461C50C2A20069F4AA /* SMTBarView.m in Sources */,
 				334E31031C5790A300D46105 /* SMTSalonCell.m in Sources */,
 				33F1BBF31C506CDB0069F4AA /* SMTShortMovieViewController.m in Sources */,
 				3348E6FB1C5333B500B46A3D /* SMTCollectionTypeListModel.m in Sources */,
+				33F8EBE91C586FEF0015B6DC /* SMTSalonDetailCell.m in Sources */,
 				3323470B1C48A21D00B05D2B /* SMTFindViewController.m in Sources */,
 				331259291C4E265300F14A50 /* SMTShowViewController.m in Sources */,
 				334E30F31C57772200D46105 /* SMTSalonDataModel.m in Sources */,
+				33F8EBEF1C5871660015B6DC /* SMTSalonDetailHeader.m in Sources */,
 				33EFB5651C4793BD0033912B /* SMTMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

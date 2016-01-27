@@ -20,9 +20,15 @@
         self.lastSelectIndex = -1;
         self.items = items;
         self.itemClickBlock = itemClcikBlock;
-        [self setupItems:items];
     }
     return self;
+}
+
+- (void)setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    
+    [self setupItems:self.items];
+
 }
 
 - (void)selectItem:(NSInteger)index {
@@ -49,6 +55,9 @@
 }
 
 - (void)setupItems:(NSArray *)items {
+    for (UIView *subView in self.subviews) {
+        [subView removeFromSuperview];
+    }
     for (NSInteger i = 0; i < items.count; i++) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setFrame:CGRectMake(i*(CGRectGetWidth(self.frame)/items.count), 0, (CGRectGetWidth(self.frame)/items.count), CGRectGetHeight(self.frame))];

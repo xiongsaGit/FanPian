@@ -28,8 +28,6 @@
         self.rightLabelOnImageView = [self factoryForLabelOnImageViewWithTag:1];
         [self addSubview:self.leftLabelOnImageView];
         [self addSubview:self.rightLabelOnImageView];
-        self.leftLabelOnImageView.backgroundColor = [UIColor redColor];
-         self.rightLabelOnImageView.backgroundColor = [UIColor yellowColor];
     }
     return self;
 }

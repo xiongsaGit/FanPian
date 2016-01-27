@@ -8,7 +8,7 @@
 
 #import "ShowLabelOnImageView.h"
 
-#define WHITE_SPACE 20
+#define WHITE_SPACE 10
 
 @interface ShowLabelOnImageView()<UIGestureRecognizerDelegate>
 @property (nonatomic, strong) UILabel *introlLabel;
@@ -24,8 +24,8 @@
     if (self = [super init]) {
         self.userInteractionEnabled = YES;
         self.clickBlock = clickBlock;
-        self.introlLabel = [self factoryForLabelWithFontSize:18 textAlignment:NSTextAlignmentCenter];
-        self.subjectLabel = [self factoryForLabelWithFontSize:20 textAlignment:NSTextAlignmentRight];
+        self.introlLabel = [self factoryForLabelWithFontSize:14 textAlignment:NSTextAlignmentCenter];
+        self.subjectLabel = [self factoryForLabelWithFontSize:18 textAlignment:NSTextAlignmentRight];
         [self addSubview:self.introlLabel];
         [self addSubview:self.subjectLabel];
         UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
@@ -35,27 +35,29 @@
 }
 
 - (void)handleTapGesture:(UITapGestureRecognizer *)tgr {
-    NSLog(@"click:handleTapGesture");
     if (self.clickBlock) {
         self.clickBlock(self);
     }
 }
 
 - (void)showImageWithImagePath:(NSString *)imagePath {
-    self.image = [UIImage imageNamed:imagePath];
-    self.frame = CGRectMake(0, 0, self.image.size.width, self.image.size.height);
+    
+    [self sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",kBaseURL,imagePath]] placeholderImage:nil options:SDWebImageProgressiveDownload];
+    
 }
 
 - (void)showTextWithIntro:(NSString *)intro subject:(NSString *)subject {
     
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:intro];
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    [paragraphStyle setLineSpacing:5];//调整行间距
+//    [paragraphStyle setLineSpacing:5];//调整行间距
     
     [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [intro length])];
     self.introlLabel.attributedText = attributedString;
     
-    self.subjectLabel.text = [NSString stringWithFormat:@"-- %@",subject];
+    if (subject && ![subject isEqualToString:@""]) {
+        self.subjectLabel.text = [NSString stringWithFormat:@"-- %@",subject];
+    }
     
     [self adjustLabelSize];
 }
@@ -63,21 +65,23 @@
 - (void)adjustLabelSize {
     
     // 先计算 计算完再调整
-    CGSize boundingSize = CGSizeMake(CGRectGetWidth(self.frame)-4*WHITE_SPACE, 0);
+    CGSize boundingSize = CGSizeMake(CGRectGetWidth(self.frame)-2*WHITE_SPACE, 0);
     
     CGSize introSize = [self sizeWithLabel:self.introlLabel boundingSize:boundingSize];
     CGSize subjectSize = [self sizeWithLabel:self.subjectLabel boundingSize:boundingSize];
     
-    
-    self.subjectLabel.frame = CGRectMake(2*WHITE_SPACE, CGRectGetHeight(self.frame)-WHITE_SPACE/2-WHITE_SPACE-subjectSize.height, boundingSize.width, subjectSize.height);
-    self.introlLabel.backgroundColor = [UIColor redColor];
-    
-    
-    CGFloat minusHeight = subjectSize.height>0?CGRectGetMinY(self.subjectLabel.frame):CGRectGetMinY(self.subjectLabel.frame)+WHITE_SPACE/2;
-    CGFloat introHeight = introSize.height <= minusHeight?introSize.height:minusHeight;
-    
-    self.introlLabel.frame = CGRectMake(2*WHITE_SPACE, (minusHeight-introHeight)/2, boundingSize.width, introHeight);
-    
+    if (introSize.height+subjectSize.height+WHITE_SPACE*1.5>CGRectGetHeight(self.frame)) {
+        self.subjectLabel.frame = CGRectMake(WHITE_SPACE, CGRectGetHeight(self.frame)-WHITE_SPACE/2-WHITE_SPACE-subjectSize.height, boundingSize.width, subjectSize.height);
+        
+        CGFloat minusHeight = subjectSize.height>0?CGRectGetMinY(self.subjectLabel.frame):CGRectGetMinY(self.subjectLabel.frame)+WHITE_SPACE/2;
+        CGFloat introHeight = introSize.height <= minusHeight?introSize.height:minusHeight;
+        
+        self.introlLabel.frame = CGRectMake(WHITE_SPACE, (minusHeight-introHeight)/2, boundingSize.width, introHeight);
+    }else {
+        CGFloat fromY = (CGRectGetHeight(self.frame)-(introSize.height+subjectSize.height+WHITE_SPACE*1.5))/2;
+        self.introlLabel.frame = CGRectMake(WHITE_SPACE, fromY, boundingSize.width, introSize.height);
+        self.subjectLabel.frame = CGRectMake(WHITE_SPACE, CGRectGetMaxY(self.introlLabel.frame)+0.5*WHITE_SPACE, boundingSize.width, subjectSize.height);
+    }
 }
 
 - (UILabel *)factoryForLabelWithFontSize:(CGFloat)fontSize textAlignment:(NSTextAlignment)align

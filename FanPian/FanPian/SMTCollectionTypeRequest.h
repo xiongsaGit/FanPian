@@ -8,8 +8,14 @@
 
 #import "SMTBaseRequest.h"
 
+
+typedef NS_ENUM(NSInteger,CollectionOrSalonType) {
+    CollectionOrSalonTypeCollection,
+    CollectionOrSalonTypeSalon,
+
+};
 @interface SMTCollectionTypeRequest : SMTBaseRequest
 
-- (id)initWithPage:(NSNumber *)page ctid:(NSString *)ctid;
+- (id)initWithType:(CollectionOrSalonType)type page:(NSNumber *)page ctid:(NSString *)ctid;
 
 @end

@@ -8,7 +8,9 @@
 
 #import "SMTBaseListViewController.h"
 
-@interface SMTBaseListViewController()<UITableViewDelegate,UITableViewDataSource>
+static NSString *const CellIdentifier = @"cellIdentifier";
+
+@interface SMTBaseListViewController()<UITableViewDelegate>
 
 @end
 
@@ -17,32 +19,57 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.dataSourceItems = [NSMutableArray array];
+    
+    self.itemHeight = 44.0f;
+    self.dataItems = [NSMutableArray array];
     
     [self.view addSubview:self.tableView];
     
-
+    [self setupTableView];
+    
+    [self defaultRequestData];
 }
 
-- (void)setDataSourceItems:(NSMutableArray *)dataSourceItems {
-    _dataSourceItems = dataSourceItems;
-    [self.tableView reloadData];
+- (void)setupTableView {
+    
+    TableViewCellConfigureBlock configureBlock;
+
+    self.tableDataSource = [[SMTTableDataSource alloc] initWithDataItems:self.dataItems cellIdentifier:CellIdentifier cellConfigureBlock:configureBlock];
+    
+    self.tableView.dataSource = self.tableDataSource;
+    
 }
 
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataSourceItems.count;
+- (void)defaultRequestData {
+    NSLog(@"log default request");
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return self.itemHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self selectItemAtIndexPath:indexPath];
+}
+
+- (void)headerRefreshEvent {
+    
+}
+
+- (void)footerLoadMoreEvent {
+    
+}
+
+- (void)selectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 
 - (UITableView *)tableView
 {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero
                                                   style:UITableViewStylePlain];
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.delegate = self;

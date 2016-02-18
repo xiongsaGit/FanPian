@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 
-typedef NS_ENUM(NSInteger,MovieTypeFrom) {
-    MovieTypeFromDefault = 0,// 上映
-    MovieTypeFromCollection,//影单详情
-};
+//typedef NS_ENUM(NSInteger,MovieTypeFrom) {
+//    MovieTypeFromDefault = 0,// 上映
+//    MovieTypeFromCollection,//影单详情
+//};
 
 // 上映
 @interface SMTShowViewController : UIViewController

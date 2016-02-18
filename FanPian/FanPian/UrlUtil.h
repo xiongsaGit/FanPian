@@ -13,7 +13,10 @@
 
 
 
-
+typedef NS_ENUM(NSInteger,MovieTypeFrom) {
+    MovieTypeFromDefault = 0,// 上映
+    MovieTypeFromCollection,//影单详情
+};
 
 
 

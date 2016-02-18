@@ -13,7 +13,7 @@
 #import "SMTShortMovieViewController.h"
 #import "SMTCollectionViewController.h"
 #import "SMTSalonViewController.h"
-
+#import "SMTMovielinesListViewController.h"
 @interface SMTFindViewController ()<UITableViewDelegate>
 
 @end
@@ -41,7 +41,8 @@
     switch (viewTag) {
         case 0:
         {
-            SMTShowViewController *viewCtrl = [[SMTShowViewController alloc] initWithType:MovieTypeFromDefault title:@"上映" ctid:nil];
+//            SMTShowViewController *viewCtrl = [[SMTShowViewController alloc] initWithType:MovieTypeFromDefault title:@"上映" ctid:nil];
+            SMTMovielinesListViewController *viewCtrl = [[SMTMovielinesListViewController alloc]init];
 
             [[self viewController].navigationController pushViewController:viewCtrl animated:YES];
         }

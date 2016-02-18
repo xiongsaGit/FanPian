@@ -48,6 +48,7 @@
 		334E31031C5790A300D46105 /* SMTSalonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 334E31021C5790A300D46105 /* SMTSalonCell.m */; };
 		336F60A91C5604B9008C6419 /* UIPopoverListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 336F60A81C5604B9008C6419 /* UIPopoverListView.m */; };
 		336F60F61C563CBE008C6419 /* ShowLabelOnImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 336F60F51C563CBE008C6419 /* ShowLabelOnImageView.m */; };
+		33A0C5231C5F62B900B907AA /* SMTMovielinesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A0C5221C5F62B900B907AA /* SMTMovielinesListViewController.m */; };
 		33A7A8541C4D005E003CD805 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A7A8531C4D005E003CD805 /* UIView+Additions.m */; };
 		33EB3EF51C4F7ECF00F93592 /* SMTBaseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EB3EF41C4F7ECF00F93592 /* SMTBaseListViewController.m */; };
 		33EFB5621C4793B40033912B /* SMTListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB5611C4793B40033912B /* SMTListViewController.m */; };
@@ -79,6 +80,7 @@
 		33F8EBE61C586EC50015B6DC /* SMTSalonDetailListMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8EBE51C586EC50015B6DC /* SMTSalonDetailListMovieModel.m */; };
 		33F8EBE91C586FEF0015B6DC /* SMTSalonDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8EBE81C586FEF0015B6DC /* SMTSalonDetailCell.m */; };
 		33F8EBEF1C5871660015B6DC /* SMTSalonDetailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8EBEE1C5871660015B6DC /* SMTSalonDetailHeader.m */; };
+		33FADC201C5F55D500E53D46 /* SMTTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FADC1F1C5F55D500E53D46 /* SMTTableDataSource.m */; };
 		E98474EED5FFA6410C22E543 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBE9C299F4D3C983B7D4063 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -182,6 +184,8 @@
 		336F60A81C5604B9008C6419 /* UIPopoverListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPopoverListView.m; sourceTree = "<group>"; };
 		336F60F41C563CBE008C6419 /* ShowLabelOnImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowLabelOnImageView.h; sourceTree = "<group>"; };
 		336F60F51C563CBE008C6419 /* ShowLabelOnImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowLabelOnImageView.m; sourceTree = "<group>"; };
+		33A0C5211C5F62B900B907AA /* SMTMovielinesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMovielinesListViewController.h; sourceTree = "<group>"; };
+		33A0C5221C5F62B900B907AA /* SMTMovielinesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMovielinesListViewController.m; sourceTree = "<group>"; };
 		33A7A8521C4D005E003CD805 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
 		33A7A8531C4D005E003CD805 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
 		33EB3EF31C4F7ECF00F93592 /* SMTBaseListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTBaseListViewController.h; sourceTree = "<group>"; };
@@ -245,6 +249,8 @@
 		33F8EBE81C586FEF0015B6DC /* SMTSalonDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTSalonDetailCell.m; sourceTree = "<group>"; };
 		33F8EBED1C5871660015B6DC /* SMTSalonDetailHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTSalonDetailHeader.h; sourceTree = "<group>"; };
 		33F8EBEE1C5871660015B6DC /* SMTSalonDetailHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTSalonDetailHeader.m; sourceTree = "<group>"; };
+		33FADC1E1C5F55D500E53D46 /* SMTTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTTableDataSource.h; sourceTree = "<group>"; };
+		33FADC1F1C5F55D500E53D46 /* SMTTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTTableDataSource.m; sourceTree = "<group>"; };
 		874545404FF4C356CEAFCE7A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DCBE9C299F4D3C983B7D4063 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -533,6 +539,10 @@
 				331259251C4E1CF600F14A50 /* rightHeaderList.plist */,
 				331259321C4E34B700F14A50 /* ConstantUtil.h */,
 				331259361C4E351E00F14A50 /* UrlUtil.h */,
+				33FADC1E1C5F55D500E53D46 /* SMTTableDataSource.h */,
+				33FADC1F1C5F55D500E53D46 /* SMTTableDataSource.m */,
+				33A0C5211C5F62B900B907AA /* SMTMovielinesListViewController.h */,
+				33A0C5221C5F62B900B907AA /* SMTMovielinesListViewController.m */,
 			);
 			path = FanPian;
 			sourceTree = "<group>";
@@ -771,6 +781,7 @@
 				331259441C4E507700F14A50 /* SMTBeOnShowListMovieModel.m in Sources */,
 				3348E6E51C524E5000B46A3D /* UIView+Size.m in Sources */,
 				33F1BC431C508BC20069F4AA /* SMTMovieImageView.m in Sources */,
+				33A0C5231C5F62B900B907AA /* SMTMovielinesListViewController.m in Sources */,
 				3323470E1C4B416F00B05D2B /* SMTScrollView.m in Sources */,
 				331259241C4E0BBA00F14A50 /* SMTFocusViewController.m in Sources */,
 				33F8EBE61C586EC50015B6DC /* SMTSalonDetailListMovieModel.m in Sources */,
@@ -815,6 +826,7 @@
 				334E31031C5790A300D46105 /* SMTSalonCell.m in Sources */,
 				33F1BBF31C506CDB0069F4AA /* SMTShortMovieViewController.m in Sources */,
 				3348E6FB1C5333B500B46A3D /* SMTCollectionTypeListModel.m in Sources */,
+				33FADC201C5F55D500E53D46 /* SMTTableDataSource.m in Sources */,
 				33F8EBE91C586FEF0015B6DC /* SMTSalonDetailCell.m in Sources */,
 				3323470B1C48A21D00B05D2B /* SMTFindViewController.m in Sources */,
 				331259291C4E265300F14A50 /* SMTShowViewController.m in Sources */,

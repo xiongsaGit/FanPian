@@ -18,4 +18,6 @@ typedef void(^NavTitleItemClickBlcok)(NSInteger itemTag);
 
 - (void)selectItem:(NSInteger)index;
 
+- (void)resizeButtonTitleFontSize:(CGFloat)fontSize;
+
 @end

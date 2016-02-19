@@ -12,6 +12,7 @@
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, copy) NavTitleItemClickBlcok itemClickBlock;
 @property (nonatomic, assign) NSInteger lastSelectIndex;
+@property (nonatomic, assign) NSInteger selectIndex;
 @end
 @implementation SMTNavTitleView
 
@@ -24,11 +25,9 @@
     return self;
 }
 
-- (void)setFrame:(CGRect)frame {
-    [super setFrame:frame];
-    
-    [self setupItems:self.items];
-
+- (void)setItems:(NSArray *)items {
+    _items = items;
+    [self setupItems:items];
 }
 
 - (void)selectItem:(NSInteger)index {
@@ -39,6 +38,8 @@
             selectButton = item;
         }
     }
+    self.selectIndex = index;
+
     [selectButton setSelected:YES];
 }
 
@@ -63,6 +64,9 @@
         [btn setFrame:CGRectMake(i*(CGRectGetWidth(self.frame)/items.count), 0, (CGRectGetWidth(self.frame)/items.count), CGRectGetHeight(self.frame))];
         [btn setTitle:items[i] forState:UIControlStateNormal];
         btn.tag = i;
+        if (i == self.selectIndex) {
+            [btn setSelected:YES];
+        }
         [btn setTitleColor:kColor_Title forState:UIControlStateNormal];
         [btn setTitleColor:kColor_Red forState:UIControlStateSelected];
         [btn addTarget:self action:@selector(itemClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -70,6 +74,11 @@
     }
 }
 
+- (void)resizeButtonTitleFontSize:(CGFloat)fontSize {
+    for (UIButton *subBtn in self.subviews) {
+        subBtn.titleLabel.font = [UIFont systemFontOfSize:fontSize];
+    }
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

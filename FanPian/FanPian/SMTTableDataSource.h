@@ -19,6 +19,11 @@ typedef void(^TableViewCellConfigureBlock)(id cell ,id item);
          cellIdentifier:(NSString *)cellIdentifier
      cellConfigureBlock:(TableViewCellConfigureBlock)cellConfigureBlock;
 
+- (id)initWithDataItems:(NSMutableArray *)dataItems
+                    cellClassName:(NSString *)cellClassName
+         cellIdentifier:(NSString *)cellIdentifier
+     cellConfigureBlock:(TableViewCellConfigureBlock)cellConfigureBlock;
+
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

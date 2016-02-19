@@ -10,7 +10,7 @@
 		331259211C4DEB5600F14A50 /* SMTFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 331259201C4DEB5600F14A50 /* SMTFooter.m */; };
 		331259241C4E0BBA00F14A50 /* SMTFocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 331259231C4E0BBA00F14A50 /* SMTFocusViewController.m */; };
 		331259261C4E1CF600F14A50 /* rightHeaderList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 331259251C4E1CF600F14A50 /* rightHeaderList.plist */; };
-		331259291C4E265300F14A50 /* SMTShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 331259281C4E265300F14A50 /* SMTShowViewController.m */; };
+		331259291C4E265300F14A50 /* SMTBeOnShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 331259281C4E265300F14A50 /* SMTBeOnShowViewController.m */; };
 		3312592E1C4E2DDC00F14A50 /* SMTWantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3312592D1C4E2DDC00F14A50 /* SMTWantViewController.m */; };
 		331259311C4E2E7700F14A50 /* SMTHadWatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 331259301C4E2E7700F14A50 /* SMTHadWatchViewController.m */; };
 		331259351C4E350800F14A50 /* SMTBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 331259341C4E350800F14A50 /* SMTBaseRequest.m */; };
@@ -50,7 +50,6 @@
 		336F60F61C563CBE008C6419 /* ShowLabelOnImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 336F60F51C563CBE008C6419 /* ShowLabelOnImageView.m */; };
 		33A0C5231C5F62B900B907AA /* SMTMovielinesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A0C5221C5F62B900B907AA /* SMTMovielinesListViewController.m */; };
 		33A7A8541C4D005E003CD805 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A7A8531C4D005E003CD805 /* UIView+Additions.m */; };
-		33EB3EF51C4F7ECF00F93592 /* SMTBaseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EB3EF41C4F7ECF00F93592 /* SMTBaseListViewController.m */; };
 		33EFB5621C4793B40033912B /* SMTListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB5611C4793B40033912B /* SMTListViewController.m */; };
 		33EFB5651C4793BD0033912B /* SMTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB5641C4793BD0033912B /* SMTMainViewController.m */; };
 		33EFB5681C4793DD0033912B /* SMTSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB5671C4793DD0033912B /* SMTSettingViewController.m */; };
@@ -80,6 +79,9 @@
 		33F8EBE61C586EC50015B6DC /* SMTSalonDetailListMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8EBE51C586EC50015B6DC /* SMTSalonDetailListMovieModel.m */; };
 		33F8EBE91C586FEF0015B6DC /* SMTSalonDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8EBE81C586FEF0015B6DC /* SMTSalonDetailCell.m */; };
 		33F8EBEF1C5871660015B6DC /* SMTSalonDetailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8EBEE1C5871660015B6DC /* SMTSalonDetailHeader.m */; };
+		33FA87401C772F0B003E34B3 /* UIWindow+WJLMidPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FA873B1C772F0B003E34B3 /* UIWindow+WJLMidPop.m */; };
+		33FA87411C772F0B003E34B3 /* WJLBottomPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FA873D1C772F0B003E34B3 /* WJLBottomPopView.m */; };
+		33FA87421C772F0B003E34B3 /* WJLMidPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FA873F1C772F0B003E34B3 /* WJLMidPopView.m */; };
 		33FADC201C5F55D500E53D46 /* SMTTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FADC1F1C5F55D500E53D46 /* SMTTableDataSource.m */; };
 		E98474EED5FFA6410C22E543 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBE9C299F4D3C983B7D4063 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -108,8 +110,8 @@
 		331259221C4E0BBA00F14A50 /* SMTFocusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTFocusViewController.h; sourceTree = "<group>"; };
 		331259231C4E0BBA00F14A50 /* SMTFocusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTFocusViewController.m; sourceTree = "<group>"; };
 		331259251C4E1CF600F14A50 /* rightHeaderList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rightHeaderList.plist; sourceTree = "<group>"; };
-		331259271C4E265300F14A50 /* SMTShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTShowViewController.h; sourceTree = "<group>"; };
-		331259281C4E265300F14A50 /* SMTShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTShowViewController.m; sourceTree = "<group>"; };
+		331259271C4E265300F14A50 /* SMTBeOnShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTBeOnShowViewController.h; sourceTree = "<group>"; };
+		331259281C4E265300F14A50 /* SMTBeOnShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTBeOnShowViewController.m; sourceTree = "<group>"; };
 		3312592C1C4E2DDC00F14A50 /* SMTWantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTWantViewController.h; sourceTree = "<group>"; };
 		3312592D1C4E2DDC00F14A50 /* SMTWantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTWantViewController.m; sourceTree = "<group>"; };
 		3312592F1C4E2E7700F14A50 /* SMTHadWatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTHadWatchViewController.h; sourceTree = "<group>"; };
@@ -188,8 +190,6 @@
 		33A0C5221C5F62B900B907AA /* SMTMovielinesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMovielinesListViewController.m; sourceTree = "<group>"; };
 		33A7A8521C4D005E003CD805 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
 		33A7A8531C4D005E003CD805 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
-		33EB3EF31C4F7ECF00F93592 /* SMTBaseListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTBaseListViewController.h; sourceTree = "<group>"; };
-		33EB3EF41C4F7ECF00F93592 /* SMTBaseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTBaseListViewController.m; sourceTree = "<group>"; };
 		33EFB5601C4793B40033912B /* SMTListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTListViewController.h; sourceTree = "<group>"; };
 		33EFB5611C4793B40033912B /* SMTListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTListViewController.m; sourceTree = "<group>"; };
 		33EFB5631C4793BD0033912B /* SMTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMainViewController.h; sourceTree = "<group>"; };
@@ -249,6 +249,12 @@
 		33F8EBE81C586FEF0015B6DC /* SMTSalonDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTSalonDetailCell.m; sourceTree = "<group>"; };
 		33F8EBED1C5871660015B6DC /* SMTSalonDetailHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTSalonDetailHeader.h; sourceTree = "<group>"; };
 		33F8EBEE1C5871660015B6DC /* SMTSalonDetailHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTSalonDetailHeader.m; sourceTree = "<group>"; };
+		33FA873A1C772F0B003E34B3 /* UIWindow+WJLMidPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+WJLMidPop.h"; sourceTree = "<group>"; };
+		33FA873B1C772F0B003E34B3 /* UIWindow+WJLMidPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+WJLMidPop.m"; sourceTree = "<group>"; };
+		33FA873C1C772F0B003E34B3 /* WJLBottomPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJLBottomPopView.h; sourceTree = "<group>"; };
+		33FA873D1C772F0B003E34B3 /* WJLBottomPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJLBottomPopView.m; sourceTree = "<group>"; };
+		33FA873E1C772F0B003E34B3 /* WJLMidPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJLMidPopView.h; sourceTree = "<group>"; };
+		33FA873F1C772F0B003E34B3 /* WJLMidPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJLMidPopView.m; sourceTree = "<group>"; };
 		33FADC1E1C5F55D500E53D46 /* SMTTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTTableDataSource.h; sourceTree = "<group>"; };
 		33FADC1F1C5F55D500E53D46 /* SMTTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTTableDataSource.m; sourceTree = "<group>"; };
 		874545404FF4C356CEAFCE7A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -295,8 +301,8 @@
 			children = (
 				332347091C48A21D00B05D2B /* SMTFindViewController.h */,
 				3323470A1C48A21D00B05D2B /* SMTFindViewController.m */,
-				331259271C4E265300F14A50 /* SMTShowViewController.h */,
-				331259281C4E265300F14A50 /* SMTShowViewController.m */,
+				331259271C4E265300F14A50 /* SMTBeOnShowViewController.h */,
+				331259281C4E265300F14A50 /* SMTBeOnShowViewController.m */,
 				33F1BBF11C506CDB0069F4AA /* SMTShortMovieViewController.h */,
 				33F1BBF21C506CDB0069F4AA /* SMTShortMovieViewController.m */,
 				3348E6F01C53198500B46A3D /* SMTCollectionViewController.h */,
@@ -427,8 +433,6 @@
 			children = (
 				332347101C4B5D7F00B05D2B /* MainPage */,
 				3323470F1C4B5D6D00B05D2B /* MenuVC */,
-				33EB3EF31C4F7ECF00F93592 /* SMTBaseListViewController.h */,
-				33EB3EF41C4F7ECF00F93592 /* SMTBaseListViewController.m */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -436,6 +440,7 @@
 		33EFB56D1C479AF20033912B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				33FA87391C772EFE003E34B3 /* thirdParty */,
 				334E30FE1C577C3F00D46105 /* SMTHeaderView.h */,
 				334E30FF1C577C3F00D46105 /* SMTHeaderView.m */,
 				336F60A71C5604B9008C6419 /* UIPopoverListView.h */,
@@ -588,6 +593,19 @@
 				33F8EBE81C586FEF0015B6DC /* SMTSalonDetailCell.m */,
 			);
 			name = cell;
+			sourceTree = "<group>";
+		};
+		33FA87391C772EFE003E34B3 /* thirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				33FA873A1C772F0B003E34B3 /* UIWindow+WJLMidPop.h */,
+				33FA873B1C772F0B003E34B3 /* UIWindow+WJLMidPop.m */,
+				33FA873C1C772F0B003E34B3 /* WJLBottomPopView.h */,
+				33FA873D1C772F0B003E34B3 /* WJLBottomPopView.m */,
+				33FA873E1C772F0B003E34B3 /* WJLMidPopView.h */,
+				33FA873F1C772F0B003E34B3 /* WJLMidPopView.m */,
+			);
+			name = thirdParty;
 			sourceTree = "<group>";
 		};
 		E1CED7343844D4D6BC2D1D94 /* Frameworks */ = {
@@ -778,12 +796,14 @@
 				332347051C489DB100B05D2B /* SMTContainerViewController.m in Sources */,
 				33EFB56B1C4793E50033912B /* SMTSearchViewController.m in Sources */,
 				331259411C4E4FCF00F14A50 /* SMTBeOnShowListModel.m in Sources */,
+				33FA87421C772F0B003E34B3 /* WJLMidPopView.m in Sources */,
 				331259441C4E507700F14A50 /* SMTBeOnShowListMovieModel.m in Sources */,
 				3348E6E51C524E5000B46A3D /* UIView+Size.m in Sources */,
 				33F1BC431C508BC20069F4AA /* SMTMovieImageView.m in Sources */,
 				33A0C5231C5F62B900B907AA /* SMTMovielinesListViewController.m in Sources */,
 				3323470E1C4B416F00B05D2B /* SMTScrollView.m in Sources */,
 				331259241C4E0BBA00F14A50 /* SMTFocusViewController.m in Sources */,
+				33FA87411C772F0B003E34B3 /* WJLBottomPopView.m in Sources */,
 				33F8EBE61C586EC50015B6DC /* SMTSalonDetailListMovieModel.m in Sources */,
 				33F8EBD71C586AC90015B6DC /* SMTSalonDetailViewController.m in Sources */,
 				33EFB5701C479B0B0033912B /* SMTNavTitleView.m in Sources */,
@@ -796,7 +816,6 @@
 				334E30F61C57777600D46105 /* SMTSalonModel.m in Sources */,
 				334E30F01C57762700D46105 /* SMTSalonRequest.m in Sources */,
 				336F60F61C563CBE008C6419 /* ShowLabelOnImageView.m in Sources */,
-				33EB3EF51C4F7ECF00F93592 /* SMTBaseListViewController.m in Sources */,
 				33EFB5621C4793B40033912B /* SMTListViewController.m in Sources */,
 				33F1BBFA1C506E840069F4AA /* SMTShortMovieModel.m in Sources */,
 				33F1BBF71C506E290069F4AA /* SMTShortMovieDataModel.m in Sources */,
@@ -828,8 +847,9 @@
 				3348E6FB1C5333B500B46A3D /* SMTCollectionTypeListModel.m in Sources */,
 				33FADC201C5F55D500E53D46 /* SMTTableDataSource.m in Sources */,
 				33F8EBE91C586FEF0015B6DC /* SMTSalonDetailCell.m in Sources */,
+				33FA87401C772F0B003E34B3 /* UIWindow+WJLMidPop.m in Sources */,
 				3323470B1C48A21D00B05D2B /* SMTFindViewController.m in Sources */,
-				331259291C4E265300F14A50 /* SMTShowViewController.m in Sources */,
+				331259291C4E265300F14A50 /* SMTBeOnShowViewController.m in Sources */,
 				334E30F31C57772200D46105 /* SMTSalonDataModel.m in Sources */,
 				33F8EBEF1C5871660015B6DC /* SMTSalonDetailHeader.m in Sources */,
 				33EFB5651C4793BD0033912B /* SMTMainViewController.m in Sources */,

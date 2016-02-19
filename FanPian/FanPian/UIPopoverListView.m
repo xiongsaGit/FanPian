@@ -65,8 +65,9 @@
     _listView.rowHeight = 44;
     _listView.sectionHeaderHeight = 0;
     _listView.sectionFooterHeight = 10;
-    _listView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, CGFLOAT_MIN)];
+    _listView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_titleView.frame), 0, CGFLOAT_MIN)];
     [self addSubview:_listView];
+    _listView.backgroundColor = [UIColor redColor];
     
     _overlayView = [[UIControl alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     _overlayView.backgroundColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.5];
@@ -92,8 +93,8 @@
 {
     if (self.datasource && [self.datasource respondsToSelector:@selector(numberOfSectionsInPopoverListView:)]) {
         return [self.datasource numberOfSectionsInPopoverListView:self];
-    }
-    return 1;
+    }else
+        return 1;
 }
 
 

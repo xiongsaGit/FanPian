@@ -6,11 +6,9 @@
 //  Copyright © 2016年 sa.xiong. All rights reserved.
 //
 
-#import "SMTBaseListViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface SMTMovielinesListViewController : SMTBaseListViewController
+@interface SMTMovielinesListViewController : UIViewController
 
-
-//- (id)initWithType:(MovieTypeFrom)type title:(NSString *)title ctid:(NSString *)ctid;
 
 @end

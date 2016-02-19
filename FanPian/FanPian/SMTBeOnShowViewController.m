@@ -1,12 +1,12 @@
 //
-//  SMTShowViewController.m
+//  SMTBeOnShowViewController.m
 //  FanPian
 //
 //  Created by sa.xiong on 16/1/19.
 //  Copyright © 2016年 sa.xiong. All rights reserved.
 //
 
-#import "SMTShowViewController.h"
+#import "SMTBeOnShowViewController.h"
 #import "SMTNavTitleView.h"
 #import "SMTBeOnShowCell.h"
 #import "UIPopoverListView.h"
@@ -16,7 +16,8 @@
 #import "SMTCollectionTypeRequest.h"
 #import "SMTCollectionTypeDataModel.h"
 
-@interface SMTShowViewController ()<UITableViewDelegate,UITableViewDataSource,UIPopoverListViewDataSource,UIPopoverListViewDelegate>
+#import "UIWindow+WJLMidPop.h"
+@interface SMTBeOnShowViewController ()<UITableViewDelegate,UITableViewDataSource,UIPopoverListViewDataSource,UIPopoverListViewDelegate>
 @property (nonatomic, assign) MovieTypeFrom movieType;
 @property (nonatomic, copy) NSString *ctid;
 @property (nonatomic, strong) UITableView *tableView;
@@ -30,7 +31,7 @@
 @property (nonatomic, assign) CGSize imageSize;
 @end
 
-@implementation SMTShowViewController
+@implementation SMTBeOnShowViewController
 
 - (id)initWithType:(MovieTypeFrom)type title:(NSString *)title ctid:(NSString *)ctid {
     if (self = [super init]) {
@@ -60,13 +61,19 @@
     
     if (self.movieType == MovieTypeFromDefault) {
         __weak typeof(self)weakSelf = self;
-        SMTNavTitleView *titleView = [[SMTNavTitleView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40) items:@[@"正在上映",@"即将上映"] clickBlock:^(NSInteger itemTag) {
+        SMTNavTitleView *titleView = [[SMTNavTitleView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30) items:@[@"正在上映",@"即将上映"] clickBlock:^(NSInteger itemTag) {
             [weakSelf showDifferentListWithItemTag:itemTag];
         }];
+        [titleView resizeButtonTitleFontSize:14];
         [titleView selectItem:0];
+        
         [self.view addSubview:titleView];
         
-        self.tableView.frame = CGRectMake(0, CGRectGetMaxY(titleView.frame), SCREEN_WIDTH, SCREEN_HEIGHT-CGRectGetMaxY(titleView.frame));
+        UILabel *line = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(titleView.frame), CGRectGetWidth(titleView.frame), .2)];
+        line.backgroundColor = UIColorFromRGB(0xe6e6e6);
+        [self.view addSubview:line];
+        
+        self.tableView.frame = CGRectMake(0, CGRectGetMaxY(line.frame), SCREEN_WIDTH, SCREEN_HEIGHT-CGRectGetMaxY(titleView.frame));
         [self requestListData];
     }else {
     
@@ -163,6 +170,10 @@
     }else {
         NSLog(@"哈哈");
         [self.listView show];
+        
+        [self.view.window showMidPopViewWithImgs:nil andTitles:@[@"加入影单",@"分享",@"取消",@""] WithCallBlock:^(int index) {
+            NSLog(@"log log log popview");
+        }];
     }
 }
 
@@ -221,17 +232,20 @@
 
 - (UIPopoverListView *)listView {
     if (!_listView) {
-        _listView = [[UIPopoverListView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, 32+44*3+10)];
+        _listView = [[UIPopoverListView alloc] initWithFrame:CGRectMake(50, SCREEN_HEIGHT, SCREEN_WIDTH-100, 32+44*3+10)];
         _listView.delegate = self;
         _listView.datasource = self;
-        _listView.listView.scrollEnabled = FALSE;
-        [_listView setTitle:@"更多"];
+        _listView.listView.scrollEnabled = YES;
+//        [_listView setTitle:@"更多"];
     }
     return _listView;
 }
 
 - (NSInteger)numberOfSectionsInPopoverListView:(UIPopoverListView *)popoverListView {
-    return 2;
+    return 1;
+}
+- (CGFloat)popoverListView:(UIPopoverListView *)popoverListView {
+    return 40;
 }
 
 #pragma mark - UIPopoverListViewDataSource
@@ -259,7 +273,7 @@
        numberOfRowsInSection:(NSInteger)section
 {
     if (section == 0) {
-        return 3;
+        return 2;
     }else {
         return 1;
     }
@@ -270,7 +284,7 @@
 - (void)popoverListView:(UIPopoverListView *)popoverListView
      didSelectIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%s : %d", __func__, (int)indexPath.row);
+    NSLog(@"listView----%s : %d", __func__, (int)indexPath.row);
     // your code here
 }
 

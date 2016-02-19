@@ -21,6 +21,7 @@
 @property (nonatomic, strong) SMTFindViewController *findVC;
 @property (nonatomic, strong) SMTMainViewController *mainVC;
 @property (nonatomic, strong) SMTScrollView *scrollView;
+@property (nonatomic, strong) SMTNavTitleView *navTitleView;
 @end
 @implementation SMTContainerViewController
 
@@ -73,17 +74,17 @@
     [self.scrollView setContentOffset:CGPointMake(SCREEN_WIDTH*index, 0) animated:YES];
     
     // 刷新状态
-    SMTNavTitleView *navTitleView = (SMTNavTitleView *)self.navigationItem.titleView;
-    [navTitleView selectItem:index];
+    [self.navTitleView selectItem:index];
 }
 
 - (void)setupNavView {
     
     __weak typeof(self)weakSelf = self;
-    SMTNavTitleView *navTitleView = [[SMTNavTitleView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH-120, 40) items:@[@"我的",@"推荐",@"发现"] clickBlock:^(NSInteger itemTag) {
+    self.navTitleView = [[SMTNavTitleView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH-120, 40) items:@[@"我的",@"推荐",@"发现"] clickBlock:^(NSInteger itemTag) {
         [weakSelf clickItemWithIndex:itemTag];
     }];
-    self.navigationItem.titleView = navTitleView;
+    [self clickItemWithIndex:1];
+    self.navigationItem.titleView = self.navTitleView;
 }
 
 - (void)setupNavItems {

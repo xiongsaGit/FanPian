@@ -7,7 +7,7 @@
 //
 
 #import "SMTCollectionViewController.h"
-#import "SMTShowViewController.h"
+#import "SMTBeOnShowViewController.h"
 
 #import "SMTCollectionCell.h"
 
@@ -42,7 +42,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     SMTCollectionListModel *model = self.dataSourceItems[indexPath.section];
-    SMTShowViewController *viewCtrl = [[SMTShowViewController alloc] initWithType:MovieTypeFromCollection title:model.name ctid:model.ctid];
+    SMTBeOnShowViewController *viewCtrl = [[SMTBeOnShowViewController alloc] initWithType:MovieTypeFromCollection title:model.name ctid:model.ctid];
     
     [self.navigationController pushViewController:viewCtrl animated:YES];
 }

@@ -12,9 +12,14 @@
 #import "SMTBeOnShowRequest.h"
 #import "SMTBeOnShowDataModel.h"
 
-
+#import "SMTTableDataSource.h"
 static NSString *const CellIdentifier = @"cellIdentifier";
-@interface SMTMovielinesListViewController()
+@interface SMTMovielinesListViewController()<UITableViewDelegate>
+@property (nonatomic, strong) NSMutableArray *dataItems;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) SMTTableDataSource *tableDataSource;
+
+@property (nonatomic, assign) CGFloat itemHeight;
 
 @end
 
@@ -22,7 +27,15 @@ static NSString *const CellIdentifier = @"cellIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    self.itemHeight = 44.0f;
+    self.dataItems = [NSMutableArray array];
+    
+    [self.view addSubview:self.tableView];
+    
+    [self setupTableView];
+    
+    [self defaultRequestData];
+
 }
 
 - (void)setupTableView {
@@ -48,6 +61,41 @@ static NSString *const CellIdentifier = @"cellIdentifier";
     } failure:^(YTKBaseRequest *request) {
         
     }];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return self.itemHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self selectItemAtIndexPath:indexPath];
+}
+
+- (void)headerRefreshEvent {
+    
+}
+
+- (void)footerLoadMoreEvent {
+    
+}
+
+- (void)selectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+- (UITableView *)tableView
+{
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
+                                                  style:UITableViewStylePlain];
+        _tableView.showsVerticalScrollIndicator = NO;
+        _tableView.delegate = self;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.rowHeight = 44;
+    }
+    return _tableView;
 }
 
 @end

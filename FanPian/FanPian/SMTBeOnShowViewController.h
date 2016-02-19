@@ -1,5 +1,5 @@
 //
-//  SMTShowViewController.h
+//  SMTBeOnShowViewController.h
 //  FanPian
 //
 //  Created by sa.xiong on 16/1/19.
@@ -15,7 +15,7 @@
 //};
 
 // 上映
-@interface SMTShowViewController : UIViewController
+@interface SMTBeOnShowViewController : UIViewController
 
 - (id)initWithType:(MovieTypeFrom)type title:(NSString *)title ctid:(NSString *)ctid;
 

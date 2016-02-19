@@ -9,7 +9,6 @@
 #import "SMTBeOnShowViewController.h"
 #import "SMTNavTitleView.h"
 #import "SMTBeOnShowCell.h"
-#import "UIPopoverListView.h"
 #import "SMTBeOnShowRequest.h"
 #import "SMTBeOnShowDataModel.h"
 
@@ -17,13 +16,11 @@
 #import "SMTCollectionTypeDataModel.h"
 
 #import "UIWindow+WJLMidPop.h"
-@interface SMTBeOnShowViewController ()<UITableViewDelegate,UITableViewDataSource,UIPopoverListViewDataSource,UIPopoverListViewDelegate>
+@interface SMTBeOnShowViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, assign) MovieTypeFrom movieType;
 @property (nonatomic, copy) NSString *ctid;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataSourceItems;
-@property (nonatomic, strong) UIPopoverListView *listView;
-@property (nonatomic, strong) NSArray *listDataSource;
 @property (nonatomic, assign) NSInteger curPage;
 
 @property (nonatomic, assign) BOOL isChecked;
@@ -54,7 +51,6 @@
     // 影单详情 需要导航栏右侧添加分享按钮
 
     self.dataSourceItems = [NSMutableArray array];
-    self.listView.listDataSource = [NSArray arrayWithObjects:@"加入影单",@"分享",@"取消", nil];
     [self.view addSubview:self.tableView];
     
     self.edgesForExtendedLayout  = UIRectEdgeNone;
@@ -169,7 +165,6 @@
         NSLog(@"评论呢");
     }else {
         NSLog(@"哈哈");
-        [self.listView show];
         
         [self.view.window showMidPopViewWithImgs:nil andTitles:@[@"加入影单",@"分享",@"取消",@""] WithCallBlock:^(int index) {
             NSLog(@"log log log popview");
@@ -229,70 +224,6 @@
     }
     return _animateImageView;
 }
-
-- (UIPopoverListView *)listView {
-    if (!_listView) {
-        _listView = [[UIPopoverListView alloc] initWithFrame:CGRectMake(50, SCREEN_HEIGHT, SCREEN_WIDTH-100, 32+44*3+10)];
-        _listView.delegate = self;
-        _listView.datasource = self;
-        _listView.listView.scrollEnabled = YES;
-//        [_listView setTitle:@"更多"];
-    }
-    return _listView;
-}
-
-- (NSInteger)numberOfSectionsInPopoverListView:(UIPopoverListView *)popoverListView {
-    return 1;
-}
-- (CGFloat)popoverListView:(UIPopoverListView *)popoverListView {
-    return 40;
-}
-
-#pragma mark - UIPopoverListViewDataSource
-
-- (UITableViewCell *)popoverListView:(UIPopoverListView *)popoverListView
-                    cellForIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *identifier = @"cell";
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                                    reuseIdentifier:identifier];
-    cell.textLabel.textAlignment = NSTextAlignmentCenter;
-    if (indexPath.section == 0) {
-        if(indexPath.row == 0){
-            cell.textLabel.text = @"加入影单";
-        }else if (indexPath.row == 1){
-            cell.textLabel.text = @"分享";
-        }
-    }else {
-        cell.textLabel.text = @"取消";
-    }
-    return cell;
-}
-
-- (NSInteger)popoverListView:(UIPopoverListView *)popoverListView
-       numberOfRowsInSection:(NSInteger)section
-{
-    if (section == 0) {
-        return 2;
-    }else {
-        return 1;
-    }
-    //    return 4;
-}
-
-#pragma mark - UIPopoverListViewDelegate
-- (void)popoverListView:(UIPopoverListView *)popoverListView
-     didSelectIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@"listView----%s : %d", __func__, (int)indexPath.row);
-    // your code here
-}
-
-//- (CGFloat)popoverListView:(UIPopoverListView *)popoverListView
-//   heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    return 60.0f;
-//}
 
 
 - (void)didReceiveMemoryWarning {

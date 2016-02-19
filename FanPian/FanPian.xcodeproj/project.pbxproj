@@ -46,7 +46,6 @@
 		334E30FD1C577C1400D46105 /* SMTSalonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 334E30FC1C577C1400D46105 /* SMTSalonViewController.m */; };
 		334E31001C577C3F00D46105 /* SMTHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 334E30FF1C577C3F00D46105 /* SMTHeaderView.m */; };
 		334E31031C5790A300D46105 /* SMTSalonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 334E31021C5790A300D46105 /* SMTSalonCell.m */; };
-		336F60A91C5604B9008C6419 /* UIPopoverListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 336F60A81C5604B9008C6419 /* UIPopoverListView.m */; };
 		336F60F61C563CBE008C6419 /* ShowLabelOnImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 336F60F51C563CBE008C6419 /* ShowLabelOnImageView.m */; };
 		33A0C5231C5F62B900B907AA /* SMTMovielinesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A0C5221C5F62B900B907AA /* SMTMovielinesListViewController.m */; };
 		33A7A8541C4D005E003CD805 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A7A8531C4D005E003CD805 /* UIView+Additions.m */; };
@@ -182,8 +181,6 @@
 		334E30FF1C577C3F00D46105 /* SMTHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTHeaderView.m; sourceTree = "<group>"; };
 		334E31011C5790A300D46105 /* SMTSalonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTSalonCell.h; sourceTree = "<group>"; };
 		334E31021C5790A300D46105 /* SMTSalonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTSalonCell.m; sourceTree = "<group>"; };
-		336F60A71C5604B9008C6419 /* UIPopoverListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPopoverListView.h; sourceTree = "<group>"; };
-		336F60A81C5604B9008C6419 /* UIPopoverListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPopoverListView.m; sourceTree = "<group>"; };
 		336F60F41C563CBE008C6419 /* ShowLabelOnImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowLabelOnImageView.h; sourceTree = "<group>"; };
 		336F60F51C563CBE008C6419 /* ShowLabelOnImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowLabelOnImageView.m; sourceTree = "<group>"; };
 		33A0C5211C5F62B900B907AA /* SMTMovielinesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMovielinesListViewController.h; sourceTree = "<group>"; };
@@ -443,8 +440,6 @@
 				33FA87391C772EFE003E34B3 /* thirdParty */,
 				334E30FE1C577C3F00D46105 /* SMTHeaderView.h */,
 				334E30FF1C577C3F00D46105 /* SMTHeaderView.m */,
-				336F60A71C5604B9008C6419 /* UIPopoverListView.h */,
-				336F60A81C5604B9008C6419 /* UIPopoverListView.m */,
 				336F60F41C563CBE008C6419 /* ShowLabelOnImageView.h */,
 				336F60F51C563CBE008C6419 /* ShowLabelOnImageView.m */,
 				33A7A8521C4D005E003CD805 /* UIView+Additions.h */,
@@ -827,7 +822,6 @@
 				33F1BC011C50702E0069F4AA /* SMTShortMovieCell.m in Sources */,
 				33F8EBE31C586D940015B6DC /* SMTSalonDetailListModel.m in Sources */,
 				331259391C4E359100F14A50 /* SMTBeOnShowRequest.m in Sources */,
-				336F60A91C5604B9008C6419 /* UIPopoverListView.m in Sources */,
 				331259311C4E2E7700F14A50 /* SMTHadWatchViewController.m in Sources */,
 				33F1BBFD1C506EC20069F4AA /* SMTShortMovieListModel.m in Sources */,
 				33F304DE1C448BAE0020838A /* main.m in Sources */,

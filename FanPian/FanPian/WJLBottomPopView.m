@@ -71,9 +71,13 @@ static const CGFloat imgTitleMargin = 20;//按钮图片和文字间隔
 - (void)didSelectAtButton:(UIButton *)sender {
     MidPopViewBlock block = self.bottomBolck;
     if (block) {
-        block((int)sender.tag - ButtonTag);
+        if ((int)sender.tag - ButtonTag != 0) {
+            block((int)sender.tag - ButtonTag);
+        }
     }
-    [self.window dismissView];
+    if ((int)sender.tag - ButtonTag != 0) {
+        [self.window dismissView];
+    }
 }
 
 + (WJLBottomPopView*)share{

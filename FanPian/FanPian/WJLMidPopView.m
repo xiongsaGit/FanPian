@@ -30,26 +30,29 @@ static const CGFloat imgTitleMargin = 20;//按钮图片和文字间隔
          [obj removeFromSuperview];
      }];
     
-    if (imgs.count <=  0) {
-       
-        return;
-    }
-    if (imgs.count != titles.count) {
-        NSLog(@"图片必须和文本一样数量");
-        return;
-    }
-    for (int i = 0; i < imgs.count ; i ++) {
-        UIButton *bt = [[UIButton alloc] init];
-        NSString *img = imgs[i];
+//    if (imgs.count <=  0) {
+//       
+//        return;
+//    }
+//    if (imgs.count != titles.count) {
+//        NSLog(@"图片必须和文本一样数量");
+//        return;
+//    }
+    for (int i = 0; i < titles.count ; i ++) {
+        UIButton *bt = [UIButton buttonWithType:UIButtonTypeCustom];
+        if (imgs.count>=titles.count) {
+            NSString *img = imgs[i];
+            [bt setImage:[UIImage imageNamed:img] forState:UIControlStateNormal];
+            if (img.length >= 1) { //有图片的话就设置图片和文字的间距
+                bt.titleEdgeInsets = UIEdgeInsetsMake(0, imgTitleMargin, 0, 0);
+            }
+        }
         NSString *title = titles[i];
-        [bt setImage:[UIImage imageNamed:img] forState:UIControlStateNormal];
         [bt setTitle:title forState:UIControlStateNormal];
         [bt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         bt.tag =  ButtonTag + i ;
         bt.backgroundColor = [UIColor whiteColor];
-        if (img.length >= 1) { //有图片的话就设置图片和文字的间距
-             bt.titleEdgeInsets = UIEdgeInsetsMake(0, imgTitleMargin, 0, 0);
-        }
+       
        
         [bt addTarget:self action:@selector(didSelectAtButton:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:bt];
@@ -69,9 +72,15 @@ static const CGFloat imgTitleMargin = 20;//按钮图片和文字间隔
 - (void)didSelectAtButton:(UIButton *)sender {
     MidPopViewBlock block = self.midBlck;
     if (block) {
-        block((int)sender.tag - ButtonTag);
+        if ((int)sender.tag - ButtonTag != 0) {
+            block((int)sender.tag - ButtonTag);
+   
+        }
     }
+    if ((int)sender.tag - ButtonTag != 0) {
+
     [self.window dismissView];
+    }
 }
 
 + (WJLMidPopView*)share{

@@ -8,7 +8,7 @@
 
 #import "UIWindow+WJLMidPop.h"
 
-#define buttonW 44 //每个弹出视图里面按钮的高度
+#define buttonW 50 //每个弹出视图里面按钮的高度
 
 UIButton *maskBt;
 
@@ -71,7 +71,7 @@ UIButton *maskBt;
     
 }
 - (void)maskClick{
-    [self dismissView];
+//    [self dismissView];
 
 }
 - (void)dismissView{

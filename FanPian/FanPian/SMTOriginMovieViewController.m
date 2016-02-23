@@ -1,21 +1,19 @@
 //
-//  SMTShortMovieViewController.m
+//  SMTOriginMovieViewController.m
 //  FanPian
 //
-//  Created by sa.xiong on 16/1/21.
+//  Created by sa.xiong on 16/2/22.
 //  Copyright © 2016年 sa.xiong. All rights reserved.
 //
 
-#import "SMTShortMovieViewController.h"
+#import "SMTOriginMovieViewController.h"
+#import "SMTModPageRequest.h"
 #import "SMTImageTitleDescCell.h"
-
 #import "SMTBeOnShowRequest.h"
 #import "SMTShortMovieDataModel.h"
 
-#import "SMTModPageRequest.h"
+@interface SMTOriginMovieViewController()<UITableViewDelegate,UITableViewDataSource>
 
-@interface SMTShortMovieViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic, copy) NSString *mod;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataSourceItems;
 @property (nonatomic, assign) NSInteger curPage;
@@ -24,20 +22,13 @@
 @property (nonatomic, assign) CGSize imageSize;
 
 @end
-@implementation SMTShortMovieViewController
-
-- (id)initWithTitle:(NSString *)title withMod:(NSString *)requestMod {
-    if (self = [super init]) {
-        self.title = title;
-        self.mod = requestMod;
-    }
-    return self;
-}
+@implementation SMTOriginMovieViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.title = @"短片";
     self.curPage = 1;
     self.isChecked = NO;
     
@@ -62,7 +53,7 @@
 
 - (void)requestDataByPageNum:(NSInteger)pageNum {
     
-    SMTModPageRequest *request = [[SMTModPageRequest alloc] initWithPage:[NSNumber numberWithInteger:pageNum] mod:self.mod];
+    SMTModPageRequest *request = [[SMTModPageRequest alloc] initWithPage:[NSNumber numberWithInteger:pageNum] mod:@"threadmusic"];
     [request startWithCompletionBlockWithSuccess:^(YTKBaseRequest *request) {
         NSError* err = nil;
         
@@ -76,8 +67,8 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-//    [self.dataSourceItems objectAtIndex:indexPath.section];
+    
+    //    [self.dataSourceItems objectAtIndex:indexPath.section];
     return [self heightOfCellAtIndexPath:indexPath];
 }
 
@@ -90,7 +81,7 @@
     
     CGSize subjectSize = [self.view sizeWithText:model.subject boundingSize:boundingSize font:kFontOfSize(15)];
     CGSize introSize = [self.view sizeWithText:model.intro boundingSize:boundingSize font:kFontOfSize(15)];
-
+    
     result = SCREEN_WIDTH*[model.height floatValue]/[model.width floatValue]+kEdge+subjectSize.height+1.5*kEdge+introSize.height+40;
     
     return result;
@@ -111,7 +102,7 @@
     }
     
     [cell configureCellData:self.dataSourceItems[indexPath.section]];
-
+    
     return cell;
 }
 
@@ -188,5 +179,6 @@
     }
     return _animateImageView;
 }
+
 
 @end

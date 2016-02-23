@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-
-
 @interface SMTShortMovieViewController : UIViewController
 
+- (id)initWithTitle:(NSString *)title withMod:(NSString *)requestMod;
 
 @end

@@ -9,7 +9,7 @@
 #ifndef ConstantUtil_h
 #define ConstantUtil_h
 
-#define AppVersion @"3.13"
+#define AppVersion @"3.14"
 
 #define kFontOfSize(size) [UIFont systemFontOfSize:size]
 #define kBoldFontOfSize(size) [UIFont boldSystemFontOfSize:size]

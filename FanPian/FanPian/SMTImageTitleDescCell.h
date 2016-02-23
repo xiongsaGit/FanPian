@@ -1,5 +1,5 @@
 //
-//  SMTShortMovieCell.h
+//  SMTImageTitleDescCell.h
 //  FanPian
 //
 //  Created by sa.xiong on 16/1/21.
@@ -8,15 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@class SMTShortMovieCell,SMTShortMovieListModel;
+// 格式：图片 标题 简介
+@class SMTImageTitleDescCell,SMTShortMovieListModel;
 
 @protocol SMTShortMovieCellDelegate <NSObject>
 - (void)playVideoWithUrlString:(NSString *)videoUrl;
 @end
 
-typedef void(^ShortMovieCellItemBlock)(SMTShortMovieCell *cell ,NSInteger itemTag);
+typedef void(^ShortMovieCellItemBlock)(SMTImageTitleDescCell *cell ,NSInteger itemTag);
 
-@interface SMTShortMovieCell : UITableViewCell
+@interface SMTImageTitleDescCell : UITableViewCell
 
 @property (nonatomic, copy) ShortMovieCellItemBlock itemBlock;
 

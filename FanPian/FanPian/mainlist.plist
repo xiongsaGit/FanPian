@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>imageName</key>
+		<string>onshow</string>
+		<key>titleContent</key>
+		<string>上映</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>shortmovie</string>
+		<key>titleContent</key>
+		<string>短片</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>movielist</string>
+		<key>titleContent</key>
+		<string>影单</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>moreitem</string>
+		<key>titleContent</key>
+		<string>更多</string>
+	</dict>
+</array>
+</plist>

@@ -106,6 +106,14 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightItem];
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+
+    NSInteger index = scrollView.contentOffset.x/SCREEN_WIDTH;
+    [self.navTitleView selectItem:index];
+
+
+}
+
 - (SMTScrollView *)scrollView {
     if (!_scrollView) {
         _scrollView = [[SMTScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];

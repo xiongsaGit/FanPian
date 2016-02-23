@@ -16,4 +16,6 @@ typedef void(^MovieImageViewClickBlock)();
 - (id)initWithClickBlock:(MovieImageViewClickBlock)clickBlock;
 
 - (void)downLoadImageWithPath:(NSString *)path;
+
+- (void)hideVideoPlayIcon:(BOOL)hidden;
 @end

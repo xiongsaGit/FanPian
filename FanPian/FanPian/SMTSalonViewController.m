@@ -27,7 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = @"沙龙";
     self.curPageNum = 1;
     self.dataItems = [NSMutableArray array];
     [self.view addSubview:self.tableView];

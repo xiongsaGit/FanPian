@@ -1,17 +1,17 @@
 //
-//  SMTShortMovieCell.m
+//  SMTImageTitleDescCell.m
 //  FanPian
 //
 //  Created by sa.xiong on 16/1/21.
 //  Copyright © 2016年 sa.xiong. All rights reserved.
 //
 
-#import "SMTShortMovieCell.h"
+#import "SMTImageTitleDescCell.h"
 #import "SMTShortMovieListModel.h"
 #import "SMTMovieImageView.h"
 #import "SMTBarView.h"
 
-@interface SMTShortMovieCell()
+@interface SMTImageTitleDescCell()
 @property (nonatomic, strong) SMTMovieImageView *coverImageView;
 @property (nonatomic, strong) UILabel *subjectLabel;
 @property (nonatomic, strong) UILabel *introLabel;
@@ -19,7 +19,7 @@
 @property (nonatomic, copy) NSString *videoUrl;
 @end
 
-@implementation SMTShortMovieCell
+@implementation SMTImageTitleDescCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {

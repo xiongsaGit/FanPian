@@ -27,6 +27,19 @@
 		332347231C4C8C6600B05D2B /* leftMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 332347221C4C8C6600B05D2B /* leftMenu.plist */; };
 		332347271C4C923400B05D2B /* rightMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 332347261C4C923400B05D2B /* rightMenu.plist */; };
 		3323472D1C4CC6A700B05D2B /* SMTImageLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323472C1C4CC6A700B05D2B /* SMTImageLabelView.m */; };
+		332894DC1C7C42F10018E8BB /* SMTOperateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 332894DB1C7C42F10018E8BB /* SMTOperateView.m */; };
+		332894DF1C7C4C5C0018E8BB /* SMTMovieExplorerDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 332894DE1C7C4C5C0018E8BB /* SMTMovieExplorerDataModel.m */; };
+		332894E21C7C4C850018E8BB /* SMTMovieExplorerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 332894E11C7C4C850018E8BB /* SMTMovieExplorerModel.m */; };
+		332894E51C7C4D230018E8BB /* SMTMEBannerItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 332894E41C7C4D230018E8BB /* SMTMEBannerItemModel.m */; };
+		332894E81C7C4E470018E8BB /* SMTMEKeyWordItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 332894E71C7C4E470018E8BB /* SMTMEKeyWordItemModel.m */; };
+		332894EB1C7C4EA40018E8BB /* SMTMEListItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 332894EA1C7C4EA40018E8BB /* SMTMEListItemModel.m */; };
+		332894EE1C7C4ED40018E8BB /* SMTMEListItemDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 332894ED1C7C4ED40018E8BB /* SMTMEListItemDataModel.m */; };
+		332894F01C7C633E0018E8BB /* mainlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 332894EF1C7C633E0018E8BB /* mainlist.plist */; };
+		3336EF5E1C7AEC8B00A9285A /* SMTVideoStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3336EF5D1C7AEC8B00A9285A /* SMTVideoStoreViewController.m */; };
+		3336EF611C7AECD500A9285A /* SMTOriginMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3336EF601C7AECD500A9285A /* SMTOriginMovieViewController.m */; };
+		3336EF641C7B04A100A9285A /* SMTOriginMovieRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3336EF631C7B04A100A9285A /* SMTOriginMovieRequest.m */; };
+		3336EF671C7B121000A9285A /* SMTMovieExploreRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3336EF661C7B121000A9285A /* SMTMovieExploreRequest.m */; };
+		3336EF6A1C7B179D00A9285A /* SMTMainHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3336EF691C7B179D00A9285A /* SMTMainHeader.m */; };
 		3348E6DF1C524B8E00B46A3D /* SMTCollectionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348E6DE1C524B8E00B46A3D /* SMTCollectionRequest.m */; };
 		3348E6E21C524C4D00B46A3D /* SMTCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348E6E11C524C4D00B46A3D /* SMTCollectionCell.m */; };
 		3348E6E51C524E5000B46A3D /* UIView+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348E6E41C524E5000B46A3D /* UIView+Size.m */; };
@@ -47,6 +60,8 @@
 		334E31001C577C3F00D46105 /* SMTHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 334E30FF1C577C3F00D46105 /* SMTHeaderView.m */; };
 		334E31031C5790A300D46105 /* SMTSalonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 334E31021C5790A300D46105 /* SMTSalonCell.m */; };
 		336F60F61C563CBE008C6419 /* ShowLabelOnImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 336F60F51C563CBE008C6419 /* ShowLabelOnImageView.m */; };
+		3384658C1C7C740700370511 /* SMTRandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384658B1C7C740700370511 /* SMTRandomColor.m */; };
+		3384658E1C7C756D00370511 /* movietype.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3384658D1C7C756D00370511 /* movietype.plist */; };
 		33A0C5231C5F62B900B907AA /* SMTMovielinesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A0C5221C5F62B900B907AA /* SMTMovielinesListViewController.m */; };
 		33A7A8541C4D005E003CD805 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A7A8531C4D005E003CD805 /* UIView+Additions.m */; };
 		33EFB5621C4793B40033912B /* SMTListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB5611C4793B40033912B /* SMTListViewController.m */; };
@@ -54,12 +69,12 @@
 		33EFB5681C4793DD0033912B /* SMTSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB5671C4793DD0033912B /* SMTSettingViewController.m */; };
 		33EFB56B1C4793E50033912B /* SMTSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB56A1C4793E50033912B /* SMTSearchViewController.m */; };
 		33EFB5701C479B0B0033912B /* SMTNavTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB56F1C479B0B0033912B /* SMTNavTitleView.m */; };
-		33F1BBF01C506BFC0069F4AA /* SMTShortMovieRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F1BBEF1C506BFC0069F4AA /* SMTShortMovieRequest.m */; };
+		33F1BBF01C506BFC0069F4AA /* SMTModPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F1BBEF1C506BFC0069F4AA /* SMTModPageRequest.m */; };
 		33F1BBF31C506CDB0069F4AA /* SMTShortMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F1BBF21C506CDB0069F4AA /* SMTShortMovieViewController.m */; };
 		33F1BBF71C506E290069F4AA /* SMTShortMovieDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F1BBF61C506E290069F4AA /* SMTShortMovieDataModel.m */; };
 		33F1BBFA1C506E840069F4AA /* SMTShortMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F1BBF91C506E840069F4AA /* SMTShortMovieModel.m */; };
 		33F1BBFD1C506EC20069F4AA /* SMTShortMovieListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F1BBFC1C506EC20069F4AA /* SMTShortMovieListModel.m */; };
-		33F1BC011C50702E0069F4AA /* SMTShortMovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F1BC001C50702E0069F4AA /* SMTShortMovieCell.m */; };
+		33F1BC011C50702E0069F4AA /* SMTImageTitleDescCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F1BC001C50702E0069F4AA /* SMTImageTitleDescCell.m */; };
 		33F1BC431C508BC20069F4AA /* SMTMovieImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F1BC421C508BC20069F4AA /* SMTMovieImageView.m */; };
 		33F1BC461C50C2A20069F4AA /* SMTBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F1BC451C50C2A20069F4AA /* SMTBarView.m */; };
 		33F304DE1C448BAE0020838A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F304DD1C448BAE0020838A /* main.m */; };
@@ -143,6 +158,31 @@
 		332347261C4C923400B05D2B /* rightMenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rightMenu.plist; sourceTree = "<group>"; };
 		3323472B1C4CC6A700B05D2B /* SMTImageLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTImageLabelView.h; sourceTree = "<group>"; };
 		3323472C1C4CC6A700B05D2B /* SMTImageLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTImageLabelView.m; sourceTree = "<group>"; };
+		332894DA1C7C42F10018E8BB /* SMTOperateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTOperateView.h; sourceTree = "<group>"; };
+		332894DB1C7C42F10018E8BB /* SMTOperateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTOperateView.m; sourceTree = "<group>"; };
+		332894DD1C7C4C5C0018E8BB /* SMTMovieExplorerDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMovieExplorerDataModel.h; sourceTree = "<group>"; };
+		332894DE1C7C4C5C0018E8BB /* SMTMovieExplorerDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMovieExplorerDataModel.m; sourceTree = "<group>"; };
+		332894E01C7C4C850018E8BB /* SMTMovieExplorerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMovieExplorerModel.h; sourceTree = "<group>"; };
+		332894E11C7C4C850018E8BB /* SMTMovieExplorerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMovieExplorerModel.m; sourceTree = "<group>"; };
+		332894E31C7C4D230018E8BB /* SMTMEBannerItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMEBannerItemModel.h; sourceTree = "<group>"; };
+		332894E41C7C4D230018E8BB /* SMTMEBannerItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMEBannerItemModel.m; sourceTree = "<group>"; };
+		332894E61C7C4E470018E8BB /* SMTMEKeyWordItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMEKeyWordItemModel.h; sourceTree = "<group>"; };
+		332894E71C7C4E470018E8BB /* SMTMEKeyWordItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMEKeyWordItemModel.m; sourceTree = "<group>"; };
+		332894E91C7C4EA40018E8BB /* SMTMEListItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMEListItemModel.h; sourceTree = "<group>"; };
+		332894EA1C7C4EA40018E8BB /* SMTMEListItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMEListItemModel.m; sourceTree = "<group>"; };
+		332894EC1C7C4ED40018E8BB /* SMTMEListItemDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMEListItemDataModel.h; sourceTree = "<group>"; };
+		332894ED1C7C4ED40018E8BB /* SMTMEListItemDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMEListItemDataModel.m; sourceTree = "<group>"; };
+		332894EF1C7C633E0018E8BB /* mainlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mainlist.plist; sourceTree = "<group>"; };
+		3336EF5C1C7AEC8B00A9285A /* SMTVideoStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTVideoStoreViewController.h; sourceTree = "<group>"; };
+		3336EF5D1C7AEC8B00A9285A /* SMTVideoStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTVideoStoreViewController.m; sourceTree = "<group>"; };
+		3336EF5F1C7AECD500A9285A /* SMTOriginMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTOriginMovieViewController.h; sourceTree = "<group>"; };
+		3336EF601C7AECD500A9285A /* SMTOriginMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTOriginMovieViewController.m; sourceTree = "<group>"; };
+		3336EF621C7B04A100A9285A /* SMTOriginMovieRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTOriginMovieRequest.h; sourceTree = "<group>"; };
+		3336EF631C7B04A100A9285A /* SMTOriginMovieRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTOriginMovieRequest.m; sourceTree = "<group>"; };
+		3336EF651C7B121000A9285A /* SMTMovieExploreRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMovieExploreRequest.h; sourceTree = "<group>"; };
+		3336EF661C7B121000A9285A /* SMTMovieExploreRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMovieExploreRequest.m; sourceTree = "<group>"; };
+		3336EF681C7B179D00A9285A /* SMTMainHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMainHeader.h; sourceTree = "<group>"; };
+		3336EF691C7B179D00A9285A /* SMTMainHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMainHeader.m; sourceTree = "<group>"; };
 		3348E6DD1C524B8E00B46A3D /* SMTCollectionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTCollectionRequest.h; sourceTree = "<group>"; };
 		3348E6DE1C524B8E00B46A3D /* SMTCollectionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTCollectionRequest.m; sourceTree = "<group>"; };
 		3348E6E01C524C4D00B46A3D /* SMTCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTCollectionCell.h; sourceTree = "<group>"; };
@@ -183,6 +223,9 @@
 		334E31021C5790A300D46105 /* SMTSalonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTSalonCell.m; sourceTree = "<group>"; };
 		336F60F41C563CBE008C6419 /* ShowLabelOnImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowLabelOnImageView.h; sourceTree = "<group>"; };
 		336F60F51C563CBE008C6419 /* ShowLabelOnImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowLabelOnImageView.m; sourceTree = "<group>"; };
+		3384658A1C7C740700370511 /* SMTRandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTRandomColor.h; sourceTree = "<group>"; };
+		3384658B1C7C740700370511 /* SMTRandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTRandomColor.m; sourceTree = "<group>"; };
+		3384658D1C7C756D00370511 /* movietype.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = movietype.plist; sourceTree = "<group>"; };
 		33A0C5211C5F62B900B907AA /* SMTMovielinesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMovielinesListViewController.h; sourceTree = "<group>"; };
 		33A0C5221C5F62B900B907AA /* SMTMovielinesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMovielinesListViewController.m; sourceTree = "<group>"; };
 		33A7A8521C4D005E003CD805 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
@@ -198,8 +241,8 @@
 		33EFB56C1C4794680033912B /* CommonUtils.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUtils.pch; sourceTree = "<group>"; };
 		33EFB56E1C479B0B0033912B /* SMTNavTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTNavTitleView.h; sourceTree = "<group>"; };
 		33EFB56F1C479B0B0033912B /* SMTNavTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTNavTitleView.m; sourceTree = "<group>"; };
-		33F1BBEE1C506BFC0069F4AA /* SMTShortMovieRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTShortMovieRequest.h; sourceTree = "<group>"; };
-		33F1BBEF1C506BFC0069F4AA /* SMTShortMovieRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTShortMovieRequest.m; sourceTree = "<group>"; };
+		33F1BBEE1C506BFC0069F4AA /* SMTModPageRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTModPageRequest.h; sourceTree = "<group>"; };
+		33F1BBEF1C506BFC0069F4AA /* SMTModPageRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTModPageRequest.m; sourceTree = "<group>"; };
 		33F1BBF11C506CDB0069F4AA /* SMTShortMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTShortMovieViewController.h; sourceTree = "<group>"; };
 		33F1BBF21C506CDB0069F4AA /* SMTShortMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTShortMovieViewController.m; sourceTree = "<group>"; };
 		33F1BBF51C506E290069F4AA /* SMTShortMovieDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTShortMovieDataModel.h; sourceTree = "<group>"; };
@@ -208,8 +251,8 @@
 		33F1BBF91C506E840069F4AA /* SMTShortMovieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTShortMovieModel.m; sourceTree = "<group>"; };
 		33F1BBFB1C506EC20069F4AA /* SMTShortMovieListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTShortMovieListModel.h; sourceTree = "<group>"; };
 		33F1BBFC1C506EC20069F4AA /* SMTShortMovieListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTShortMovieListModel.m; sourceTree = "<group>"; };
-		33F1BBFF1C50702E0069F4AA /* SMTShortMovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTShortMovieCell.h; sourceTree = "<group>"; };
-		33F1BC001C50702E0069F4AA /* SMTShortMovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTShortMovieCell.m; sourceTree = "<group>"; };
+		33F1BBFF1C50702E0069F4AA /* SMTImageTitleDescCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTImageTitleDescCell.h; sourceTree = "<group>"; };
+		33F1BC001C50702E0069F4AA /* SMTImageTitleDescCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTImageTitleDescCell.m; sourceTree = "<group>"; };
 		33F1BC411C508BC20069F4AA /* SMTMovieImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMovieImageView.h; sourceTree = "<group>"; };
 		33F1BC421C508BC20069F4AA /* SMTMovieImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMovieImageView.m; sourceTree = "<group>"; };
 		33F1BC441C50C2A20069F4AA /* SMTBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTBarView.h; sourceTree = "<group>"; };
@@ -308,6 +351,10 @@
 				334E30FC1C577C1400D46105 /* SMTSalonViewController.m */,
 				33F8EBD51C586AC90015B6DC /* SMTSalonDetailViewController.h */,
 				33F8EBD61C586AC90015B6DC /* SMTSalonDetailViewController.m */,
+				3336EF5C1C7AEC8B00A9285A /* SMTVideoStoreViewController.h */,
+				3336EF5D1C7AEC8B00A9285A /* SMTVideoStoreViewController.m */,
+				3336EF5F1C7AECD500A9285A /* SMTOriginMovieViewController.h */,
+				3336EF601C7AECD500A9285A /* SMTOriginMovieViewController.m */,
 			);
 			name = find;
 			sourceTree = "<group>";
@@ -332,14 +379,18 @@
 				331259341C4E350800F14A50 /* SMTBaseRequest.m */,
 				331259371C4E359100F14A50 /* SMTBeOnShowRequest.h */,
 				331259381C4E359100F14A50 /* SMTBeOnShowRequest.m */,
-				33F1BBEE1C506BFC0069F4AA /* SMTShortMovieRequest.h */,
-				33F1BBEF1C506BFC0069F4AA /* SMTShortMovieRequest.m */,
+				33F1BBEE1C506BFC0069F4AA /* SMTModPageRequest.h */,
+				33F1BBEF1C506BFC0069F4AA /* SMTModPageRequest.m */,
 				3348E6DD1C524B8E00B46A3D /* SMTCollectionRequest.h */,
 				3348E6DE1C524B8E00B46A3D /* SMTCollectionRequest.m */,
 				3348E6F31C53329F00B46A3D /* SMTCollectionTypeRequest.h */,
 				3348E6F41C53329F00B46A3D /* SMTCollectionTypeRequest.m */,
 				334E30EE1C57762700D46105 /* SMTSalonRequest.h */,
 				334E30EF1C57762700D46105 /* SMTSalonRequest.m */,
+				3336EF621C7B04A100A9285A /* SMTOriginMovieRequest.h */,
+				3336EF631C7B04A100A9285A /* SMTOriginMovieRequest.m */,
+				3336EF651C7B121000A9285A /* SMTMovieExploreRequest.h */,
+				3336EF661C7B121000A9285A /* SMTMovieExploreRequest.m */,
 			);
 			name = Request;
 			sourceTree = "<group>";
@@ -351,6 +402,18 @@
 				33F1BBFE1C506FBA0069F4AA /* shortMovie */,
 				3348E6EF1C53195800B46A3D /* collection */,
 				334E30FA1C5779B800D46105 /* salon */,
+				332894DD1C7C4C5C0018E8BB /* SMTMovieExplorerDataModel.h */,
+				332894DE1C7C4C5C0018E8BB /* SMTMovieExplorerDataModel.m */,
+				332894E01C7C4C850018E8BB /* SMTMovieExplorerModel.h */,
+				332894E11C7C4C850018E8BB /* SMTMovieExplorerModel.m */,
+				332894E31C7C4D230018E8BB /* SMTMEBannerItemModel.h */,
+				332894E41C7C4D230018E8BB /* SMTMEBannerItemModel.m */,
+				332894E61C7C4E470018E8BB /* SMTMEKeyWordItemModel.h */,
+				332894E71C7C4E470018E8BB /* SMTMEKeyWordItemModel.m */,
+				332894E91C7C4EA40018E8BB /* SMTMEListItemModel.h */,
+				332894EA1C7C4EA40018E8BB /* SMTMEListItemModel.m */,
+				332894EC1C7C4ED40018E8BB /* SMTMEListItemDataModel.h */,
+				332894ED1C7C4ED40018E8BB /* SMTMEListItemDataModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -463,6 +526,10 @@
 				3348E6E41C524E5000B46A3D /* UIView+Size.m */,
 				33F8EBED1C5871660015B6DC /* SMTSalonDetailHeader.h */,
 				33F8EBEE1C5871660015B6DC /* SMTSalonDetailHeader.m */,
+				3336EF681C7B179D00A9285A /* SMTMainHeader.h */,
+				3336EF691C7B179D00A9285A /* SMTMainHeader.m */,
+				332894DA1C7C42F10018E8BB /* SMTOperateView.h */,
+				332894DB1C7C42F10018E8BB /* SMTOperateView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -535,14 +602,18 @@
 				33F304DC1C448BAE0020838A /* Supporting Files */,
 				33EFB56C1C4794680033912B /* CommonUtils.pch */,
 				332347221C4C8C6600B05D2B /* leftMenu.plist */,
+				3384658D1C7C756D00370511 /* movietype.plist */,
 				332347261C4C923400B05D2B /* rightMenu.plist */,
 				331259251C4E1CF600F14A50 /* rightHeaderList.plist */,
+				332894EF1C7C633E0018E8BB /* mainlist.plist */,
 				331259321C4E34B700F14A50 /* ConstantUtil.h */,
 				331259361C4E351E00F14A50 /* UrlUtil.h */,
 				33FADC1E1C5F55D500E53D46 /* SMTTableDataSource.h */,
 				33FADC1F1C5F55D500E53D46 /* SMTTableDataSource.m */,
 				33A0C5211C5F62B900B907AA /* SMTMovielinesListViewController.h */,
 				33A0C5221C5F62B900B907AA /* SMTMovielinesListViewController.m */,
+				3384658A1C7C740700370511 /* SMTRandomColor.h */,
+				3384658B1C7C740700370511 /* SMTRandomColor.m */,
 			);
 			path = FanPian;
 			sourceTree = "<group>";
@@ -578,8 +649,8 @@
 			children = (
 				33F719E51C4F1F8C0038208E /* SMTBeOnShowCell.h */,
 				33F719E61C4F1F8C0038208E /* SMTBeOnShowCell.m */,
-				33F1BBFF1C50702E0069F4AA /* SMTShortMovieCell.h */,
-				33F1BC001C50702E0069F4AA /* SMTShortMovieCell.m */,
+				33F1BBFF1C50702E0069F4AA /* SMTImageTitleDescCell.h */,
+				33F1BC001C50702E0069F4AA /* SMTImageTitleDescCell.m */,
 				3348E6E01C524C4D00B46A3D /* SMTCollectionCell.h */,
 				3348E6E11C524C4D00B46A3D /* SMTCollectionCell.m */,
 				334E31011C5790A300D46105 /* SMTSalonCell.h */,
@@ -719,6 +790,8 @@
 			files = (
 				331259261C4E1CF600F14A50 /* rightHeaderList.plist in Resources */,
 				332347231C4C8C6600B05D2B /* leftMenu.plist in Resources */,
+				332894F01C7C633E0018E8BB /* mainlist.plist in Resources */,
+				3384658E1C7C756D00370511 /* movietype.plist in Resources */,
 				332347271C4C923400B05D2B /* rightMenu.plist in Resources */,
 				33F304EC1C448BAE0020838A /* LaunchScreen.storyboard in Resources */,
 				33F304E91C448BAE0020838A /* Assets.xcassets in Resources */,
@@ -781,6 +854,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3348E6EE1C5318D000B46A3D /* SMTCollectionListModel.m in Sources */,
+				332894DC1C7C42F10018E8BB /* SMTOperateView.m in Sources */,
 				331259211C4DEB5600F14A50 /* SMTFooter.m in Sources */,
 				33F719E71C4F1F8C0038208E /* SMTBeOnShowCell.m in Sources */,
 				3348E6FE1C5341EB00B46A3D /* SMTCollectionTypeListItemModel.m in Sources */,
@@ -789,7 +863,10 @@
 				3348E7011C53659200B46A3D /* SMTCollectionTypeModel.m in Sources */,
 				33EFB5681C4793DD0033912B /* SMTSettingViewController.m in Sources */,
 				332347051C489DB100B05D2B /* SMTContainerViewController.m in Sources */,
+				332894DF1C7C4C5C0018E8BB /* SMTMovieExplorerDataModel.m in Sources */,
 				33EFB56B1C4793E50033912B /* SMTSearchViewController.m in Sources */,
+				332894E81C7C4E470018E8BB /* SMTMEKeyWordItemModel.m in Sources */,
+				3336EF611C7AECD500A9285A /* SMTOriginMovieViewController.m in Sources */,
 				331259411C4E4FCF00F14A50 /* SMTBeOnShowListModel.m in Sources */,
 				33FA87421C772F0B003E34B3 /* WJLMidPopView.m in Sources */,
 				331259441C4E507700F14A50 /* SMTBeOnShowListMovieModel.m in Sources */,
@@ -804,7 +881,10 @@
 				33EFB5701C479B0B0033912B /* SMTNavTitleView.m in Sources */,
 				33F304E41C448BAE0020838A /* ViewController.m in Sources */,
 				331259351C4E350800F14A50 /* SMTBaseRequest.m in Sources */,
+				332894E21C7C4C850018E8BB /* SMTMovieExplorerModel.m in Sources */,
 				3348E6EB1C5318C200B46A3D /* SMTCollectionModel.m in Sources */,
+				3336EF671C7B121000A9285A /* SMTMovieExploreRequest.m in Sources */,
+				3384658C1C7C740700370511 /* SMTRandomColor.m in Sources */,
 				3348E6F21C53198500B46A3D /* SMTCollectionViewController.m in Sources */,
 				332347161C4B629400B05D2B /* RHCArrayDataSource.m in Sources */,
 				3348E6F51C53329F00B46A3D /* SMTCollectionTypeRequest.m in Sources */,
@@ -819,15 +899,17 @@
 				334E30F91C57778400D46105 /* SMTSalonListModel.m in Sources */,
 				33F304E11C448BAE0020838A /* AppDelegate.m in Sources */,
 				3312593D1C4E4F3000F14A50 /* SMTBeOnShowModel.m in Sources */,
-				33F1BC011C50702E0069F4AA /* SMTShortMovieCell.m in Sources */,
+				33F1BC011C50702E0069F4AA /* SMTImageTitleDescCell.m in Sources */,
 				33F8EBE31C586D940015B6DC /* SMTSalonDetailListModel.m in Sources */,
 				331259391C4E359100F14A50 /* SMTBeOnShowRequest.m in Sources */,
 				331259311C4E2E7700F14A50 /* SMTHadWatchViewController.m in Sources */,
 				33F1BBFD1C506EC20069F4AA /* SMTShortMovieListModel.m in Sources */,
 				33F304DE1C448BAE0020838A /* main.m in Sources */,
+				332894EE1C7C4ED40018E8BB /* SMTMEListItemDataModel.m in Sources */,
 				3348E6E81C5318A200B46A3D /* SMTCollectionDataModel.m in Sources */,
 				334E31001C577C3F00D46105 /* SMTHeaderView.m in Sources */,
-				33F1BBF01C506BFC0069F4AA /* SMTShortMovieRequest.m in Sources */,
+				3336EF5E1C7AEC8B00A9285A /* SMTVideoStoreViewController.m in Sources */,
+				33F1BBF01C506BFC0069F4AA /* SMTModPageRequest.m in Sources */,
 				33F8EBDD1C586C670015B6DC /* SMTSalonDetailModel.m in Sources */,
 				331259471C4E5AEA00F14A50 /* SMTBeOnShowDataModel.m in Sources */,
 				3348E6DF1C524B8E00B46A3D /* SMTCollectionRequest.m in Sources */,
@@ -837,7 +919,9 @@
 				3348E6F81C53339400B46A3D /* SMTCollectionTypeDataModel.m in Sources */,
 				33F1BC461C50C2A20069F4AA /* SMTBarView.m in Sources */,
 				334E31031C5790A300D46105 /* SMTSalonCell.m in Sources */,
+				3336EF6A1C7B179D00A9285A /* SMTMainHeader.m in Sources */,
 				33F1BBF31C506CDB0069F4AA /* SMTShortMovieViewController.m in Sources */,
+				332894E51C7C4D230018E8BB /* SMTMEBannerItemModel.m in Sources */,
 				3348E6FB1C5333B500B46A3D /* SMTCollectionTypeListModel.m in Sources */,
 				33FADC201C5F55D500E53D46 /* SMTTableDataSource.m in Sources */,
 				33F8EBE91C586FEF0015B6DC /* SMTSalonDetailCell.m in Sources */,
@@ -847,6 +931,8 @@
 				334E30F31C57772200D46105 /* SMTSalonDataModel.m in Sources */,
 				33F8EBEF1C5871660015B6DC /* SMTSalonDetailHeader.m in Sources */,
 				33EFB5651C4793BD0033912B /* SMTMainViewController.m in Sources */,
+				3336EF641C7B04A100A9285A /* SMTOriginMovieRequest.m in Sources */,
+				332894EB1C7C4EA40018E8BB /* SMTMEListItemModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

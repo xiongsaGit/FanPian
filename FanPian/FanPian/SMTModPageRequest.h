@@ -1,5 +1,5 @@
 //
-//  SMTShortMovieRequest.h
+//  SMTModPageRequest.h
 //  FanPian
 //
 //  Created by sa.xiong on 16/1/21.
@@ -8,8 +8,8 @@
 
 #import "SMTBaseRequest.h"
 
-@interface SMTShortMovieRequest : SMTBaseRequest
+@interface SMTModPageRequest : SMTBaseRequest
 
-- (id)initWithPage:(NSNumber *)page;
+- (id)initWithPage:(NSNumber *)page mod:(NSString *)mod;
 
 @end

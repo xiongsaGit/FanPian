@@ -164,9 +164,8 @@
     }else if (itemTag == 1) {
         NSLog(@"评论呢");
     }else {
-        NSLog(@"哈哈");
         
-        [self.view.window showMidPopViewWithImgs:nil andTitles:@[@"加入影单",@"分享",@"取消",@""] WithCallBlock:^(int index) {
+        [self.view.window showMidPopViewWithImgs:nil andTitles:@[@"加入影单",@"分享",@"取消"] WithCallBlock:^(int index) {
             NSLog(@"log log log popview");
         }];
     }

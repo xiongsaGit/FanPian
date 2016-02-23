@@ -100,10 +100,13 @@
         }
         
         CGRect imageRect = self.imageView.frame;
-        imageRect.origin = CGPointMake((CGRectGetWidth(self.frame)-CGRectGetWidth(self.imageView.frame))/2, originY);
-        self.imageView.frame = imageRect;
   
-        self.label.frame = CGRectMake(0, CGRectGetMaxY(self.imageView.frame)+SpaceX, CGRectGetWidth(self.frame),titileSize.height);
+//        self.label.frame = CGRectMake(0, CGRectGetMaxY(self.imageView.frame)+SpaceX, CGRectGetWidth(self.frame),titileSize.height);
+        self.label.frame = CGRectMake(0,CGRectGetHeight(self.frame)-titileSize.height-SpaceX, CGRectGetWidth(self.frame),titileSize.height);
+        imageRect.origin = CGPointMake((CGRectGetWidth(self.frame)-CGRectGetWidth(self.imageView.frame))/2, CGRectGetMinY(self.label.frame)-imageRect.size.height-SpaceX);
+
+        self.imageView.frame = imageRect;
+
     }
 }
 

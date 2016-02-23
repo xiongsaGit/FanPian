@@ -1,23 +1,25 @@
 //
-//  SMTShortMovieRequest.m
+//  SMTModPageRequest.m
 //  FanPian
 //
 //  Created by sa.xiong on 16/1/21.
 //  Copyright © 2016年 sa.xiong. All rights reserved.
 //
 
-#import "SMTShortMovieRequest.h"
+#import "SMTModPageRequest.h"
 
-@implementation SMTShortMovieRequest
+@implementation SMTModPageRequest
 {
     NSNumber *_page;
+    NSString *_mod;
 }
 
-- (id)initWithPage:(NSNumber *)page
+- (id)initWithPage:(NSNumber *)page mod:(NSString *)mod
 {
     self = [super init];
     if (self) {
         _page = page;
+        _mod = mod;
     }
     return self;
 }
@@ -30,8 +32,9 @@
 
 - (id)requestArgument
 {
+    
     return @{
-             @"mod":@"threadvideo",
+             @"mod":_mod,
              @"androidflag":@"1",
              @"appfrom":@"ios",
              @"iosversion":AppVersion,

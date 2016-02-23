@@ -13,7 +13,11 @@
 #import "SMTShortMovieViewController.h"
 #import "SMTCollectionViewController.h"
 #import "SMTSalonViewController.h"
+#import "SMTVideoStoreViewController.h"
+#import "SMTOriginMovieViewController.h"
 #import "SMTMovielinesListViewController.h"
+
+
 @interface SMTFindViewController ()<UITableViewDelegate>
 
 @end
@@ -42,14 +46,12 @@
         case 0:
         {
             SMTBeOnShowViewController *viewCtrl = [[SMTBeOnShowViewController alloc] initWithType:MovieTypeFromDefault title:@"上映" ctid:nil];
-//            SMTMovielinesListViewController *viewCtrl = [[SMTMovielinesListViewController alloc]init];
-
             [[self viewController].navigationController pushViewController:viewCtrl animated:YES];
         }
             break;
         case 1:
         {
-            SMTShortMovieViewController *viewCtrl = [[SMTShortMovieViewController alloc]init];
+            SMTShortMovieViewController *viewCtrl = [[SMTShortMovieViewController alloc]initWithTitle:@"短片" withMod:@"threadvideo"];
             
             [[self viewController].navigationController pushViewController:viewCtrl animated:YES];
         }
@@ -64,6 +66,20 @@
         case 3:
         {
             SMTSalonViewController *viewCtrl = [[SMTSalonViewController alloc] init];
+            
+            [[self viewController].navigationController pushViewController:viewCtrl animated:YES];
+        }
+            break;
+        case 4:
+        {
+            SMTShortMovieViewController *viewCtrl = [[SMTShortMovieViewController alloc]initWithTitle:@"电影原声" withMod:@"threadmusic"];
+            
+            [[self viewController].navigationController pushViewController:viewCtrl animated:YES];
+        }
+            break;
+        case 5:
+        {
+            SMTOriginMovieViewController *viewCtrl = [[SMTOriginMovieViewController alloc] init];
             
             [[self viewController].navigationController pushViewController:viewCtrl animated:YES];
         }

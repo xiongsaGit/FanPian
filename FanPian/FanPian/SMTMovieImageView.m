@@ -27,7 +27,9 @@
     return self;
 }
 
-
+- (void)hideVideoPlayIcon:(BOOL)hidden {
+    [self.iconImageView setHidden:hidden];
+}
 
 - (void)handleTapGesture:(UITapGestureRecognizer *)tgr {
     if (self.clickBlock) {

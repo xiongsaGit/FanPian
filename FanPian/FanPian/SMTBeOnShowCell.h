@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class SMTShortMovieCell,SMTBeOnShowCell;
+@class SMTImageTitleDescCell,SMTBeOnShowCell;
 typedef void(^BeOnShowCellItemBlock)(SMTBeOnShowCell *cell ,NSInteger itemTag);
 
 

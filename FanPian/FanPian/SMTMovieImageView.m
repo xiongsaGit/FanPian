@@ -16,6 +16,14 @@
 
 @implementation SMTMovieImageView
 
+- (id)init {
+    if (self = [super init]) {
+        [self addSubview:self.iconImageView];
+        NSLog(@"add iconImageView");
+    }
+    return self;
+}
+
 - (id)initWithClickBlock:(MovieImageViewClickBlock)clickBlock {
     if (self = [super init]) {
         [self addSubview:self.iconImageView];

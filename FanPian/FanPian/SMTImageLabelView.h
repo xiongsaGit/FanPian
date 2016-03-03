@@ -27,4 +27,6 @@ typedef void(^ImageLabelViewBlock)();
 
 - (void)configureWitState:(BOOL)isChecked;
 
+- (void)configureLabelTextColor:(UIColor *)textColor;
+
 @end

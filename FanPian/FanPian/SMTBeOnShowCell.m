@@ -63,7 +63,6 @@
     
     self.barView.items = @[leftDict,middleDict,rightDict];
     
-    
     CGFloat ratio = [listModel.moviedata.height floatValue]/[listModel.moviedata.width floatValue];
 
     [self configureFrameWithRatio:ratio];

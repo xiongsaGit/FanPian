@@ -48,6 +48,13 @@
     }
 }
 
+- (void)itemLabelTextColor:(UIColor *)textColor {
+    
+    [self.goodImageLabelView configureLabelTextColor:textColor];
+    [self.replyImageLabelView configureLabelTextColor:textColor];
+
+}
+
 - (void)setFrame:(CGRect)frame {
     [super setFrame:frame];
     

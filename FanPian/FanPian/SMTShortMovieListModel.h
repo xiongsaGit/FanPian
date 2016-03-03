@@ -7,6 +7,7 @@
 //
 
 #import "JSONModel.h"
+#import "SMTImageListItemModel.h"
 
 @protocol SMTShortMovieListModel <NSObject>
 
@@ -31,4 +32,11 @@
 @property (nonatomic, strong) NSNumber <Optional>*width;
 // 
 @property (nonatomic, copy) NSString <Optional>*message;
+@property (nonatomic, copy) NSString <Optional>*ctid;
+@property (nonatomic, copy) NSString <Optional>*desc;
+@property (nonatomic, copy) NSString <Optional>*name;
+@property (nonatomic, copy) NSString <Optional>*threadnum;
+//
+@property (nonatomic, strong) NSNumber <Optional>*imagecount;
+@property (nonatomic, strong) NSArray <Optional,SMTImageListItemModel>*imagelist;
 @end

@@ -18,13 +18,13 @@
 		<key>content</key>
 		<string>影单</string>
         <key>needshow</key>
-        <false/>
+        <true/>
 		<key>hasmore</key>
 		<true/>
 	</dict>
 	<dict>
 		<key>type</key>
-		<string>R_Message</string>
+		<string>threadvideo</string>
 		<key>content</key>
 		<string>短片</string>
         <key>needshow</key>
@@ -34,7 +34,7 @@
 	</dict>
 	<dict>
 		<key>type</key>
-		<string>R_Message</string>
+		<string>threadarticle</string>
 		<key>content</key>
 		<string>杂粮</string>
         <key>needshow</key>
@@ -44,7 +44,7 @@
 	</dict>
 	<dict>
 		<key>type</key>
-		<string>R_Message</string>
+		<string>threadgallery</string>
 		<key>content</key>
 		<string>画报</string>
         <key>needshow</key>
@@ -54,33 +54,33 @@
 	</dict>
 	<dict>
 		<key>type</key>
-		<string>R_Message</string>
+		<string>movielines</string>
 		<key>content</key>
 		<string>台词</string>
         <key>needshow</key>
         <false/>
         <key>hasmore</key>
-        <true/>
+        <false/>
 	</dict>
 	<dict>
 		<key>type</key>
-		<string>R_Message</string>
+		<string>threadmusic</string>
 		<key>content</key>
 		<string>音乐</string>
         <key>needshow</key>
         <false/>
         <key>hasmore</key>
-        <true/>
+        <false/>
 	</dict>
 	<dict>
 		<key>type</key>
-		<string>R_Message</string>
+		<string>channel</string>
 		<key>content</key>
 		<string>沙龙</string>
         <key>needshow</key>
         <true/>
         <key>hasmore</key>
-        <false/>
+        <true/>
 	</dict>
 </array>
 </plist>

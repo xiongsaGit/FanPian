@@ -20,9 +20,14 @@ typedef void(^ShortMovieCellItemBlock)(SMTImageTitleDescCell *cell ,NSInteger it
 @interface SMTImageTitleDescCell : UITableViewCell
 
 @property (nonatomic, copy) ShortMovieCellItemBlock itemBlock;
-
+@property (nonatomic, assign) CGFloat cellHeight;
 - (void)configureCellData:(SMTShortMovieListModel *)listModel;
+- (void)configureCellData:(SMTShortMovieListModel *)listModel withType:(NSString *)type;
+
+- (void)configureCellData:(SMTShortMovieListModel *)listModel withLookMore:(BOOL)hasMore withType:(NSString *)type;
 
 - (void)configureBarViewAtItemTag:(NSInteger)itemTag state:(BOOL)isChecked;
+
+- (void)hideLookButton:(BOOL)hidden;
 
 @end

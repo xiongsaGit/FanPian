@@ -53,6 +53,10 @@
     }
 }
 
+- (void)configureLabelTextColor:(UIColor *)textColor {
+    self.label.textColor = textColor;
+}
+
 - (void)configureWitState:(BOOL)isChecked {
     self.imageView.image = isChecked ?[UIImage imageNamed:self.selectImageName]:[UIImage imageNamed:self.commonImageName];
 }

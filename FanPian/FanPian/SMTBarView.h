@@ -17,5 +17,6 @@ typedef void(^BarViewClickItemBlock)(NSInteger itemTag);
 
 - (void)configureEventAtItemTag:(NSInteger)itemTag state:(BOOL)isChecked;
 
+- (void)itemLabelTextColor:(UIColor *)textColor;
 
 @end

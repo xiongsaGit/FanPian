@@ -10,15 +10,25 @@
 #import "SMTMovieExploreRequest.h"
 #import "SMTImageTitleDescCell.h"
 #import "SMTMovieExplorerDataModel.h"
-
+#import "SMTThreadgalleryCell.h"
+#import "SMTMLChannelCell.h"
+#import "SMTMLMovielinesCell.h"
 #import "SMTMainHeader.h"
+
+typedef NS_ENUM(NSInteger,MainTableViewRequestType) {
+    MainTableViewRequestTypeDefault,
+    MainTableViewRequestTypeRefresh,
+    MainTableViewRequestTypeLoadMore,
+};
+
 @interface SMTMainViewController()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
 
 @property (nonatomic, strong) SMTMainHeader *headerView;
 @property (nonatomic, assign) NSInteger curPage;
-
+@property (nonatomic, copy) NSString *curPdateline;
+@property (nonatomic, assign) MainTableViewRequestType requestType;
 @end
 
 @implementation SMTMainViewController
@@ -28,25 +38,47 @@
     // Do any additional setup after loading the view.
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
+    self.curPage = 1;
+    self.requestType = MainTableViewRequestTypeDefault;
     self.dataArray = [NSMutableArray array];
     [self.view addSubview:self.tableView];
     
     [self addHeaderView];
-    [self requestMainPageDataWithPdataline:@"0"];
+    [self requestMainPageDataWithPdataline:@"0" AtPageNum:self.curPage];
 }
 
-- (void)requestMainPageDataWithPdataline:(NSString *)pdateline {
-    SMTMovieExploreRequest *request = [[SMTMovieExploreRequest alloc] initWithPage:@(self.curPage) pdateline:pdateline];
+- (void)requestMainPageDataWithPdataline:(NSString *)pdateline AtPageNum:(NSInteger)pageNum {
+    
+    SMTMovieExploreRequest *request = [[SMTMovieExploreRequest alloc] initWithPage:@(pageNum) pdateline:pdateline];
     [request startWithCompletionBlockWithSuccess:^(YTKBaseRequest *request) {
         NSError* err = nil;
         SMTMovieExplorerDataModel *model = [[SMTMovieExplorerDataModel alloc] initWithString:request.responseString error:&err];
-         self.dataArray = [NSMutableArray arrayWithArray:model.data.list];
+        
+        if (self.requestType == MainTableViewRequestTypeDefault || self.requestType == MainTableViewRequestTypeRefresh) {
+            [self.dataArray removeAllObjects];
+            self.dataArray = [NSMutableArray arrayWithArray:model.data.list];
+            self.curPage = 1;
+        }else {
+            [self.dataArray addObjectsFromArray:model.data.list];
+        }
+        
         [self.tableView reloadData];
     } failure:^(YTKBaseRequest *request) {
         
     }];
 }
 
+- (void)refreshDataInTableView {
+    self.requestType = MainTableViewRequestTypeRefresh;
+    [self requestMainPageDataWithPdataline:@"0" AtPageNum:self.curPage];
+}
+
+- (void)loadMoreDataInTableView {
+    self.curPage ++;
+
+    self.requestType = MainTableViewRequestTypeLoadMore;
+    [self requestMainPageDataWithPdataline:self.curPdateline AtPageNum:self.curPage];
+}
 
 - (void)addHeaderView {
     self.headerView = [[SMTMainHeader alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];
@@ -59,64 +91,117 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.dataArray.count;
+    return 1;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return self.dataArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SMTMEListItemModel *itemModel = self.dataArray[indexPath.row];
-    NSDictionary *item = [self movieTypeDataWithType:itemModel.type];
-    if ([item[@"hasmore"] boolValue]) {
-        return 300+40;
-    }else
-        return 300;
+    SMTMEListItemModel *itemModel = self.dataArray[indexPath.section];
+    NSString *type = itemModel.type;
+    if ([type isEqualToString:@"threadgallery"]) {
+        
+        SMTThreadgalleryCell *cell = (SMTThreadgalleryCell *)[self tableView:tableView cellForRowAtIndexPath:indexPath];
+        return cell.cellHeight;
+    }else if ([type isEqualToString:@"movielines"]) {
+        SMTMLMovielinesCell *cell = (SMTMLMovielinesCell *)[self tableView:tableView cellForRowAtIndexPath:indexPath];
+        return cell.cellHeight;
+    }else if ([type isEqualToString:@"channel"]) {
+        SMTMLChannelCell *cell = (SMTMLChannelCell *)[self tableView:tableView cellForRowAtIndexPath:indexPath];
+        return cell.cellHeight;
+    }else {
+
+        SMTImageTitleDescCell *cell = (SMTImageTitleDescCell *)[self tableView:tableView cellForRowAtIndexPath:indexPath];
+        
+        return cell.cellHeight;
+    }//threadgallery movielines  channel
+    return CGFLOAT_MIN;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *identifier = @"cellId";
-    SMTImageTitleDescCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    
-    SMTMEListItemModel *itemModel = self.dataArray[indexPath.row];
-
-    if (cell==nil)
-    {
-        cell = [[SMTImageTitleDescCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    SMTMEListItemModel *itemModel = self.dataArray[indexPath.section];
+    if ([itemModel.type isEqualToString:@"threadgallery"]) {
         
-        UILabel *typeLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 100, 20)];
-        typeLabel.backgroundColor = [SMTRandomColor randomColor];
-        typeLabel.tag = 10001;
-        [cell.contentView addSubview:typeLabel];
+        static NSString *identifier = @"threadgallery";
+        SMTThreadgalleryCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
         
-        if ([[self movieTypeDataWithType:itemModel.type][@"hasmore"]boolValue]) {
-            // 添加 查看 按钮
-            
-            UIButton *lookBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-            [lookBtn setFrame:CGRectMake((SCREEN_WIDTH-100)/2, CGRectGetHeight(cell.contentView.frame)-40, 100, 40)];
-            lookBtn.layer.borderColor = [UIColorFromRGB(0xbf5758) CGColor];
-            lookBtn.layer.borderWidth = 1;
-            [lookBtn setTitle:@"查看" forState:UIControlStateNormal];
-            [lookBtn setTitleColor:UIColorFromRGB(0xbf5758) forState:UIControlStateNormal];
-            [cell.contentView  addSubview:lookBtn];
+        
+        if (cell==nil)
+        {
+            cell = [[SMTThreadgalleryCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         }
-    }
-    按钮过大，标签文本居中
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
-    UILabel *lbl = [cell.contentView viewWithTag:10001];
-    if ([self typeLabelTitleWithType:itemModel.type]==nil) {
-        lbl.hidden = YES;
+        [cell configureGalleryCellData:itemModel];
+        
+        return cell;
+    }else if ([itemModel.type isEqualToString:@"channel"]) {
+        static NSString *identifier = @"channel";
+        SMTMLChannelCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        
+        
+        if (cell==nil)
+        {
+            cell = [[SMTMLChannelCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
+        [cell configureCellForData:itemModel];
+        
+        return cell;
+
+    }else if ([itemModel.type isEqualToString:@"movielines"]) {
+        static NSString *identifier = @"movielines";
+        SMTMLMovielinesCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        
+        
+        if (cell==nil)
+        {
+            cell = [[SMTMLMovielinesCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
+        [cell configureCellForData:itemModel];
+        
+        return cell;
     }else {
-        lbl.text = [self typeLabelTitleWithType:itemModel.type];
-        lbl.hidden = NO;
+        static NSString *identifier = @"cellId";
+        SMTImageTitleDescCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        
+        if (cell==nil)
+        {
+            cell = [[SMTImageTitleDescCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+            
+            UILabel *typeLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 40, 18)];
+            typeLabel.backgroundColor = [SMTRandomColor randomColor];
+            typeLabel.tag = 10001;
+            typeLabel.font = kFontOfSize(11);
+            typeLabel.textColor = [UIColor whiteColor];
+            typeLabel.textAlignment = NSTextAlignmentCenter;
+            typeLabel.adjustsFontSizeToFitWidth = YES;
+            [cell.contentView addSubview:typeLabel];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        UILabel *lbl = [cell.contentView viewWithTag:10001];
+        if ([self typeLabelTitleWithType:itemModel.type]==nil) {
+            lbl.hidden = YES;
+        }else {
+            lbl.text = [self typeLabelTitleWithType:itemModel.type];
+            lbl.hidden = NO;
+        }
+        BOOL lookMore = [[self movieTypeDataWithType:itemModel.type][@"hasmore"]boolValue];
+        
+        [cell configureCellData:itemModel.itemdata withLookMore:lookMore withType:itemModel.type];
+        [cell hideLookButton:![[self movieTypeDataWithType:itemModel.type][@"hasmore"]boolValue]];
+
+       
+        return cell;
     }
-    
-    [cell configureCellData:itemModel.itemdata];
-    return cell;
 }
 
 - (NSDictionary *)movieTypeDataWithType:(NSString *)type {
@@ -136,6 +221,7 @@
     NSString *content = nil;
     if ([item[@"needshow"] boolValue]) {
         content = item[@"content"];
+        NSLog(@"content:%@",content);
     }
     return content;
 }
@@ -145,6 +231,11 @@
     //    NSIndexPath *
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    UIView *footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 10)];
+    footer.backgroundColor = UIColorFromRGB(0xefeff4);
+    return footer;
+}
 
 - (UITableView *)tableView
 {
@@ -153,6 +244,10 @@
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
         _tableView.dataSource = self;
         _tableView.delegate = self;
+        _tableView.sectionFooterHeight = 10;
+        _tableView.sectionHeaderHeight = CGFLOAT_MIN;
+        _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshDataInTableView)];
+        _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreDataInTableView)];
     }
     return _tableView;
 }

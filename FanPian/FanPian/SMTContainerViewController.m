@@ -108,8 +108,8 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 
-    NSInteger index = scrollView.contentOffset.x/SCREEN_WIDTH;
-    [self.navTitleView selectItem:index];
+//    NSInteger index = scrollView.contentOffset.x/SCREEN_WIDTH;
+//    [self.navTitleView selectItem:index];
 
 
 }
@@ -118,6 +118,7 @@
     if (!_scrollView) {
         _scrollView = [[SMTScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
         _scrollView.delegate = self;
+        _scrollView.scrollEnabled = NO;
     }
     return _scrollView;
 }

@@ -63,6 +63,12 @@
 		3384658C1C7C740700370511 /* SMTRandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384658B1C7C740700370511 /* SMTRandomColor.m */; };
 		3384658E1C7C756D00370511 /* movietype.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3384658D1C7C756D00370511 /* movietype.plist */; };
 		33A0C5231C5F62B900B907AA /* SMTMovielinesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A0C5221C5F62B900B907AA /* SMTMovielinesListViewController.m */; };
+		33A421BD1C88223500A25790 /* ImageVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A421BA1C88223500A25790 /* ImageVideoView.m */; };
+		33A421BE1C88223500A25790 /* PlayVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A421BC1C88223500A25790 /* PlayVideoView.m */; };
+		33A421C21C88330100A25790 /* SMTTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A421C11C88330100A25790 /* SMTTestViewController.m */; };
+		33A421C41C8840BD00A25790 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A421C31C8840BD00A25790 /* MediaPlayer.framework */; };
+		33A421C61C8840C600A25790 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A421C51C8840C600A25790 /* AVKit.framework */; };
+		33A421C81C8840CC00A25790 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A421C71C8840CC00A25790 /* AVFoundation.framework */; };
 		33A7A8541C4D005E003CD805 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A7A8531C4D005E003CD805 /* UIView+Additions.m */; };
 		33EFB5621C4793B40033912B /* SMTListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB5611C4793B40033912B /* SMTListViewController.m */; };
 		33EFB5651C4793BD0033912B /* SMTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB5641C4793BD0033912B /* SMTMainViewController.m */; };
@@ -97,6 +103,11 @@
 		33FA87411C772F0B003E34B3 /* WJLBottomPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FA873D1C772F0B003E34B3 /* WJLBottomPopView.m */; };
 		33FA87421C772F0B003E34B3 /* WJLMidPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FA873F1C772F0B003E34B3 /* WJLMidPopView.m */; };
 		33FADC201C5F55D500E53D46 /* SMTTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FADC1F1C5F55D500E53D46 /* SMTTableDataSource.m */; };
+		33FEE51F1C7D62CE000BAB5C /* SMTImageListItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FEE51E1C7D62CE000BAB5C /* SMTImageListItemModel.m */; };
+		33FEE5231C7D8B86000BAB5C /* SMTMLMovielinesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FEE5221C7D8B86000BAB5C /* SMTMLMovielinesCell.m */; };
+		33FEE5261C7D8B97000BAB5C /* SMTThreadgalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FEE5251C7D8B97000BAB5C /* SMTThreadgalleryCell.m */; };
+		33FEE5291C7DAE6B000BAB5C /* SMTMLChannelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FEE5281C7DAE6B000BAB5C /* SMTMLChannelCell.m */; };
+		33FEE52C1C7DB54A000BAB5C /* SMTMLBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FEE52B1C7DB54A000BAB5C /* SMTMLBaseCell.m */; };
 		E98474EED5FFA6410C22E543 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBE9C299F4D3C983B7D4063 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -228,6 +239,15 @@
 		3384658D1C7C756D00370511 /* movietype.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = movietype.plist; sourceTree = "<group>"; };
 		33A0C5211C5F62B900B907AA /* SMTMovielinesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMovielinesListViewController.h; sourceTree = "<group>"; };
 		33A0C5221C5F62B900B907AA /* SMTMovielinesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMovielinesListViewController.m; sourceTree = "<group>"; };
+		33A421B91C88223500A25790 /* ImageVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageVideoView.h; sourceTree = "<group>"; };
+		33A421BA1C88223500A25790 /* ImageVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageVideoView.m; sourceTree = "<group>"; };
+		33A421BB1C88223500A25790 /* PlayVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayVideoView.h; sourceTree = "<group>"; };
+		33A421BC1C88223500A25790 /* PlayVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayVideoView.m; sourceTree = "<group>"; };
+		33A421C01C88330100A25790 /* SMTTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTTestViewController.h; sourceTree = "<group>"; };
+		33A421C11C88330100A25790 /* SMTTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTTestViewController.m; sourceTree = "<group>"; };
+		33A421C31C8840BD00A25790 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		33A421C51C8840C600A25790 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		33A421C71C8840CC00A25790 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		33A7A8521C4D005E003CD805 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
 		33A7A8531C4D005E003CD805 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
 		33EFB5601C4793B40033912B /* SMTListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTListViewController.h; sourceTree = "<group>"; };
@@ -297,6 +317,16 @@
 		33FA873F1C772F0B003E34B3 /* WJLMidPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJLMidPopView.m; sourceTree = "<group>"; };
 		33FADC1E1C5F55D500E53D46 /* SMTTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTTableDataSource.h; sourceTree = "<group>"; };
 		33FADC1F1C5F55D500E53D46 /* SMTTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTTableDataSource.m; sourceTree = "<group>"; };
+		33FEE51D1C7D62CE000BAB5C /* SMTImageListItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTImageListItemModel.h; sourceTree = "<group>"; };
+		33FEE51E1C7D62CE000BAB5C /* SMTImageListItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTImageListItemModel.m; sourceTree = "<group>"; };
+		33FEE5211C7D8B86000BAB5C /* SMTMLMovielinesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMLMovielinesCell.h; sourceTree = "<group>"; };
+		33FEE5221C7D8B86000BAB5C /* SMTMLMovielinesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMLMovielinesCell.m; sourceTree = "<group>"; };
+		33FEE5241C7D8B97000BAB5C /* SMTThreadgalleryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTThreadgalleryCell.h; sourceTree = "<group>"; };
+		33FEE5251C7D8B97000BAB5C /* SMTThreadgalleryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTThreadgalleryCell.m; sourceTree = "<group>"; };
+		33FEE5271C7DAE6B000BAB5C /* SMTMLChannelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMLChannelCell.h; sourceTree = "<group>"; };
+		33FEE5281C7DAE6B000BAB5C /* SMTMLChannelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMLChannelCell.m; sourceTree = "<group>"; };
+		33FEE52A1C7DB54A000BAB5C /* SMTMLBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMLBaseCell.h; sourceTree = "<group>"; };
+		33FEE52B1C7DB54A000BAB5C /* SMTMLBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMLBaseCell.m; sourceTree = "<group>"; };
 		874545404FF4C356CEAFCE7A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DCBE9C299F4D3C983B7D4063 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -306,6 +336,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A421C81C8840CC00A25790 /* AVFoundation.framework in Frameworks */,
+				33A421C61C8840C600A25790 /* AVKit.framework in Frameworks */,
+				33A421C41C8840BD00A25790 /* MediaPlayer.framework in Frameworks */,
 				E98474EED5FFA6410C22E543 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +447,8 @@
 				332894EA1C7C4EA40018E8BB /* SMTMEListItemModel.m */,
 				332894EC1C7C4ED40018E8BB /* SMTMEListItemDataModel.h */,
 				332894ED1C7C4ED40018E8BB /* SMTMEListItemDataModel.m */,
+				33FEE51D1C7D62CE000BAB5C /* SMTImageListItemModel.h */,
+				33FEE51E1C7D62CE000BAB5C /* SMTImageListItemModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -486,6 +521,17 @@
 				33F8EBE51C586EC50015B6DC /* SMTSalonDetailListMovieModel.m */,
 			);
 			name = salon;
+			sourceTree = "<group>";
+		};
+		33A421BF1C88223A00A25790 /* PlayVideoOrImage */ = {
+			isa = PBXGroup;
+			children = (
+				33A421B91C88223500A25790 /* ImageVideoView.h */,
+				33A421BA1C88223500A25790 /* ImageVideoView.m */,
+				33A421BB1C88223500A25790 /* PlayVideoView.h */,
+				33A421BC1C88223500A25790 /* PlayVideoView.m */,
+			);
+			name = PlayVideoOrImage;
 			sourceTree = "<group>";
 		};
 		33EFB55F1C47935F0033912B /* VC */ = {
@@ -587,6 +633,7 @@
 		33F304DB1C448BAE0020838A /* FanPian */ = {
 			isa = PBXGroup;
 			children = (
+				33A421BF1C88223A00A25790 /* PlayVideoOrImage */,
 				33F304DF1C448BAE0020838A /* AppDelegate.h */,
 				33F304E01C448BAE0020838A /* AppDelegate.m */,
 				33EFB55F1C47935F0033912B /* VC */,
@@ -614,6 +661,8 @@
 				33A0C5221C5F62B900B907AA /* SMTMovielinesListViewController.m */,
 				3384658A1C7C740700370511 /* SMTRandomColor.h */,
 				3384658B1C7C740700370511 /* SMTRandomColor.m */,
+				33A421C01C88330100A25790 /* SMTTestViewController.h */,
+				33A421C11C88330100A25790 /* SMTTestViewController.m */,
 			);
 			path = FanPian;
 			sourceTree = "<group>";
@@ -647,6 +696,7 @@
 		33F719E81C4F1F900038208E /* cell */ = {
 			isa = PBXGroup;
 			children = (
+				33FEE5201C7D8B59000BAB5C /* mainlist */,
 				33F719E51C4F1F8C0038208E /* SMTBeOnShowCell.h */,
 				33F719E61C4F1F8C0038208E /* SMTBeOnShowCell.m */,
 				33F1BBFF1C50702E0069F4AA /* SMTImageTitleDescCell.h */,
@@ -674,9 +724,27 @@
 			name = thirdParty;
 			sourceTree = "<group>";
 		};
+		33FEE5201C7D8B59000BAB5C /* mainlist */ = {
+			isa = PBXGroup;
+			children = (
+				33FEE5211C7D8B86000BAB5C /* SMTMLMovielinesCell.h */,
+				33FEE5221C7D8B86000BAB5C /* SMTMLMovielinesCell.m */,
+				33FEE5241C7D8B97000BAB5C /* SMTThreadgalleryCell.h */,
+				33FEE5251C7D8B97000BAB5C /* SMTThreadgalleryCell.m */,
+				33FEE5271C7DAE6B000BAB5C /* SMTMLChannelCell.h */,
+				33FEE5281C7DAE6B000BAB5C /* SMTMLChannelCell.m */,
+				33FEE52A1C7DB54A000BAB5C /* SMTMLBaseCell.h */,
+				33FEE52B1C7DB54A000BAB5C /* SMTMLBaseCell.m */,
+			);
+			name = mainlist;
+			sourceTree = "<group>";
+		};
 		E1CED7343844D4D6BC2D1D94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33A421C71C8840CC00A25790 /* AVFoundation.framework */,
+				33A421C51C8840C600A25790 /* AVKit.framework */,
+				33A421C31C8840BD00A25790 /* MediaPlayer.framework */,
 				DCBE9C299F4D3C983B7D4063 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -871,6 +939,7 @@
 				33FA87421C772F0B003E34B3 /* WJLMidPopView.m in Sources */,
 				331259441C4E507700F14A50 /* SMTBeOnShowListMovieModel.m in Sources */,
 				3348E6E51C524E5000B46A3D /* UIView+Size.m in Sources */,
+				33A421BE1C88223500A25790 /* PlayVideoView.m in Sources */,
 				33F1BC431C508BC20069F4AA /* SMTMovieImageView.m in Sources */,
 				33A0C5231C5F62B900B907AA /* SMTMovielinesListViewController.m in Sources */,
 				3323470E1C4B416F00B05D2B /* SMTScrollView.m in Sources */,
@@ -881,8 +950,10 @@
 				33EFB5701C479B0B0033912B /* SMTNavTitleView.m in Sources */,
 				33F304E41C448BAE0020838A /* ViewController.m in Sources */,
 				331259351C4E350800F14A50 /* SMTBaseRequest.m in Sources */,
+				33A421BD1C88223500A25790 /* ImageVideoView.m in Sources */,
 				332894E21C7C4C850018E8BB /* SMTMovieExplorerModel.m in Sources */,
 				3348E6EB1C5318C200B46A3D /* SMTCollectionModel.m in Sources */,
+				33FEE51F1C7D62CE000BAB5C /* SMTImageListItemModel.m in Sources */,
 				3336EF671C7B121000A9285A /* SMTMovieExploreRequest.m in Sources */,
 				3384658C1C7C740700370511 /* SMTRandomColor.m in Sources */,
 				3348E6F21C53198500B46A3D /* SMTCollectionViewController.m in Sources */,
@@ -894,6 +965,7 @@
 				33EFB5621C4793B40033912B /* SMTListViewController.m in Sources */,
 				33F1BBFA1C506E840069F4AA /* SMTShortMovieModel.m in Sources */,
 				33F1BBF71C506E290069F4AA /* SMTShortMovieDataModel.m in Sources */,
+				33FEE5231C7D8B86000BAB5C /* SMTMLMovielinesCell.m in Sources */,
 				3312592E1C4E2DDC00F14A50 /* SMTWantViewController.m in Sources */,
 				332347081C48A20200B05D2B /* SMTMeViewController.m in Sources */,
 				334E30F91C57778400D46105 /* SMTSalonListModel.m in Sources */,
@@ -918,6 +990,7 @@
 				33F8EBDA1C586C520015B6DC /* SMTSalonDetailDataModel.m in Sources */,
 				3348E6F81C53339400B46A3D /* SMTCollectionTypeDataModel.m in Sources */,
 				33F1BC461C50C2A20069F4AA /* SMTBarView.m in Sources */,
+				33FEE5291C7DAE6B000BAB5C /* SMTMLChannelCell.m in Sources */,
 				334E31031C5790A300D46105 /* SMTSalonCell.m in Sources */,
 				3336EF6A1C7B179D00A9285A /* SMTMainHeader.m in Sources */,
 				33F1BBF31C506CDB0069F4AA /* SMTShortMovieViewController.m in Sources */,
@@ -925,6 +998,8 @@
 				3348E6FB1C5333B500B46A3D /* SMTCollectionTypeListModel.m in Sources */,
 				33FADC201C5F55D500E53D46 /* SMTTableDataSource.m in Sources */,
 				33F8EBE91C586FEF0015B6DC /* SMTSalonDetailCell.m in Sources */,
+				33A421C21C88330100A25790 /* SMTTestViewController.m in Sources */,
+				33FEE5261C7D8B97000BAB5C /* SMTThreadgalleryCell.m in Sources */,
 				33FA87401C772F0B003E34B3 /* UIWindow+WJLMidPop.m in Sources */,
 				3323470B1C48A21D00B05D2B /* SMTFindViewController.m in Sources */,
 				331259291C4E265300F14A50 /* SMTBeOnShowViewController.m in Sources */,
@@ -933,6 +1008,7 @@
 				33EFB5651C4793BD0033912B /* SMTMainViewController.m in Sources */,
 				3336EF641C7B04A100A9285A /* SMTOriginMovieRequest.m in Sources */,
 				332894EB1C7C4EA40018E8BB /* SMTMEListItemModel.m in Sources */,
+				33FEE52C1C7DB54A000BAB5C /* SMTMLBaseCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

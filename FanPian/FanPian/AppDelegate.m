@@ -9,8 +9,8 @@
 #import "AppDelegate.h"
 #import "SMTContainerViewController.h"
 
+#import "SMTTestViewController.h"
 @interface AppDelegate ()
-
 @end
 
 @implementation AppDelegate
@@ -18,10 +18,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:[[SMTContainerViewController alloc] init]];
-    self.window.rootViewController = navCtrl;
     self.window.backgroundColor = [UIColor whiteColor];
+
+        self.window.rootViewController = [[SMTTestViewController alloc] init];
+
+    
+//    UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:[[SMTContainerViewController alloc] init]];
+//    self.window.rootViewController = navCtrl;
+//    self.window.backgroundColor = [UIColor whiteColor];
     
     return YES;
 }

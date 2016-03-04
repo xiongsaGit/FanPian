@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^ImageVideoViewFinishBlock)();
+typedef void(^ImageVideoViewSkipBlock)();
 
 @interface ImageVideoView : UIView
 
-- (id)initWithFinishBlock:(ImageVideoViewFinishBlock)finishBlock;
+- (id)initWithSkipBlock:(ImageVideoViewSkipBlock)skipBlock;
 
 - (void)loadViewData:(NSDictionary *)dataDict;
 

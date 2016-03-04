@@ -10,6 +10,8 @@
 #import "PlayVideoView.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import "RHCTimer.h"
+#import "NSTimer+Addition.h"
 
 #define kSkipbuttonWidth 6*kEdge
 #define kSkipbuttonHeight 3*kEdge
@@ -23,34 +25,61 @@
 @property (nonatomic, strong) UIScrollView *imageScrollView;
 @property (nonatomic, strong) NSMutableArray *imagesArray;
 @property (nonatomic, strong) PlayVideoView *playVideoView;
-@property (nonatomic, copy) ImageVideoViewFinishBlock finishBlock;
+@property (nonatomic, copy) ImageVideoViewSkipBlock skipBlock;
 
+//@property (nonatomic, strong) dispatch_source_t timer;
+@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, assign) NSInteger timeDuration;
 @end
 
 @implementation ImageVideoView
 
-- (id)initWithFinishBlock:(ImageVideoViewFinishBlock)finishBlock {
+- (id)initWithSkipBlock:(ImageVideoViewSkipBlock)skipBlock {
     if (self = [super init]) {
-        self.finishBlock = finishBlock;
+        self.skipBlock = skipBlock;
         self.imagesArray = [NSMutableArray array];
         [self addSubview:self.skipButton];
+        
 
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(videoPlayFinishedCallback)
                                                      name:MPMoviePlayerPlaybackDidFinishNotification
                                                    object:nil];
         
-//        [self saveImage];
+        self.timeDuration = 5;
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(refreshSkipButtonTitle) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+        [self.timer pauseTimer];
+        
     }
     return self;
 }
 
-- (void)videoPlayFinishedCallback {
-    if (self.finishBlock) {
-        self.finishBlock();
+- (void)refreshSkipButtonTitle {
+    if (self.timeDuration > 0) {
+        [self.skipButton setTitle:[NSString stringWithFormat:@"%ld 跳过",self.timeDuration] forState:UIControlStateNormal];
+    }else {
+        [self.timer invalidate];
+        [self.skipButton setTitle:@"跳过" forState:UIControlStateNormal];
+        [self skipDirectly];
+    }
+    self.timeDuration--;
+
+}
+
+- (void)skipDirectly {
+    if (self.skipBlock) {
+        self.skipBlock();
     }
 }
 
+- (void)videoPlayFinishedCallback {
+    [self skipDirectly];
+}
+
+- (void)handleSkipButtonClicked:(UIButton *)button {
+    [self skipDirectly];
+}
 
 
 - (void)deleteFileFromPath:(NSString *)filePath {
@@ -64,7 +93,6 @@
     }
 }
 
-
 - (void)loadViewData:(NSDictionary *)dataDict {
     
     if ([dataDict[@"type"] isEqualToString:@"image"]) {
@@ -72,25 +100,32 @@
         [self addImageViewToScrollViewFromImageList:dataDict[@"dataList"]];
     }else {
         // 视频
-        
+        __weak typeof(self)weakSelf = self;
+        self.playVideoView.successBlock = ^(BOOL successFlag){
+            if (!successFlag) {
+                [weakSelf loadDefaultImage];
+            }else
+                [weakSelf defaultSetting];
+        };
         self.playVideoView.frame = self.bounds;
-        [PlayVideoView sharedManager].shouldAutoplay = YES;
-        [PlayVideoView sharedManager].view.frame = self.playVideoView.frame;
-        [PlayVideoView sharedManager].controlStyle = MPMovieControlStyleNone;
-        [self.playVideoView addSubview:[PlayVideoView sharedManager].view];
+        
         [self addSubview:self.playVideoView];
 
         [self.playVideoView startPlayWithPath:dataDict[@"dataList"][0] fileIsLocal:NO];
     }
 }
 
+- (void)defaultSetting {
+    [self.timer resumeTimer];
+    self.skipButton.hidden = NO;
+    [self bringSubviewToFront:self.skipButton];
+}
+
 - (void)addImageViewToScrollViewFromImageList:(NSArray *)imageList {
 
     if (imageList==nil||imageList.count <= 0) {
         // 展示默认图片
-        [self addSubview:self.defaultImageView];
-        [self.defaultImageView setFrame:self.bounds];
-
+        [self loadDefaultImage];
     }else {
         
         [self addSubview:self.imageScrollView];
@@ -104,7 +139,11 @@
             
             [self downloadToImageView:imageView withStringUrl:imageList[i] successBlock:^(UIImage *image) {
                 imageView.image = image;
+                // 成功
+                
+                [self.timer resumeTimer];
 
+                self.skipButton.hidden = NO;
             }];
             
             [self.imageScrollView addSubview:imageView];
@@ -142,6 +181,11 @@
                 }
             } else if (error) {
                 NSLog(@"download fail request=%@, errorCode=%ld", [downloadURL absoluteString], (long)error.code);
+            
+
+            }else {
+                [self loadDefaultImage];
+
             }
         }];
     }else {//图片存在,读取
@@ -149,6 +193,15 @@
        
     }
     
+}
+
+- (void)loadDefaultImage {
+    if (!_defaultImageView) {
+        [self addSubview:self.defaultImageView];
+        [self.defaultImageView setFrame:self.bounds];
+    }
+    [self defaultSetting];
+
 }
 
 - (NSString *)fileFolderDir{
@@ -191,6 +244,8 @@
         _skipButton.layer.cornerRadius = 4;
         _skipButton.layer.borderColor = [[UIColor redColor]CGColor];//[UIColorFromRGB(0xffffff) CGColor];
         [_skipButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_skipButton addTarget:self action:@selector(handleSkipButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        _skipButton.hidden = YES;
     }
     return _skipButton;
 }
@@ -221,6 +276,8 @@
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter]removeObserver:self];
+    [self.timer invalidate];
+    self.timer = nil;
 }
 
 

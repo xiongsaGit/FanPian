@@ -70,6 +70,9 @@
 		33A421C61C8840C600A25790 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A421C51C8840C600A25790 /* AVKit.framework */; };
 		33A421C81C8840CC00A25790 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A421C71C8840CC00A25790 /* AVFoundation.framework */; };
 		33A7A8541C4D005E003CD805 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A7A8531C4D005E003CD805 /* UIView+Additions.m */; };
+		33D982D91C898D7600FE65B9 /* RHCTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D982D81C898D7600FE65B9 /* RHCTimer.m */; };
+		33D982DC1C89911A00FE65B9 /* SMTOtherTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D982DB1C89911A00FE65B9 /* SMTOtherTestViewController.m */; };
+		33D982DF1C899D8000FE65B9 /* NSTimer+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D982DE1C899D8000FE65B9 /* NSTimer+Addition.m */; };
 		33EFB5621C4793B40033912B /* SMTListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB5611C4793B40033912B /* SMTListViewController.m */; };
 		33EFB5651C4793BD0033912B /* SMTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB5641C4793BD0033912B /* SMTMainViewController.m */; };
 		33EFB5681C4793DD0033912B /* SMTSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB5671C4793DD0033912B /* SMTSettingViewController.m */; };
@@ -250,6 +253,12 @@
 		33A421C71C8840CC00A25790 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		33A7A8521C4D005E003CD805 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
 		33A7A8531C4D005E003CD805 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		33D982D71C898D7600FE65B9 /* RHCTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHCTimer.h; sourceTree = "<group>"; };
+		33D982D81C898D7600FE65B9 /* RHCTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHCTimer.m; sourceTree = "<group>"; };
+		33D982DA1C89911A00FE65B9 /* SMTOtherTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTOtherTestViewController.h; sourceTree = "<group>"; };
+		33D982DB1C89911A00FE65B9 /* SMTOtherTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTOtherTestViewController.m; sourceTree = "<group>"; };
+		33D982DD1C899D8000FE65B9 /* NSTimer+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Addition.h"; sourceTree = "<group>"; };
+		33D982DE1C899D8000FE65B9 /* NSTimer+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Addition.m"; sourceTree = "<group>"; };
 		33EFB5601C4793B40033912B /* SMTListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTListViewController.h; sourceTree = "<group>"; };
 		33EFB5611C4793B40033912B /* SMTListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTListViewController.m; sourceTree = "<group>"; };
 		33EFB5631C4793BD0033912B /* SMTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMainViewController.h; sourceTree = "<group>"; };
@@ -526,10 +535,18 @@
 		33A421BF1C88223A00A25790 /* PlayVideoOrImage */ = {
 			isa = PBXGroup;
 			children = (
+				33D982DD1C899D8000FE65B9 /* NSTimer+Addition.h */,
+				33D982DE1C899D8000FE65B9 /* NSTimer+Addition.m */,
+				33D982D71C898D7600FE65B9 /* RHCTimer.h */,
+				33D982D81C898D7600FE65B9 /* RHCTimer.m */,
 				33A421B91C88223500A25790 /* ImageVideoView.h */,
 				33A421BA1C88223500A25790 /* ImageVideoView.m */,
 				33A421BB1C88223500A25790 /* PlayVideoView.h */,
 				33A421BC1C88223500A25790 /* PlayVideoView.m */,
+				33A421C01C88330100A25790 /* SMTTestViewController.h */,
+				33A421C11C88330100A25790 /* SMTTestViewController.m */,
+				33D982DA1C89911A00FE65B9 /* SMTOtherTestViewController.h */,
+				33D982DB1C89911A00FE65B9 /* SMTOtherTestViewController.m */,
 			);
 			name = PlayVideoOrImage;
 			sourceTree = "<group>";
@@ -661,8 +678,6 @@
 				33A0C5221C5F62B900B907AA /* SMTMovielinesListViewController.m */,
 				3384658A1C7C740700370511 /* SMTRandomColor.h */,
 				3384658B1C7C740700370511 /* SMTRandomColor.m */,
-				33A421C01C88330100A25790 /* SMTTestViewController.h */,
-				33A421C11C88330100A25790 /* SMTTestViewController.m */,
 			);
 			path = FanPian;
 			sourceTree = "<group>";
@@ -962,6 +977,7 @@
 				334E30F61C57777600D46105 /* SMTSalonModel.m in Sources */,
 				334E30F01C57762700D46105 /* SMTSalonRequest.m in Sources */,
 				336F60F61C563CBE008C6419 /* ShowLabelOnImageView.m in Sources */,
+				33D982DF1C899D8000FE65B9 /* NSTimer+Addition.m in Sources */,
 				33EFB5621C4793B40033912B /* SMTListViewController.m in Sources */,
 				33F1BBFA1C506E840069F4AA /* SMTShortMovieModel.m in Sources */,
 				33F1BBF71C506E290069F4AA /* SMTShortMovieDataModel.m in Sources */,
@@ -971,6 +987,7 @@
 				334E30F91C57778400D46105 /* SMTSalonListModel.m in Sources */,
 				33F304E11C448BAE0020838A /* AppDelegate.m in Sources */,
 				3312593D1C4E4F3000F14A50 /* SMTBeOnShowModel.m in Sources */,
+				33D982D91C898D7600FE65B9 /* RHCTimer.m in Sources */,
 				33F1BC011C50702E0069F4AA /* SMTImageTitleDescCell.m in Sources */,
 				33F8EBE31C586D940015B6DC /* SMTSalonDetailListModel.m in Sources */,
 				331259391C4E359100F14A50 /* SMTBeOnShowRequest.m in Sources */,
@@ -1002,6 +1019,7 @@
 				33FEE5261C7D8B97000BAB5C /* SMTThreadgalleryCell.m in Sources */,
 				33FA87401C772F0B003E34B3 /* UIWindow+WJLMidPop.m in Sources */,
 				3323470B1C48A21D00B05D2B /* SMTFindViewController.m in Sources */,
+				33D982DC1C89911A00FE65B9 /* SMTOtherTestViewController.m in Sources */,
 				331259291C4E265300F14A50 /* SMTBeOnShowViewController.m in Sources */,
 				334E30F31C57772200D46105 /* SMTSalonDataModel.m in Sources */,
 				33F8EBEF1C5871660015B6DC /* SMTSalonDetailHeader.m in Sources */,

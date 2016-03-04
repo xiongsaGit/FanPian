@@ -10,6 +10,10 @@
 #import "SMTContainerViewController.h"
 
 #import "SMTTestViewController.h"
+#import "SMTOtherTestViewController.h"
+
+#define NEED_SHOW YES
+
 @interface AppDelegate ()
 @end
 
@@ -19,11 +23,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-
+   
+    if (NEED_SHOW) {
         self.window.rootViewController = [[SMTTestViewController alloc] init];
+    }else {
+        self.window.rootViewController = [[SMTOtherTestViewController alloc] init];
+    }
 
     
-//    UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:[[SMTContainerViewController alloc] init]];
+//   UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:[[SMTContainerViewController alloc] init]];
 //    self.window.rootViewController = navCtrl;
 //    self.window.backgroundColor = [UIColor whiteColor];
     

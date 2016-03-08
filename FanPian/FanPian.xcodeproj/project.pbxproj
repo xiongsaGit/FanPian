@@ -111,6 +111,9 @@
 		33FEE5261C7D8B97000BAB5C /* SMTThreadgalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FEE5251C7D8B97000BAB5C /* SMTThreadgalleryCell.m */; };
 		33FEE5291C7DAE6B000BAB5C /* SMTMLChannelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FEE5281C7DAE6B000BAB5C /* SMTMLChannelCell.m */; };
 		33FEE52C1C7DB54A000BAB5C /* SMTMLBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FEE52B1C7DB54A000BAB5C /* SMTMLBaseCell.m */; };
+		5628681C1C8F0779007EB4AE /* RFAdImageMovieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 562868171C8F0779007EB4AE /* RFAdImageMovieView.m */; settings = {ASSET_TAGS = (); }; };
+		5628681E1C8F0779007EB4AE /* RFPlayMovieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5628681B1C8F0779007EB4AE /* RFPlayMovieView.m */; settings = {ASSET_TAGS = (); }; };
+		562868231C8F09D9007EB4AE /* RFManageFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 562868221C8F09D9007EB4AE /* RFManageFile.m */; settings = {ASSET_TAGS = (); }; };
 		E98474EED5FFA6410C22E543 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBE9C299F4D3C983B7D4063 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -336,6 +339,12 @@
 		33FEE5281C7DAE6B000BAB5C /* SMTMLChannelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMLChannelCell.m; sourceTree = "<group>"; };
 		33FEE52A1C7DB54A000BAB5C /* SMTMLBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTMLBaseCell.h; sourceTree = "<group>"; };
 		33FEE52B1C7DB54A000BAB5C /* SMTMLBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTMLBaseCell.m; sourceTree = "<group>"; };
+		562868161C8F0779007EB4AE /* RFAdImageMovieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAdImageMovieView.h; sourceTree = "<group>"; };
+		562868171C8F0779007EB4AE /* RFAdImageMovieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAdImageMovieView.m; sourceTree = "<group>"; };
+		562868191C8F0779007EB4AE /* RFManageFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFManageFile.h; sourceTree = "<group>"; };
+		5628681A1C8F0779007EB4AE /* RFPlayMovieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFPlayMovieView.h; sourceTree = "<group>"; };
+		5628681B1C8F0779007EB4AE /* RFPlayMovieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFPlayMovieView.m; sourceTree = "<group>"; };
+		562868221C8F09D9007EB4AE /* RFManageFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFManageFile.m; sourceTree = "<group>"; };
 		874545404FF4C356CEAFCE7A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DCBE9C299F4D3C983B7D4063 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -535,6 +544,12 @@
 		33A421BF1C88223A00A25790 /* PlayVideoOrImage */ = {
 			isa = PBXGroup;
 			children = (
+				562868221C8F09D9007EB4AE /* RFManageFile.m */,
+				562868161C8F0779007EB4AE /* RFAdImageMovieView.h */,
+				562868171C8F0779007EB4AE /* RFAdImageMovieView.m */,
+				562868191C8F0779007EB4AE /* RFManageFile.h */,
+				5628681A1C8F0779007EB4AE /* RFPlayMovieView.h */,
+				5628681B1C8F0779007EB4AE /* RFPlayMovieView.m */,
 				33D982DD1C899D8000FE65B9 /* NSTimer+Addition.h */,
 				33D982DE1C899D8000FE65B9 /* NSTimer+Addition.m */,
 				33D982D71C898D7600FE65B9 /* RHCTimer.h */,
@@ -946,6 +961,7 @@
 				3348E7011C53659200B46A3D /* SMTCollectionTypeModel.m in Sources */,
 				33EFB5681C4793DD0033912B /* SMTSettingViewController.m in Sources */,
 				332347051C489DB100B05D2B /* SMTContainerViewController.m in Sources */,
+				562868231C8F09D9007EB4AE /* RFManageFile.m in Sources */,
 				332894DF1C7C4C5C0018E8BB /* SMTMovieExplorerDataModel.m in Sources */,
 				33EFB56B1C4793E50033912B /* SMTSearchViewController.m in Sources */,
 				332894E81C7C4E470018E8BB /* SMTMEKeyWordItemModel.m in Sources */,
@@ -1006,6 +1022,7 @@
 				334E30FD1C577C1400D46105 /* SMTSalonViewController.m in Sources */,
 				33F8EBDA1C586C520015B6DC /* SMTSalonDetailDataModel.m in Sources */,
 				3348E6F81C53339400B46A3D /* SMTCollectionTypeDataModel.m in Sources */,
+				5628681C1C8F0779007EB4AE /* RFAdImageMovieView.m in Sources */,
 				33F1BC461C50C2A20069F4AA /* SMTBarView.m in Sources */,
 				33FEE5291C7DAE6B000BAB5C /* SMTMLChannelCell.m in Sources */,
 				334E31031C5790A300D46105 /* SMTSalonCell.m in Sources */,
@@ -1016,6 +1033,7 @@
 				33FADC201C5F55D500E53D46 /* SMTTableDataSource.m in Sources */,
 				33F8EBE91C586FEF0015B6DC /* SMTSalonDetailCell.m in Sources */,
 				33A421C21C88330100A25790 /* SMTTestViewController.m in Sources */,
+				5628681E1C8F0779007EB4AE /* RFPlayMovieView.m in Sources */,
 				33FEE5261C7D8B97000BAB5C /* SMTThreadgalleryCell.m in Sources */,
 				33FA87401C772F0B003E34B3 /* UIWindow+WJLMidPop.m in Sources */,
 				3323470B1C48A21D00B05D2B /* SMTFindViewController.m in Sources */,

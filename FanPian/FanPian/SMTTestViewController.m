@@ -8,12 +8,12 @@
 
 #import "SMTTestViewController.h"
 #import "SMTOtherTestViewController.h"
-#import "ImageVideoView.h"
+#import "RFAdImageMovieView.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVKit/AVKit.h>
 
 @interface SMTTestViewController ()
-@property (nonatomic, strong) ImageVideoView *imageVideoView;
+@property (nonatomic, strong) RFAdImageMovieView *imageVideoView;
 
 @end
 
@@ -26,27 +26,35 @@
     
     [self.view addSubview:self.imageVideoView];
     self.imageVideoView.frame = self.view.bounds;
-   // [self.imageVideoView loadViewData:@{@"type":@"image1",
-    //                                    @"dataList":@[@"http://morguo.com/data/attachment/movietrailer/threadvideo/2015/35366_LovingVincent.mp4"]}];// http://7xjdla.com1.z0.glb.clouddn.com/apicloud/c002853ae48c407441d76c9a1c1ad1e1.jpg
-//
     
-   [self.imageVideoView loadViewData:@{@"type":@"image",
-                                        @"dataList":@[@"http://7xjdla.com1.z0.glb.clouddn.com/apicloud/c002853ae48c407441d76c9a1c1ad1e1.jpg"]}];// http://7xjdla.com1.z0.glb.clouddn.com/apicloud/c002853ae48c407441d76c9a1c1ad1e1.jpg
-//    
+    
+    // 传进去的URL就是本地的URL吗？
+    
+    
+    
+    
+    [self.imageVideoView loadViewData:@{@"type":@"image1",
+                                        @"dataList":@[@"http://morguo.com/data/attachment/movietrailer/threadvideo/2015/35366_LovingVincent.mp4"]}];// http://7xjdla.com1.z0.glb.clouddn.com/apicloud/c002853ae48c407441d76c9a1c1ad1e1.jpg
+
+    
+//   [self.imageVideoView loadViewData:@{@"type":@"image",
+//                                        @"dataList":@[@"http://7xjdla.com1.z0.glb.clouddn.com/apicloud/c002853ae48c407441d76c9a1c1ad1e1.jpg"]}];// http://7xjdla.com1.z0.glb.clouddn.com/apicloud/c002853ae48c407441d76c9a1c1ad1e1.jpg
+////    
 
     
 }
 
 
-- (ImageVideoView *)imageVideoView {
+- (RFAdImageMovieView *)imageVideoView {
     if (!_imageVideoView) {
         
         __weak typeof(self)weakSelf = self;
-        _imageVideoView = [[ImageVideoView alloc] initWithSkipBlock:^{
-            NSLog(@"SKIP");
+        _imageVideoView = [[RFAdImageMovieView alloc] initWithSkipBlock:^{
+            NSLog(@"SKIP123");
             SMTOtherTestViewController *viewCtrl = [[SMTOtherTestViewController alloc] init];
             [weakSelf.view.window setRootViewController:viewCtrl];
         }];
+        _imageVideoView.timeDuration = 190;
     }
     return _imageVideoView;
 }
